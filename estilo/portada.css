@@ -1,0 +1,104 @@
+.mainimg{
+  width:100%;
+  padding:1px;
+  margin:0px 0px 0px -2px;
+  border-top:1px solid #afafaf;
+  border-right:1px solid #afafaf;
+  border-bottom:2px solid #afafaf;
+  border-left:1px solid #afafaf;
+  background-color:#ffffff;   /*#828592;*/
+}
+.sportimg{
+ width:30px;
+ height:30px;
+}
+.statecountryimg{
+ width:20px;
+ height:13px;
+}
+.tag12 span, .tag12 img{
+  vertical-align:middle;
+}
+.tag12{
+  margin:0px 0% 0px 0%;
+  border-radius:0px;
+  background:#cfcfcf;              /*#dbceba;            :#bfbfff;*/
+  font-size:1.00em;
+}
+.tag34, .tag5{
+  margin:10px 0% 0px 2.5%;
+  border-radius:5px;
+  font-size:0.75em;
+  display:inline-block;
+}
+
+.tag12 a{
+  text-decoration:none;
+  color:#000000;
+  padding:0px 5px;
+  font-weight:bolder;
+}
+.tag34 a, .tag5 a{
+  text-decoration:none;
+  color:#000000;
+  /*background:#e5ded2;   */           /* fcecd1;     14b9eb #7abae2 #62b2e2;      #4aa8e3;    f5f5f5*/
+  padding:0px 10px;
+  border-radius:25px;
+  font-weight:bolder;
+}
+.tag12 a:hover, .tag34 a:hover, .tag5 a:hover{
+  text-decoration:none;
+  color:#ff0000;
+  font-weight:bolder;
+}
+.hora{
+  text-align:left;
+  /*background:#dfdfdf;*/            /*:#bfbfff;*/
+  font-size:0.75em;
+  font-weight:bolder;
+  padding:10px 0px 10px 10px;
+}
+.comentario{
+  margin:20px 2% 0px 2%;
+  /*background:#e5ded2;*/
+  border-radius:5px;
+  font-size:0.75em;
+}
+#bktckbx img, #bsblckbx img, #vllyckbx img, #ftblckbx img, 
+#bktckbx input, #bsblckbx input, #vllyckbx input, #ftblckbx input, 
+#bktckbx label, #bsblckbx label, #vllyckbx label, #ftblckbx label{
+  vertical-align:middle;
+}
+#bktckbx, #bsblckbx, #vllyckbx, #ftblckbx{
+  border-radius:5px; 
+} 
+#bktckbx label, #bsblckbx label, #vllyckbx label, #ftblckbx label{
+  cursor:pointer;  
+}
+#bktckbx input,  #bsblckbx input, #vllyckbx input, #ftblckbx input{
+  cursor:pointer; 
+}
+#morebtn, #lessbtn{
+  height:70px;
+  width:70px;
+  background:#008000;
+  cursor:pointer;
+  border-radius:5px;
+  
+  display:none;
+}
+#morebtn:hover, #lessbtn:hover{
+}
+.fotoentradas{
+  display:inline-block;
+  vertical-align:top;
+  /*float:left;*/  
+}
+.entry{
+  margin:0px 5% auto 5%;
+  border:1px solid #d6d6d6;
+  border-radius:5px;
+}
+#sefue{
+  display:none;    
+}

@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>4 bolas</title>
+<link rel="stylesheet" type="text/css" href="estilo/comun.css">
+<link rel="stylesheet" type="text/css" href="estilo/ponlo.css">
+<script type="text/javascript" src="escritos/js/ponlo.js"></script>
+</head>
+<body>
+<div class="papel">
+    
+    
+<div id="titulo" class="palcentro">
+<a href='portada.php'><img src="foto/bkt.png" alt="foto"></a>
+<a href='portada.php'><img src="foto/bsbl.png" alt="foto"></a>
+<a href='portada.php'><img src="foto/ftbl.png" alt="foto"></a>
+<a href='portada.php'><img src="foto/vlly.png" alt="foto"></a>
+</div><!--end of titulo--> 
+
+
+<div id="mensaje" class="palcentro">
+
+
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+
+
+<!--  <div id="parrafocero"> -->
+<!---------------------------------------------------------------------------------------------------->
+<form action="escritos/php/ponlo.php" method="POST" enctype="multipart/form-data">
+<fieldset>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="palcentro lkentry1-2">
+<p id="filefeedbk"><!--   inserted by js   --></p>
+</div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="palcentro lkentry1-2" id="filechbx">
+<input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+<input type="file" id="filechbt" name="laFoto" accept="image/*" onchange="coloreaFile();daFileFbk();coloreaComentario();daComentarioFbk();bregaConSubmitButton();" required="true"></input>
+</div>
+<div class="aclara"></div>
+<div class="vaciocien"></div> 
+<!--
+<script type="text/javascript">
+  coloreaFile();
+  daFileFbk();
+</script>
+-->
+<!---------------------------------------------------------------------------------------------------->
+<!--  </div> -->
+<!-- end parrafocero -->
+
+
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+
+
+<!-- <div id="parrafouno"> -->
+<!---------------------------------------------------------------------------------------------------->
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="palcentro lkentry1-3">
+<p id="deportefeedbk"><!--   inserted by js   --></p>
+</div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>   
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-2 palaizq" id="bktrdbx">
+<input type="radio" name="deporte" id="baloncestord" value='baloncesto' onclick="coloreaDeporte();daDeporteFbk();bregaConSubmitButton();" required="true">
+<label for="baloncestord">Baloncesto Infantil y Juvenil</label>
+<img src="foto/bkt.png" alt="foto">
+</div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-2 palaizq" id="bsblrdbx">
+<input type="radio" name="deporte" id="beisbolrd" value='beisbol' onclick="coloreaDeporte();daDeporteFbk();bregaConSubmitButton();" required="true">
+<label for="beisbolrd">Beisbol Infantil y Juvenil</label>
+<img src="foto/bsbl.png" alt="foto">
+</div>
+<div class="vacio2ymedio"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-2 palaizq" id="ftblrdbx">
+<input type="radio" name="deporte" id="futbolrd" value='futbol' onclick="coloreaDeporte();daDeporteFbk();bregaConSubmitButton();" required="true">
+<label for="futbolrd">Futbol Infantil y Juvenil</label>
+<img src="foto/ftbl.png" alt="foto">
+</div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-2 palaizq" id="vllyrdbx">
+<input type="radio" name="deporte" id="volyrd" value='volibol' onclick="coloreaDeporte();daDeporteFbk();bregaConSubmitButton();" required="true">            
+<label for="volyrd">Volleyball Infantil y Juvenil</label>
+<img src="foto/vlly.png" alt="foto">
+</div>
+<div class="vacio2ymedio"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div> 
+
+<script type="text/javascript">
+  coloreaDeporte();
+  daDeporteFbk();
+</script>
+<!---------------------------------------------------------------------------------------------------->
+<!-- </div> -->
+<!-- end parrafouno -->
+
+
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+
+
+<!-- <div id="parrafodos"> -->
+<!---------------------------------------------------------------------------------------------------->
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="palcentro lkentry1-3">
+<p id="nivelfeedbk"><!--   inserted by js   --></p>
+</div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-2 palaizq" id="intrdbx">
+<input type="radio" name="nivel" id="intrd" value='internacional' onclick="coloreaNivel();daNivelFbk();bregaConSubmitButton();" required="true">
+<label for="intrd">Internacional - Representando a Puerto Rico</label>
+<img src="foto/pr.png" alt="foto">
+</div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-2 palaizq" id="islardbx">
+<input type="radio" name="nivel" id="islard" value='isla' onclick="coloreaNivel();daNivelFbk();bregaConSubmitButton();" required="true">
+<label for="islard">Torneo Nivel Isla - Representando tu Pueblo o Liga</label>
+</div>
+<div class="vacio2ymedio"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-2 palaizq" id="localrdbx">
+<input type="radio" name="nivel" id="localrd" value='local' onclick="coloreaNivel();daNivelFbk();bregaConSubmitButton();" required="true">
+<label for="localrd">Torneo Local, Municipal o Escolar</label>
+</div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-2 palaizq" id="informalrdbx">
+<input type="radio" name="nivel" id="informalrd" value='informal' onclick="coloreaNivel();daNivelFbk();bregaConSubmitButton();" required="true">            
+<label for="informalrd">Practicando, Fogueos, for Fun ....</label>
+</div>
+<div class="vacio2ymedio"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+
+<script type="text/javascript">
+  coloreaNivel();
+  daNivelFbk();
+</script>
+<!---------------------------------------------------------------------------------------------------->
+<!-- </div> -->
+<!-- end parrafodos -->
+
+
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+
+
+<!-- <div id="parrafotres"> -->
+<!---------------------------------------------------------------------------------------------------->
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="vacio2ymedio"></div>
+<div class="palaizq lkentry1-3">
+<p id="tag3feedbk"><!--   inserted by js   --></p>
+</div>
+<div class="vacio2ymedio"></div>
+<div class="palaizq lkentry1-3">
+<p id="tag4feedbk"><!--   inserted by js   --></p>
+</div>
+<div class="vacio2ymedio"></div>
+<div class="palaizq lkentry1-3">
+<p id="tag5feedbk"><!--   inserted by js   --></p>
+</div>
+<div class="vacio2ymedio"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-3 palaizq" id="tag3inputbx">
+<label for="tag3in">Tag 3</label>
+<input type="text" id="tag3in" name="tag3in" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();" required="true">
+</div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-3 palaizq" id="tag4inputbx">
+<label for="tag4in">Tag 4</label> 
+<input type="text" id="tag4in" name="tag4in" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();" required="true">
+</div>
+<div class="vacio2ymedio"></div>
+<div class="lkentry1-3 palaizq" id="tag5inputbx">
+<label for="tag5in">Tag 5</label>
+<input type="text" id="tag5in" name="tag5in" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();" required="true">
+</div>
+<div class="vacio2ymedio"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+
+<script type="text/javascript">
+  coloreaTags();
+  daTagsFbk();
+</script>
+<!---------------------------------------------------------------------------------------------------->
+<!-- </div> -->
+<!-- end parrafotres -->
+
+
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+
+
+<!---------------------------------------------------------------------------------------------------->
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="palcentro lkentry1-2">
+<p id="comentariofeedbk"><!--   inserted by js   --></p>
+</div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="palcentro lkentry1-2" id="comentariobx">
+<textarea rows="3" cols="50"  id="comentarioarea" name="comentarioarea" onkeyup="coloreaComentario();daComentarioFbk();coloreaFile();daFileFbk();bregaConSubmitButton();"></textarea>
+</div>
+<div class="aclara"></div>
+<div class="vaciocien"></div> 
+
+<script type="text/javascript">
+  coloreaFile();
+  daFileFbk();    
+  coloreaComentario();
+  daComentarioFbk();
+</script>
+<!---------------------------------------------------------------------------------------------------->
+
+
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+
+
+<!-- <div id="parrafocuatro"> -->
+<!---------------------------------------------------------------------------------------------------->
+
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<button type="submit" id="postbtn">Submit</button>
+<!-- <input type="submit" value="Go" id="postbtn">  -->
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+</fieldset>
+</form>
+
+<script type="text/javascript">
+  bregaConSubmitButton();
+</script>
+<!---------------------------------------------------------------------------------------------------->
+<!--  </div> -->
+<!-- end parrafocuatro -->
+
+
+</div><!-- end mensaje-->
+          
+          
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+<div class="aclara"></div>
+<div class="vaciocien"></div>
+
+
+<div id="despedida" class="palcentro">
+4 bolas. Hecho en Puerto Rico. Feito em Puerto Rico. Made in Puerto Rico.
+</div><!--end of despedida-->
+          
+
+</div><!-- end papel-->
+</body>
+</html>

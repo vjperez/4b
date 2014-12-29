@@ -1,0 +1,60 @@
+#bktrdbx, #bsblrdbx, #vllyrdbx, #ftblrdbx{
+  border-radius:5px;
+}
+
+#filechbx,
+#intrdbx, #islardbx, #localrdbx, #informalrdbx, /*  las img en esta div no me agrandan las divs a 40px, so necesito padding ....... o una bandera de pr de 40px */
+#tag3inputbx, #tag4inputbx, #tag5inputbx,  /* esta div tiene height default minimo, no 40px, so necesito padding */
+#comentariobx{
+  border-radius:5px;
+  padding:10px 0px;
+}
+
+
+#bktrdbx img,   #bsblrdbx img,   #vllyrdbx img,   #ftblrdbx img{
+  vertical-align:middle;
+  width:40px; 
+  height:40px;
+}
+#intrdbx img,   #islardbx img,   #localrdbx img,   #informalrdbx img{
+  vertical-align:middle;
+}
+#bktrdbx label, #bsblrdbx label, #vllyrdbx label, #ftblrdbx label,
+#intrdbx label, #islardbx label, #localrdbx label, #informalrdbx label,
+#tag3inputbx label, #tag4inputbx label, #tag5inputbx label{
+  /*font-weight:normal;*/
+  /*color:#ffffff;*/  
+  cursor:pointer;  
+}
+#filechbx input,
+#bktrdbx input,  #bsblrdbx input, #vllyrdbx input, #ftblrdbx input,
+#intrdbx input,  #islardbx input, #localrdbx input, #informalrdbx input,
+#tag3inputbx input, #tag4inputbx input, #tag5inputbx input{
+  cursor:pointer; 
+}
+#postbtn{
+  height:40px;
+  width:120px;
+ /* background:#23a09a  /*#5fcf80;*/
+ /* background: linear-gradient(#aeb2c3, #bfbfbf);   /* (#828592, #aeb2c3);  */
+ /* font-weight:bolder;*/
+ /* cursor:pointer;*/
+  border-radius:5px;
+  /*color:#00ff00;*/
+}
+/*
+#postbtn:disabled{
+  height:40px;
+  width:120px;
+  /* background:#23a09a  /*#5fcf80;
+  background: linear-gradient(#aeb2c3, #bfbfbf);   /* (#828592, #aeb2c3);  
+  font-weight:bolder;
+  cursor:pointer;
+  border-radius:5px;
+  color:#ff0000;
+}
+
+#postbtn:hover{
+  color:#ff0000;
+}
+*/
