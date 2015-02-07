@@ -1,12 +1,13 @@
 .mainimg{
   width:100%;
   padding:1px;
-  margin:0px 0px 0px -2px;
+  margin:10px 0px 0px -2px;
   border-top:1px solid #afafaf;
-  border-right:1px solid #afafaf;
-  border-bottom:2px solid #afafaf;
+  border-right:1px solid #888888;
+  border-bottom:2px solid #888888;
   border-left:1px solid #afafaf;
   background-color:#ffffff;   /*#828592;*/
+  display:block;
 }
 .sportimg{
  width:30px;
@@ -20,13 +21,14 @@
   vertical-align:middle;
 }
 .tag12{
-  margin:0px 0% 0px 0%;
+  padding:5px 0px 5px 0px;	
+  margin:2px 0px 0px 0px;
   border-radius:0px;
-  background:#cfcfcf;              /*#dbceba;            :#bfbfff;*/
-  font-size:1.00em;
+  background:#e3dcbf;    /*#cfcfcf;       #dbceba;            :#bfbfff;*/
+  /* font-size:1.00em; */
 }
 .tag34, .tag5{
-  margin:10px 0% 0px 2.5%;
+  margin:0px 0% 0px 2.5%;
   border-radius:5px;
   font-size:0.75em;
   display:inline-block;
@@ -56,10 +58,10 @@
   /*background:#dfdfdf;*/            /*:#bfbfff;*/
   font-size:0.75em;
   font-weight:bolder;
-  padding:10px 0px 10px 10px;
+  margin:10px 0px 0px 10px;
 }
 .comentario{
-  margin:20px 2% 0px 2%;
+  margin:25px 2% 10px 2%;
   /*background:#e5ded2;*/
   border-radius:5px;
   font-size:0.75em;
