@@ -14,10 +14,14 @@ body{
   font-size:1.00em;
   text-align:center;
 }
+#papel{
+  width:100%;
+  padding:30px 0px;	
+}
 #titulo{
   /* border:2px solid #828592;   /* #828592 o #e8e8e8 */
   /* border-radius:5px; */ 
-  width:90%;
+  width:100%;
 }
 
 #titulo img{
@@ -29,25 +33,22 @@ body{
 #mensaje{
   /* border:2px solid #828592; /* #828592 o #e8e8e8 */
   /* border-radius:5px; */
-  width:90%;
+  width:100%;
 }
 #despedida{
   /* border:0px solid #bfbfbf;   /*828592*/
   /* border-radius:5px; */
   font-size:0.625em;
-  width:90%;
+  width:100%;
 }
 
-fieldset{
+/* fieldset{
   border:1px solid #bfbfbf; /* #828592 o #e8e8e8 */
   border-radius:5px;
-}
+} */
 
 
-.papel{
-  width:100%;
-  padding:30px 0px;
-}
+
 .palcentro{
   margin:0px auto;
 }

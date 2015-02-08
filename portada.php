@@ -16,10 +16,7 @@
 <script type="text/javascript" src="escritos/js/portada.js"></script>
 </head>
 <body>
-    
-    
-<div class="papel">
-    
+<div id="papel">    
     
 <div id="titulo" class="palcentro">
 <a href='portada.php'><img src="foto/bkt.png" alt="foto"></a>
@@ -226,6 +223,6 @@ mysqli_close($cxn);
 </div><!--end of despedida-->
           
 
-</div><!-- end papel-->
+</div><!-- end of papel-->
 </body>
 </html>
