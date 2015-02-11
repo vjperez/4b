@@ -41,7 +41,10 @@ function putHtml(elHtml){
       elHtml[index%showing] += "<div class='tag34'><a href='#'>" + entry[index][4] + "</a></div>";
       elHtml[index%showing] += "<div class='tag34'><a href='#'>" + entry[index][5] + "</a></div>";
       elHtml[index%showing] += "<div class='tag5'> <a href='#'>" + entry[index][6] + "</a></div>";
-      elHtml[index%showing] += "<div class='comentario'><p>" + entry[index][7] + "</p></div>";
+      if(entry[index][7] == ""){
+      }else{
+         elHtml[index%showing] += "<div class='comentario'><p>" + entry[index][7] + "</p></div>";
+      }
       elHtml[index%showing] += "</div>";
       index++; 
     }	       
