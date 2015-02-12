@@ -4,8 +4,9 @@
     padding: 0px;
 }
 body{
+	background:#ffffcc; 
   /* background: url(../foto/fondo.jpg); */ 
-  background: url(../foto/fondo02.jpg);
+  /* background: url(../foto/fondo02.jpg); */
   /* background: url(../foto/fondo03.jpg); */
   /* background: url(../foto/fondo04.jpg); */
   /* background: url(../foto/fondo05.jpg); */
