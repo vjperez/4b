@@ -9,6 +9,8 @@
 <link rel="stylesheet" type="text/css" href="../../estilo/muestralo.css">
 -->
 <link rel="stylesheet" type="text/css" href="../../estilo/portada.css">
+
+
 <link rel="stylesheet" type="text/css" media='screen and (max-width: 700px)' href="../../estilo/portadaSmall.css">
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='../../estilo/portadaMedium.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1201px)' href='../../estilo/portadaBig.css'>

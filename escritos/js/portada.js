@@ -1,12 +1,33 @@
   function escogeDeporte(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
-    var botonArr = ["baloncestock", "futbolck", "beisbolck", "volyck"];
-    var divArr = ["bktckbx", "ftblckbx", "bsblckbx", "vllyckbx"];
+    var botonArr = ["baloncesto-boton", "beisbol-boton", "futbol-boton", "volibol-boton"];
+    var divArr = ["baloncesto-inputbox-div", "beisbol-inputbox-div", "futbol-soccer-inputbox-div", "volibol-inputbox-div"];
+    for(index = 0; index < botonArr.length; index++){
+      var boton = document.getElementById(botonArr[index]);
+      var ladivision = document.getElementById(divArr[index]);
+      //var labels = ladivision.getElementsByTagName('label');
+      if(boton.checked == true){
+        ladivision.style.backgroundColor='#7ec97b';
+        ladivision.style.border="1px solid #bfbfbf";
+        //labels[0].style.color='#ffffff';
+        //labels[0].style.fontWeight='bold';
+      }else{
+        ladivision.style.backgroundColor='#d5d5d5'; // f5f5f5
+        ladivision.style.border="1px solid #bfbfbf";
+        //labels[0].style.color='#000000';
+        //labels[0].style.fontWeight='normal';
+      }
+    }
+  }
+ 
+  function escogeArea(){
+    var botonArr = ["norte-boton", "sur-boton", "oeste-boton", "este-boton"];
+    var divArr = ["norte-inputbox-div", "sur-inputbox-div", "oeste-inputbox-div", "este-inputbox-div"];
     for(index = 0; index < botonArr.length; index++){
       var boton = document.getElementById(botonArr[index]);
       var ladivision = document.getElementById(divArr[index]);
       var labels = ladivision.getElementsByTagName('label');
       if(boton.checked == true){
-        ladivision.style.backgroundColor='green';
+        ladivision.style.backgroundColor='#7ec97b';
         ladivision.style.border="1px solid #bfbfbf";
         labels[0].style.color='#ffffff';
         labels[0].style.fontWeight='bold';
@@ -17,9 +38,7 @@
         labels[0].style.fontWeight='normal';
       }
     }
-  }
- 
-  
+  }  
    
   
 //columnas en entry[index]
@@ -27,7 +46,6 @@
 function putHtml(elHtml){  
     var index = 0;
     while(index < entry.length){
-      elHtml[index%showing] += "<div class='vaciocien'></div> <div class='vaciocien'></div> <div class='vaciocien'></div> <div class='vaciocien'></div> ";
       elHtml[index%showing] += "<div class='entry'>";
       elHtml[index%showing] += "<div class='hora'>" + entry[index][1] + "</div>";
       if(entry[index][0] == 0 || entry[index][8] == "") {
@@ -35,7 +53,7 @@ function putHtml(elHtml){
           elHtml[index%showing] += "<a href='escritos/php/muestralo.php?id=" + entry[index][8].substring(0, entry[index][8].indexOf(".")) + "'><img src='loaded/" + entry[index][8] +  "' alt='foto' class='mainimg'></a>";
       }
       elHtml[index%showing] += "<div class='tag12'>";
-      elHtml[index%showing] += "<a href='portada.php?x=" + getdeporte(entry[index][2]) + "'><img src='foto/" + entry[index][2]  + "' alt='foto' class='sportimg'></a><a href='portada.php?y=" + getnivel(entry[index][3]) + "'><span>" + entry[index][3]  + "</span></a>";
+      elHtml[index%showing] += "<a href='portada.php?x=" + getdeporte(entry[index][2]) + "'><img src='icon/" + entry[index][2]  + "' alt='foto' class='sportimg'></a><a href='portada.php?y=" + getnivel(entry[index][3]) + "'><span>" + entry[index][3]  + "</span></a>";
       if(entry[index][3].indexOf("nternacional") > -1) elHtml[index%showing] += "<img src='foto/pr.png' alt='foto' class='statecountryimg'>";
       elHtml[index%showing] += "</div>";
       elHtml[index%showing] += "<div class='tag34'><a href='#'>" + entry[index][4] + "</a></div>";
@@ -97,13 +115,13 @@ function cambioBig( mqBig ){
 
 
 function getdeporte(foto){
-    if(foto == 'bkt.png'){
+    if(foto == 'baloncesto.png'){
       return 0;
-    }else if(foto == 'bsbl.png'){
+    }else if(foto == 'beisbol.png'){
       return 1;
-    }else if(foto == 'ftbl.png'){
+    }else if(foto == 'futbol-soccer.png'){
       return 2;
-    }else if(foto == 'vlly.png'){
+    }else if(foto == 'volibol.png'){
       return 3;  
     }
 }

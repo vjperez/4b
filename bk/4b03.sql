@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.11.1deb2+deb7u1
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Feb 11, 2015 at 12:33 PM
--- Server version: 5.5.41
--- PHP Version: 5.4.36-0+deb7u3
+-- Host: 127.0.0.1
+-- Generation Time: Feb 16, 2015 at 09:12 AM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -118,9 +118,9 @@ INSERT INTO `fotoentrada` (`id`, `deporte`, `nivel`, `tag3`, `tag4`, `tag5`, `ti
 (00000015, 3, 2, 'Borinquen', 'Caguas Criollas', 'CNVPR', '2014-08-13 13:53:32', 'Resultado del juego Division Oro 14U.'),
 (00000016, 3, 3, 'Cien Fuegos, Cuba', 'Arecibo PR', 'Copa de Voleibol del Caribe', '2014-08-13 13:53:46', 'Pa demostrar, hoy le ganamos a Cuba, ya veras.'),
 (00000017, 0, 3, 'FIBA Americas', 'U17', '@ Dubai Emiratos Arabes', '2014-08-13 14:00:09', 'Ayer le ganamos a Espana y hoy a Italia, ni el cambio de hora nos detiene.'),
-(00000018, 0, 2, 'cat sub 15', 'ponce', 'lares', '2014-08-16 22:46:15', ''),
+(00000018, 0, 2, 'cat sub 15', 'ponce', 'lares', '2015-02-13 00:08:09', NULL),
 (00000019, 3, 0, 'boleo', '8vo grado', 'Copa Municipal entre Escuelas', '2014-08-13 14:02:32', 'Estamos preparandonos pal torneo municipal en el pueblo de Luquillo. Las nenas de 8vo grado de la escuela Hostos empezaron en el verano a practicar.'),
-(00000020, 3, 0, 'bompeo', 'Jayuya', 'Liga Jayuyana', '2014-08-13 14:04:29', NULL),
+(00000020, 3, 0, 'bompeo', 'Jayuya', 'Liga Jayuyana', '2015-02-13 00:04:54', NULL),
 (00000021, 0, 3, 'FIBA Americas', 'U17', '@ Dubai Emeiratos Arabes', '2014-08-16 22:48:59', 'Con Egipto, ya en la etapa de cruces, pasamos un susto. GraciAS A Dios GANAMOS y estamos en los mejores 8 equipos U17 del mundo. Quien sera  proximo !'),
 (00000022, 1, 0, 'bateo', 'fundamentos', 'toque', '2014-09-06 12:17:50', NULL),
 (00000023, 0, 1, 'Yauco', 'Torneo de Colores', '11 y 12', '2014-08-16 22:52:58', 'Hoy hubo 4 juegos en el torneo local de nuestra liga en Yauco.'),
@@ -131,14 +131,14 @@ INSERT INTO `fotoentrada` (`id`, `deporte`, `nivel`, `tag3`, `tag4`, `tag5`, `ti
 (00000028, 2, 0, 'manejo balon', 'en grupo', 'conos', '2014-09-06 12:38:56', NULL),
 (00000029, 2, 0, 'pre escolar', 'edad 5', 'controlando balon', '2014-09-06 12:39:28', NULL),
 (00000030, 1, 0, 'fundamentos', 'fieldeo', 'coqui', '2014-09-06 12:39:57', NULL),
-(00000031, 1, 0, 'relajo', 'tripeo', 'diversion', '2014-09-06 12:40:25', 'que se diviertan'),
+(00000031, 1, 0, 'relajo', 'tripeo', 'diversion', '2015-02-13 00:04:30', 'Jugando y divirtiendose.'),
 (00000032, 0, 0, 'dribleo', 'Mayaguez', 'clase de universidad', '2014-09-06 12:40:43', NULL),
-(00000033, 0, 2, 'cat sub 15', 'ponce', 'lares', '2014-09-06 12:41:25', 'Este post lo escribo para dejarles saber que Laes le gano a Ponce, por 12.'),
-(00000034, 0, 2, 'Hostos Mayaguez', 'Benites Canovanas', 'Cat 16 under', '2014-09-06 12:42:02', ''),
-(00000035, 0, 2, 'Santa Margarita Caguas', 'Perpetuo Soccoro Maricao', 'Sub 16', '2014-09-06 12:42:19', 'gkkkkkkkkkkkkkkkkkkkkgf reklj;lkj;slfk gjhsgdhgfksjd hfskj dgfskjd ghfskjdgfskjd ghfskjdgfskjd fgskjdfgskd jgfskjdgf skdjg fskjdf gskjdfgksjg fks kjfg'),
+(00000033, 0, 2, 'cat sub 15', 'ponce', 'lares', '2015-02-12 23:44:35', 'Este post lo escribo para dejarles saber que Lares le gano a Ponce, por 12.'),
+(00000034, 0, 2, 'Hostos Mayaguez', 'Benites Canovanas', 'Cat 16 under', '2015-02-13 00:03:55', NULL),
+(00000035, 0, 2, 'Santa Margarita Caguas', 'Perpetuo Soccoro Maricao', 'Sub 16', '2015-02-13 00:03:30', NULL),
 (00000036, 0, 0, 'viso perez', 'diego perez', 'carlos arroyo "el arroyato"', '2014-09-06 23:39:56', 'Frente al Roberto Clemente, despues de una de las practicas pal FIBA 2014.  Vimos al Arroyato y aprovechamos.'),
 (00000037, 0, 0, 'viso perez', 'diego perez', 'jose juan barea', '2014-09-07 09:12:04', 'viso el gigante con barea el enano'),
-(00000038, 0, 0, 'viso perez', 'diego perez', 'el felo filiberto rivera', '2014-09-07 09:42:10', '');
+(00000038, 0, 0, 'viso perez', 'diego perez', 'el felo filiberto rivera', '2015-02-12 23:46:39', 'los nenes con filiberto rivera, tocayo de felo su abuelo');
 
 --
 -- Constraints for dumped tables

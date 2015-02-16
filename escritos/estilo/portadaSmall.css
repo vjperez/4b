@@ -1,0 +1,21 @@
+#uno{
+   width:98%;
+   border:0px solid #000000;
+}
+#dos{
+  display:none;
+}
+#tres{
+  display:none;
+}
+#baloncesto-inputbox-div, #beisbol-inputbox-div,
+#volibol-inputbox-div, #futbol-soccer-inputbox-div,
+#norte-inputbox-div, #sur-inputbox-div,
+#oeste-inputbox-div, #este-inputbox-div{
+  width:16%;
+  margin:5px 25px;
+  padding:4px 0px;
+  display:inline;
+  float:left; 
+}
+    

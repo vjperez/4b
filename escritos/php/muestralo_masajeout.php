@@ -1,13 +1,13 @@
 <?php
   function getdeportefotopath($deporte){
     if($deporte == 0){
-      $path = 'bkt.png';
+      $path = 'baloncesto.png';
     }else if($deporte == 1){
-      $path =  'bsbl.png';
+      $path =  'beisbol.png';
     }else if($deporte == 2){
-      $path = 'ftbl.png';
+      $path = 'futbol-soccer.png';
     }else if($deporte == 3){
-      $path = 'vlly.png';  
+      $path = 'volibol.png';  
     }
     return $path;
   }

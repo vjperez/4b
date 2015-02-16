@@ -17,6 +17,6 @@
     $mensaje2 = 'conecta.php: ' . mysqli_connect_error(); 
     header('Location:error.php?error1=' . $mensaje1 . '&error2=' . $mensaje2);
   }else{
-    //echo '<p>' . DB_USUARIO . ' esta logueado en MySQL, usando base de datos ' . DB_NOMBRE . '.</p>';
+    //  echo '<p>' . DB_USUARIO . ' esta logueado en MySQL, usando base de datos ' . DB_NOMBRE . '.</p>';
   }
 ?>
