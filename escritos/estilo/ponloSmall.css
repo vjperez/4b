@@ -1,0 +1,10 @@
+#justToClear{
+  display:none;
+}
+#comentario-feedback-paragraph{
+  margin-top:30px;   
+}
+#file-select-div, #tag3-input-div, #tag4-input-div, #tag5-input-div, #comentario-div{
+  width:60%;
+  margin:0px auto;
+}

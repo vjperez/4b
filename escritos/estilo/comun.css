@@ -26,8 +26,8 @@ body{
 }
 #selecciona{
   border:2px solid #bfbfbf;   /* #828592 o #e8e8e8 */
-  /* border-radius:5px; */ 
-  width:100%;
+  border-radius:5px;
+  width:98%;
   margin:100px auto 0px auto;
 }
 .select-img{
@@ -43,7 +43,7 @@ body{
   /* border-radius:5px; */
   font-size:0.625em;
   width:100%;
-  margin:100px auto 0px auto;
+  margin:100px auto 10px auto;
 }
 
 
@@ -61,8 +61,15 @@ body{
   display:inline;
   margin:0px 10px;
 }
+#titulo li#titulo-text{
+  margin-top:0.5em;
+  display:block;
+  font-weight: bold;
+  font-size:1.5em;
+  color:#039dc3;
+    }
 fieldset{
-  border:1px solid #bfbfbf; /* #828592 o #e8e8e8 */
+  border:0px solid #ff0000;    /* #bfbfbf; /* #828592 o #e8e8e8 */
   display:block;
   margin:0px auto;
 }

@@ -1,0 +1,26 @@
+#justToClear{
+  clear:both;
+  display:block;
+}
+#file-foto{
+  float:left;
+  width:40%;
+  margin:0px 5% 0px 5%;
+}
+#comentario{
+  float:left;
+  width:40%;
+  margin:0px 5% 0px 0%;
+}
+#file-select-div{
+  width:40%;
+  margin:0px auto;
+}
+#comentario-div{
+  width:50%;
+  margin:0px auto;
+}
+#tag3-input-div, #tag4-input-div, #tag5-input-div{
+  width:23%;
+  margin:0px auto;
+}

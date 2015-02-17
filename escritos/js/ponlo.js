@@ -19,7 +19,7 @@
     
     if( ! escogioFoto() && noUsado() == limit){
       parrafo.style.color='red';
-      parrafo.innerHTML='Escoge tu foto, y/o <br>comenta abajo sobre el juego de hoy.';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
+      parrafo.innerHTML='Escoge tu foto del juego de hoy.';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
     }else if( ! escogioFoto() && noUsado() < limit){
       parrafo.style.color='green';
       parrafo.innerHTML='Aun puedes escoger una foto.';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
@@ -32,75 +32,77 @@
   
   
   
-  
-    function coloreaDeporte(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
-    var botonArr = ["baloncesto-radio-boton", "futbol-soccer-radio-boton", "beisbol-radio-boton", "volibol-radio-boton"];
-    var divArr = ["baloncesto-radio-div", "futbol-soccer-radio-div", "beisbol-radio-div", "volibol-radio-div"];
-    for(index = 0; index < botonArr.length; index++){
-      var boton = document.getElementById(botonArr[index]);
-      var ladivision = document.getElementById(divArr[index]);
-      var labels = ladivision.getElementsByTagName('label');
-      if(boton.checked == true){
-        ladivision.style.backgroundColor='#7ec97b';
-        ladivision.style.border="1px solid #bfbfbf";
-        labels[0].style.color='#ffffff';
-        labels[0].style.fontWeight='bold';
-      }else{
-        ladivision.style.backgroundColor='#d5d5d5'; //aeb2c3
-        ladivision.style.border="1px solid #bfbfbf";
-        labels[0].style.color='#000000';
-        labels[0].style.fontWeight='normal';
-      }
-    }
-  }
-  function daDeporteFbk(){
+//
+//    function coloreaDeporte(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
+//    var botonArr = ["baloncesto-radio-boton", "futbol-soccer-radio-boton", "beisbol-radio-boton", "volibol-radio-boton"];
+//    var divArr = ["baloncesto-inputbox-div", "beisbol-inputbox-div", "futbol-soccer-inputbox-div", "volibol-inputbox-div"];
+//    for(index = 0; index < botonArr.length; index++){
+//      var boton = document.getElementById(botonArr[index]);
+//      var ladivision = document.getElementById(divArr[index]);
+//      var labels = ladivision.getElementsByTagName('label');
+//      if(boton.checked == true){
+//        ladivision.style.backgroundColor='#7ec97b';
+//        ladivision.style.border="1px solid #bfbfbf";
+//        labels[0].style.color='#ffffff';
+//        labels[0].style.fontWeight='bold';
+//      }else{
+//        ladivision.style.backgroundColor='#d5d5d5'; //aeb2c3
+//        ladivision.style.border="1px solid #bfbfbf";
+//        labels[0].style.color='#000000';
+//        labels[0].style.fontWeight='normal';
+//      }
+//    }
+//  }
+
+  function daDeporteFeedback(){
     var parrafo = document.getElementById('deporte-feedback-paragraph');
-    var boton1 = document.getElementById('baloncesto-radio-boton');
-    var boton2 = document.getElementById('futbol-soccer-radio-boton');
-    var boton3 = document.getElementById('beisbol-radio-boton');
-    var boton4 = document.getElementById('volibol-radio-boton');
+    var boton1 = document.getElementById('baloncesto-boton');
+    var boton2 = document.getElementById('futbol-soccer-boton');
+    var boton3 = document.getElementById('beisbol-boton');
+    var boton4 = document.getElementById('volibol-boton');
     if(boton1.checked == true || boton2.checked == true || boton3.checked == true || boton4.checked == true){
       parrafo.style.color='green';
       parrafo.innerHTML='OK !';    
     }else{
       parrafo.style.color='red';
-      parrafo.innerHTML='Escoge el deporte en la foto.';
+      parrafo.innerHTML='Escoge el deporte que te interesa.';
     }    
   }  
   
   
-    function coloreaNivel(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
-    var botonArr = ["norte-radio-boton", "sur-radio-boton", "oeste-radio-boton", "este-radio-boton"];
-    var divArr = ["norte-radio-div", "sur-radio-div", "oeste-radio-div", "este-radio-div"];
-    for(index = 0; index < botonArr.length; index++){
-      var boton = document.getElementById(botonArr[index]);
-      var ladivision = document.getElementById(divArr[index]);
-      var labels = ladivision.getElementsByTagName('label');
-      if(boton.checked == true){
-        ladivision.style.backgroundColor='#7ec97b';
-        ladivision.style.border="1px solid #bfbfbf";
-        labels[0].style.color='#ffffff';
-        labels[0].style.fontWeight='bold';
-      }else{
-        ladivision.style.backgroundColor='#d5d5d5'; //bfbfbf
-        ladivision.style.border="1px solid #bfbfbf";
-        labels[0].style.color='#000000';
-        labels[0].style.fontWeight='normal';
-      }
-    }
-  }
-  function daNivelFbk(){
+//    function coloreaNivel(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
+//    var botonArr = ["norte-radio-boton", "sur-radio-boton", "oeste-radio-boton", "este-radio-boton"];
+//    var divArr = ["norte-inputbox-div", "sur-inputbox-div", "oeste-inputbox-div", "este-inputbox-div"];
+//    for(index = 0; index < botonArr.length; index++){
+//      var boton = document.getElementById(botonArr[index]);
+//      var ladivision = document.getElementById(divArr[index]);
+//      var labels = ladivision.getElementsByTagName('label');
+//      if(boton.checked == true){
+//        ladivision.style.backgroundColor='#7ec97b';
+//        ladivision.style.border="1px solid #bfbfbf";
+//        labels[0].style.color='#ffffff';
+//        labels[0].style.fontWeight='bold';
+//      }else{
+//        ladivision.style.backgroundColor='#d5d5d5'; //bfbfbf
+//        ladivision.style.border="1px solid #bfbfbf";
+//        labels[0].style.color='#000000';
+//        labels[0].style.fontWeight='normal';
+//      }
+//    }
+//  }
+  
+  function daAreaFeedback(){
     var parrafo = document.getElementById('area-feedback-paragraph');
-    var boton1 = document.getElementById('norte-radio-boton');
-    var boton2 = document.getElementById('sur-radio-boton');
-    var boton3 = document.getElementById('oeste-radio-boton');
-    var boton4 = document.getElementById('este-radio-boton');
+    var boton1 = document.getElementById('norte-boton');
+    var boton2 = document.getElementById('sur-boton');
+    var boton3 = document.getElementById('oeste-boton');
+    var boton4 = document.getElementById('este-boton');
     if(boton1.checked == true || boton2.checked == true || boton3.checked == true || boton4.checked == true){
       parrafo.style.color='green';
       parrafo.innerHTML='OK !';    
     }else{
       parrafo.style.color='red';
-      parrafo.innerHTML='Escoge el nivel de juego.';
+      parrafo.innerHTML='Escoge el Area de Puerto Rico que te interesa.';
     }    
   }  
   
@@ -144,7 +146,7 @@
       var parrafo = document.getElementById(parrafoArr[index]);
       if(faltanArr[index] == limit){
         parrafo.style.color='red';
-        parrafo.innerHTML='Usa ' + limit + ' letras o menos para el tag.';    
+        parrafo.innerHTML='Taguea la foto usando hasta ' + limit + ' letras.';    
       }else if(faltanArr[index] >= 0){
         parrafo.style.color='green';
         if(faltanArr[index] >= 2) parrafo.innerHTML= 'Puedes usar ' + faltanArr[index] + ' letras mas.';
@@ -221,10 +223,10 @@
     var faltan = noUsado(); 
     if(faltan == limit && escogioFoto()){
       parrafo.style.color='green';
-      parrafo.innerHTML='Comentario opcional. Usa ' + limit + ' letras o menos.';    
+      parrafo.innerHTML='Comentario opcional de ' + limit + ' letras o menos.';    
     }else if(faltan == limit && ! escogioFoto()){
       parrafo.style.color='red';
-      parrafo.innerHTML='Comentario. Usa ' + limit + ' letras o menos.';    
+      parrafo.innerHTML='Comentario de ' + limit + ' letras o menos.';    
     }else if(faltan > 1){
       parrafo.style.color='green';
       parrafo.innerHTML= 'Puedes usar ' + faltan + ' letras mas.';

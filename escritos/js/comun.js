@@ -1,5 +1,5 @@
   function escogeDeporte(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
-    var botonArr = ["baloncesto-boton", "beisbol-boton", "futbol-boton", "volibol-boton"];
+    var botonArr = ["baloncesto-boton", "beisbol-boton", "futbol-soccer-boton", "volibol-boton"];
     var divArr = ["baloncesto-inputbox-div", "beisbol-inputbox-div", "futbol-soccer-inputbox-div", "volibol-inputbox-div"];
     for(index = 0; index < botonArr.length; index++){
       var boton = document.getElementById(botonArr[index]);

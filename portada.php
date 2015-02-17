@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>4 bolas Deporte Infantil en Puerto Rico</title>
+<title>4 bolas Deporte Infantil Y Juvenil en Puerto Rico Baloncesto Beisbol Volibol Futbol Soccer</title>
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/portada.css">
 
@@ -32,6 +32,7 @@
 <li><a href='portada.php'><img src="icon/beisbol.png" alt="puerto rico beisbol infantil"></a></li>
 <li><a href='portada.php'><img src="icon/futbol-soccer.png" alt="puerto rico futbol soccer infantil"></a></li>
 <li><a href='portada.php'><img src="icon/volibol.png" alt="puerto rico volibol infantil"></a></li>
+<li id="titulo-text">Infantil y Juvenil</li>
 </ul>
 </div><!--end of titulo--> 
 
@@ -77,7 +78,7 @@
 </div>
 
 <div  id="futbol-soccer-inputbox-div">
-<input type="radio" name="deporte" id="futbol-boton" value="futbol" onclick="escogeDeporte()">
+<input type="radio" name="deporte" id="futbol-soccer-boton" value="futbol" onclick="escogeDeporte()">
 <!-- <label for="futbol-boton">Futbol Infantil y Juvenil</label> -->
 <img src="icon/futbol-soccer.png" alt="puerto rico futbol soccer infantil" class="select-img">
 </div>
@@ -103,7 +104,7 @@
 <div id="links">
 <fieldset>
 <div class="link">
-<a href="ponlo.htm"><img src="icon/camera.png" alt="camera-icon"><span>Ponlo en 4bolas.</span></a>
+<a href="ponlo.htm"><img src="icon/camera.png" alt="camera-icon"><span>Ponlo en 4bolas.</span><img src="icon/pencil.png" alt="camera-icon"></a>
 </div>
 </fieldset>
 </div><!-- end of postea -->

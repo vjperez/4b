@@ -2,13 +2,13 @@
   border:0px solid #00ff00;   /* #828592 o #e8e8e8 */
   /* border-radius:5px; */ 
   width:100%;
-  margin:25px auto 0px auto;
+  margin:33px auto 0px auto;
 }
 .link{
   border-radius:5px;
   background:#d5d5d5;               /*#0591e8;   /*:#bfbfff;*/
   border:1px solid #bfbfbf;
-  width:200px;
+  width:300px;
   margin:0px auto;
 }
 .link img{
@@ -17,7 +17,8 @@
   vertical-align:middle;  
 }
 .link span{
-  vertical-align:middle;  
+  vertical-align:middle; 
+  margin:0px 10px;
 }
 .link a{
   text-decoration:none;
