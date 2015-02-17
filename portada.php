@@ -13,6 +13,7 @@
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1025px)' href='estilo/portada-1000.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1260px)' href='estilo/portada-1250.css'>
 -->
+<script type="text/javascript" src="escritos/js/comun.js"></script>
 <script type="text/javascript" src="escritos/js/portada.js"></script>
 </head>
 
@@ -30,7 +31,7 @@
 <li><a href='portada.php'><img src="icon/baloncesto.png" alt="puerto rico baloncesto infantil"></a></li>
 <li><a href='portada.php'><img src="icon/beisbol.png" alt="puerto rico beisbol infantil"></a></li>
 <li><a href='portada.php'><img src="icon/futbol-soccer.png" alt="puerto rico futbol soccer infantil"></a></li>
-<li><a href='portada.php'><img src="icon/volibol.png" alt="puerto rico volibol infanti"></a></li>
+<li><a href='portada.php'><img src="icon/volibol.png" alt="puerto rico volibol infantil"></a></li>
 </ul>
 </div><!--end of titulo--> 
 
@@ -39,52 +40,52 @@
 <!---------------------------------------------------------------------------------------------------->
 <div id="selecciona">
 <form action="#" method="POST">    
-<fieldset class="grupo">
+<fieldset>
 
 <div id="norte-inputbox-div">
-<input type="checkbox" name="area" id="norte-boton" value="norte" onclick="escogeArea()" checked>
+<input type="radio" name="area" id="norte-boton" value="norte" onclick="escogeArea()" checked>
 <label for="norte-boton">Norte</label>
 </div>
 
 <div  id="sur-inputbox-div">
-<input type="checkbox" name="area" id="sur-boton" value="sur" onclick="escogeArea()">
+<input type="radio" name="area" id="sur-boton" value="sur" onclick="escogeArea()">
 <label for="sur-boton">Sur</label>
 </div>
 
 <div  id="oeste-inputbox-div">
-<input type="checkbox" name="area" id="oeste-boton" value="oeste" onclick="escogeArea()">
+<input type="radio" name="area" id="oeste-boton" value="oeste" onclick="escogeArea()">
 <label for="oeste-boton">Oeste</label>
 </div>
 
 <div  id="este-inputbox-div">
-<input type="checkbox" name="area" id="este-boton" value="este" onclick="escogeArea()" checked>            
+<input type="radio" name="area" id="este-boton" value="este" onclick="escogeArea()" checked>            
 <label for="este-boton">Este</label>
 </div>
 </fieldset>
 
 <fieldset>
 <div id="baloncesto-inputbox-div">
-<input type="checkbox" name="deporte" id="baloncesto-boton" value="baloncesto" onclick="escogeDeporte()" checked>
+<input type="radio" name="deporte" id="baloncesto-boton" value="baloncesto" onclick="escogeDeporte()" checked>
 <!-- <label for="baloncesto-boton">Baloncesto Infantil y Juvenil</label> -->
-<img src="icon/baloncesto.png" alt="puerto rico baloncesto infantil" class="sportimg">
+<img src="icon/baloncesto.png" alt="puerto rico baloncesto infantil" class="select-img">
 </div>
 
 <div  id="beisbol-inputbox-div">
-<input type="checkbox" name="deporte" id="beisbol-boton" value="beisbol" onclick="escogeDeporte()">
+<input type="radio" name="deporte" id="beisbol-boton" value="beisbol" onclick="escogeDeporte()">
 <!-- <label for="beisbol-boton">Beisbol Infantil y Juvenil</label> -->
-<img src="icon/beisbol.png" alt="puerto rico beisbol infantil" class="sportimg">
+<img src="icon/beisbol.png" alt="puerto rico beisbol infantil" class="select-img">
 </div>
 
 <div  id="futbol-soccer-inputbox-div">
-<input type="checkbox" name="deporte" id="futbol-boton" value="futbol" onclick="escogeDeporte()">
+<input type="radio" name="deporte" id="futbol-boton" value="futbol" onclick="escogeDeporte()">
 <!-- <label for="futbol-boton">Futbol Infantil y Juvenil</label> -->
-<img src="icon/futbol-soccer.png" alt="puerto rico futbol soccer infantil" class="sportimg">
+<img src="icon/futbol-soccer.png" alt="puerto rico futbol soccer infantil" class="select-img">
 </div>
 
 <div  id="volibol-inputbox-div">
-<input type="checkbox" name="deporte" id="volibol-boton" value="voly" onclick="escogeDeporte()" checked>            
+<input type="radio" name="deporte" id="volibol-boton" value="voly" onclick="escogeDeporte()" checked>            
 <!-- <label for="volibol-boton">Volibol Infantil y Juvenil</label> -->
-<img src="icon/volibol.png" alt="puerto rico voleibol infantil" class="sportimg">
+<img src="icon/volibol.png" alt="puerto rico voleibol infantil" class="select-img">
 </div>
 
 </fieldset>
@@ -99,8 +100,8 @@
 
 
 <!---------------------------------------------------------------------------------------------------->
-<div id="postea">
-<fieldset class="grupo">
+<div id="links">
+<fieldset>
 <div class="link">
 <a href="ponlo.htm"><img src="icon/camera.png" alt="camera-icon"><span>Ponlo en 4bolas.</span></a>
 </div>

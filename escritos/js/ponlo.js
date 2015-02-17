@@ -1,21 +1,21 @@
   function coloreaFile(){
     var limit = 150;
-    var ladivision = document.getElementById('filechbx');
+    var ladivision = document.getElementById('file-select-div');
     
     if( ! escogioFoto() && noUsado() == limit){
       ladivision.style.backgroundColor='#d5d5d5';
       ladivision.style.border="1px solid #bfbfbf";
     }else if( ! escogioFoto() && noUsado() < limit){
-      ladivision.style.backgroundColor='green';
+      ladivision.style.backgroundColor='#7ec97b';
       ladivision.style.border="1px solid #bfbfbf";
     }else{
-      ladivision.style.backgroundColor='green'; //bfbfbf
+      ladivision.style.backgroundColor='#7ec97b'; 
       ladivision.style.border="1px solid #bfbfbf";
     }
   }
   function daFileFbk(){
     var limit = 150;  
-    var parrafo = document.getElementById('filefeedbk');
+    var parrafo = document.getElementById('file-feedback-paragraph');
     
     if( ! escogioFoto() && noUsado() == limit){
       parrafo.style.color='red';
@@ -25,20 +25,23 @@
       parrafo.innerHTML='Aun puedes escoger una foto.';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
     }else{
       parrafo.style.color='green';
-      parrafo.innerHTML='Ya escogiste la foto.';
+      parrafo.innerHTML='Ya escogiste la foto !';
     }    
   }
   
   
+  
+  
+  
     function coloreaDeporte(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
-    var botonArr = ["baloncestord", "futbolrd", "beisbolrd", "volyrd"];
-    var divArr = ["bktrdbx", "ftblrdbx", "bsblrdbx", "vllyrdbx"];
+    var botonArr = ["baloncesto-radio-boton", "futbol-soccer-radio-boton", "beisbol-radio-boton", "volibol-radio-boton"];
+    var divArr = ["baloncesto-radio-div", "futbol-soccer-radio-div", "beisbol-radio-div", "volibol-radio-div"];
     for(index = 0; index < botonArr.length; index++){
       var boton = document.getElementById(botonArr[index]);
       var ladivision = document.getElementById(divArr[index]);
       var labels = ladivision.getElementsByTagName('label');
       if(boton.checked == true){
-        ladivision.style.backgroundColor='green';
+        ladivision.style.backgroundColor='#7ec97b';
         ladivision.style.border="1px solid #bfbfbf";
         labels[0].style.color='#ffffff';
         labels[0].style.fontWeight='bold';
@@ -51,11 +54,11 @@
     }
   }
   function daDeporteFbk(){
-    var parrafo = document.getElementById('deportefeedbk');
-    var boton1 = document.getElementById('baloncestord');
-    var boton2 = document.getElementById('futbolrd');
-    var boton3 = document.getElementById('beisbolrd');
-    var boton4 = document.getElementById('volyrd');
+    var parrafo = document.getElementById('deporte-feedback-paragraph');
+    var boton1 = document.getElementById('baloncesto-radio-boton');
+    var boton2 = document.getElementById('futbol-soccer-radio-boton');
+    var boton3 = document.getElementById('beisbol-radio-boton');
+    var boton4 = document.getElementById('volibol-radio-boton');
     if(boton1.checked == true || boton2.checked == true || boton3.checked == true || boton4.checked == true){
       parrafo.style.color='green';
       parrafo.innerHTML='OK !';    
@@ -67,14 +70,14 @@
   
   
     function coloreaNivel(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
-    var botonArr = ["intrd", "islard", "localrd", "informalrd"];
-    var divArr = ["intrdbx", "islardbx", "localrdbx", "informalrdbx"];
+    var botonArr = ["norte-radio-boton", "sur-radio-boton", "oeste-radio-boton", "este-radio-boton"];
+    var divArr = ["norte-radio-div", "sur-radio-div", "oeste-radio-div", "este-radio-div"];
     for(index = 0; index < botonArr.length; index++){
       var boton = document.getElementById(botonArr[index]);
       var ladivision = document.getElementById(divArr[index]);
       var labels = ladivision.getElementsByTagName('label');
       if(boton.checked == true){
-        ladivision.style.backgroundColor='green';
+        ladivision.style.backgroundColor='#7ec97b';
         ladivision.style.border="1px solid #bfbfbf";
         labels[0].style.color='#ffffff';
         labels[0].style.fontWeight='bold';
@@ -87,11 +90,11 @@
     }
   }
   function daNivelFbk(){
-    var parrafo = document.getElementById('nivelfeedbk');
-    var boton1 = document.getElementById('intrd');
-    var boton2 = document.getElementById('islard');
-    var boton3 = document.getElementById('localrd');
-    var boton4 = document.getElementById('informalrd');
+    var parrafo = document.getElementById('area-feedback-paragraph');
+    var boton1 = document.getElementById('norte-radio-boton');
+    var boton2 = document.getElementById('sur-radio-boton');
+    var boton3 = document.getElementById('oeste-radio-boton');
+    var boton4 = document.getElementById('este-radio-boton');
     if(boton1.checked == true || boton2.checked == true || boton3.checked == true || boton4.checked == true){
       parrafo.style.color='green';
       parrafo.innerHTML='OK !';    
@@ -104,14 +107,14 @@
     //cambia color de divisiones
     function coloreaTags(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
     var limit = 40;
-    var botonArr = ["tag3in", "tag4in", "tag5in"];
-    var divArr = ["tag3inputbx", "tag4inputbx", "tag5inputbx"];
+    var botonArr = ["tag3-input", "tag4-input", "tag5-input"];
+    var divArr = ["tag3-input-div", "tag4-input-div", "tag5-input-div"];
     for(index = 0; index < botonArr.length; index++){
       var boton = document.getElementById(botonArr[index]);
       var ladivision = document.getElementById(divArr[index]);
       var labels = ladivision.getElementsByTagName('label'); /*  get the elements named 'label' from  "ladivision" NOT FROM document */
       if(boton.value != '' && boton.value.length <= limit){
-        ladivision.style.backgroundColor='green';
+        ladivision.style.backgroundColor='#7ec97b';
         ladivision.style.border="1px solid #bfbfbf";
         labels[0].style.color='#ffffff';
         labels[0].style.fontWeight='bold';
@@ -129,14 +132,14 @@
   //cambia color de letra de parrafo
   function daTagsFbk(){
     var limit = 40;
-    var usadas3 = document.getElementById('tag3in').value.length;
+    var usadas3 = document.getElementById('tag3-input').value.length;
     var faltan3 = limit - usadas3;       
-    var usadas4 = document.getElementById('tag4in').value.length;
+    var usadas4 = document.getElementById('tag4-input').value.length;
     var faltan4 = limit - usadas4;
-    var usadas5 = document.getElementById('tag5in').value.length;
+    var usadas5 = document.getElementById('tag5-input').value.length;
     var faltan5 = limit - usadas5;          
     var faltanArr = [faltan3, faltan4, faltan5];
-    var parrafoArr = ["tag3feedbk", "tag4feedbk", "tag5feedbk"];
+    var parrafoArr = ["tag3-feedback-paragraph", "tag4-feedback-paragraph", "tag5-feedback-paragraph"];
     for(index = 0; index < parrafoArr.length; index++){
       var parrafo = document.getElementById(parrafoArr[index]);
       if(faltanArr[index] == limit){
@@ -160,37 +163,37 @@
   
   
     function bregaConSubmitButton(){
-    var feedbackColor0 = document.getElementById('filefeedbk').style.color;
-    var feedbackColor1 = document.getElementById('deportefeedbk').style.color;
-    var feedbackColor2 = document.getElementById('nivelfeedbk').style.color;
-    var feedbackColor3 = document.getElementById('tag3feedbk').style.color;
-    var feedbackColor4 = document.getElementById('tag4feedbk').style.color;
-    var feedbackColor5 = document.getElementById('tag5feedbk').style.color;
-    var feedbackColor6 = document.getElementById('comentariofeedbk').style.color;
+    var feedbackColor0 = document.getElementById('file-feedback-paragraph').style.color;
+    var feedbackColor1 = document.getElementById('deporte-feedback-paragraph').style.color;
+    var feedbackColor2 = document.getElementById('area-feedback-paragraph').style.color;
+    var feedbackColor3 = document.getElementById('tag3-feedback-paragraph').style.color;
+    var feedbackColor4 = document.getElementById('tag4-feedback-paragraph').style.color;
+    var feedbackColor5 = document.getElementById('tag5-feedback-paragraph').style.color;
+    var feedbackColor6 = document.getElementById('comentario-feedback-paragraph').style.color;
     //console.log("parrafos  = " + parrafo0 + " " + parrafo1 + " " + parrafo2 + " " + parrafo3);
     if(feedbackColor4 == 'green' && feedbackColor5 == 'green' && feedbackColor6 == 'green' &&  
        feedbackColor3 == 'green' && feedbackColor2 == 'green' && feedbackColor1 == 'green' && feedbackColor0 == 'green'){
-      document.getElementById('postbtn').disabled=false;
-      document.getElementById('postbtn').style.color='#ffffff';
-      document.getElementById('postbtn').style.fontWeight='bold';
-      document.getElementById('postbtn').style.backgroundColor='green';
-      document.getElementById('postbtn').style.cursor='pointer';
+      document.getElementById('submit-boton').disabled=false;
+      document.getElementById('submit-boton').style.color='#ffffff';
+      document.getElementById('submit-boton').style.fontWeight='bold';
+      document.getElementById('submit-boton').style.backgroundColor='#7ec97b';
+      document.getElementById('submit-boton').style.cursor='pointer';
     }else{
-      document.getElementById('postbtn').disabled=true;
-      document.getElementById('postbtn').style.color='#000000';
-      document.getElementById('postbtn').style.fontWeight='normal';
-      document.getElementById('postbtn').style.backgroundColor='#d5d5d5';
-      document.getElementById('postbtn').style.cursor='default';   
+      document.getElementById('submit-boton').disabled=true;
+      document.getElementById('submit-boton').style.color='#000000';
+      document.getElementById('submit-boton').style.fontWeight='normal';
+      document.getElementById('submit-boton').style.backgroundColor='#d5d5d5';
+      document.getElementById('submit-boton').style.cursor='default';   
     }
   }
 
   function noUsado(){
     var limit = 150;
-    var usadas = document.getElementById('comentarioarea').value.length;
+    var usadas = document.getElementById('comentario-area').value.length;
     return limit - usadas;        
   } 
   function escogioFoto(){
-    var filechboton = document.getElementById('filechbt');  
+    var filechboton = document.getElementById('file-choose-boton');  
     return filechboton.value != '';  
   }
 
@@ -198,14 +201,14 @@
   //cambia color de divisiones
   function coloreaComentario(){
     var limit = 150;  
-    var ladivision = document.getElementById('comentariobx');
+    var ladivision = document.getElementById('comentario-div');
 
     var faltan = noUsado();    
     if(faltan < 0 || ( ! escogioFoto() && faltan == limit) ){
       ladivision.style.backgroundColor='#d5d5d5'; //bfbfbf
       ladivision.style.border="1px solid #bfbfbf";
     }else{
-      ladivision.style.backgroundColor='green';
+      ladivision.style.backgroundColor='#7ec97b';
       ladivision.style.border="1px solid #bfbfbf";
     }
   }
@@ -213,7 +216,7 @@
   function daComentarioFbk(){
     var limit = 150;  
     /* ahora brega con el parrafo y da feedback pq ya se cuantos faltan */
-    var parrafo = document.getElementById('comentariofeedbk');
+    var parrafo = document.getElementById('comentario-feedback-paragraph');
     
     var faltan = noUsado(); 
     if(faltan == limit && escogioFoto()){

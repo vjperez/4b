@@ -1,38 +1,38 @@
-#bktrdbx, #bsblrdbx, #vllyrdbx, #ftblrdbx{
+#baloncesto-radio-div, #beisbol-radio-div, #volibol-radio-div, #futbol-soccer-radio-div{
   border-radius:5px;
 }
 
-#filechbx,
-#intrdbx, #islardbx, #localrdbx, #informalrdbx, /*  las img en esta div no me agrandan las divs a 40px, so necesito padding ....... o una bandera de pr de 40px */
-#tag3inputbx, #tag4inputbx, #tag5inputbx,  /* esta div tiene height default minimo, no 40px, so necesito padding */
-#comentariobx{
+#file-select-div,
+#norte-radio-div, #sur-radio-div, #oeste-radio-div, #este-radio-div, /*  las img en esta div no me agrandan las divs a 40px, so necesito padding ....... o una bandera de pr de 40px */
+#tag3-input-div, #tag4-input-div, #tag5-input-div,  /* esta div tiene height default minimo, no 40px, so necesito padding */
+#comentario-area{
   border-radius:5px;
-  padding:10px 0px;
+  padding:0px 0px;
 }
 
 
-#bktrdbx img,   #bsblrdbx img,   #vllyrdbx img,   #ftblrdbx img{
+#baloncesto-radio-div img,   #beisbol-radio-div img,   #volibol-radio-div img,   #futbol-soccer-radio-div img{
   vertical-align:middle;
-  width:40px; 
-  height:40px;
+  width:30px; 
+  height:30px;
 }
-#intrdbx img,   #islardbx img,   #localrdbx img,   #informalrdbx img{
+#norte-radio-div img,   #sur-radio-div img,   #oeste-radio-div img,   #este-radio-div img{
   vertical-align:middle;
 }
-#bktrdbx label, #bsblrdbx label, #vllyrdbx label, #ftblrdbx label,
-#intrdbx label, #islardbx label, #localrdbx label, #informalrdbx label,
-#tag3inputbx label, #tag4inputbx label, #tag5inputbx label{
+#baloncesto-radio-div label, #beisbol-radio-div label, #volibol-radio-div label, #futbol-soccer-radio-div label,
+#norte-radio-div label, #sur-radio-div label, #oeste-radio-div label, #este-radio-div label,
+#tag3-input-div label, #tag4-input-div label, #tag5-input-div label{
   /*font-weight:normal;*/
   /*color:#ffffff;*/  
   cursor:pointer;  
 }
-#filechbx input,
-#bktrdbx input,  #bsblrdbx input, #vllyrdbx input, #ftblrdbx input,
-#intrdbx input,  #islardbx input, #localrdbx input, #informalrdbx input,
-#tag3inputbx input, #tag4inputbx input, #tag5inputbx input{
+#file-select-div input,
+#baloncesto-radio-div input,  #beisbol-radio-div input, #volibol-radio-div input, #futbol-soccer-radio-div input,
+#norte-radio-div input,  #sur-radio-div input, #oeste-radio-div input, #este-radio-div input,
+#tag3-input-div input, #tag4-input-div input, #tag5-input-div input{
   cursor:pointer; 
 }
-#postbtn{
+#submit-boton{
   height:40px;
   width:120px;
  /* background:#23a09a  /*#5fcf80;*/
@@ -43,7 +43,7 @@
   /*color:#00ff00;*/
 }
 /*
-#postbtn:disabled{
+#submit-boton:disabled{
   height:40px;
   width:120px;
   /* background:#23a09a  /*#5fcf80;
@@ -54,7 +54,7 @@
   color:#ff0000;
 }
 
-#postbtn:hover{
+#submit-boton:hover{
   color:#ff0000;
 }
 */
