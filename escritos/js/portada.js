@@ -1,5 +1,3 @@
-
-  
 //columnas en entry[index]
 // 0  alto     1 fecha    2 deporte foto path    3 nivel exp     4 tag3     5 tag4     6 tag5     7 comentario     8 fotopath
 function putHtml(elHtml){  
