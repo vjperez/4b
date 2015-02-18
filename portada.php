@@ -104,7 +104,7 @@
 <div id="links">
 <fieldset>
 <div class="link">
-<a href="ponlo.htm"><img src="icon/camera.png" alt="camera-icon"><span>Ponlo en 4bolas.</span><img src="icon/pencil.png" alt="camera-icon"></a>
+<a href="ponlo.htm"><img src="icon/camera.png" alt="camera-icon"><span>Ponlo en 4bolas.</span><img src="icon/pencil.png" alt="pencil-icon"></a>
 </div>
 </fieldset>
 </div><!-- end of postea -->
