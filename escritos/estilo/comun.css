@@ -3,7 +3,8 @@
     padding: 0px;
 }
 body{
-    background:#f5f5dc; 
+   background:#f3efe3; 
+  /* background:#f5f5dc;  */
   /* background:#ffffcc;  */
   /* background: url(../../fondo/fondo.jpg); */ 
   /* background: url(../foto/fondo02.jpg); */
@@ -66,7 +67,8 @@ body{
   display:block;
   font-weight: bold;
   font-size:1.5em;
-  color:#039dc3;
+  /* color:#039dc3; */
+  color:#199eb8;
     }
 fieldset{
   border:0px solid #ff0000;    /* #bfbfbf; /* #828592 o #e8e8e8 */
