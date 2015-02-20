@@ -11,8 +11,8 @@ $entry = array();
 //columnas en foto   
 //id = foto[0]     ancho = foto[1]     alto = foto[2]   tipo = foto[3]     fotoentradaid = foto[4]
 require_once 'escritos/php/config/datosConfig.php';
-require_once 'escritos/php/config/conecta.php';
-require_once 'escritos/php/muestralo_masajeout.php';
+require_once 'config/conecta.php';
+require_once 'muestralo_masajeout.php';
 
 
 
