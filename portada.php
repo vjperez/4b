@@ -1,3 +1,4 @@
+<?php require_once 'escritos/php/sacalo/sacalo.php'; ?>
 <!doctype html>
 <html>
 <head>
@@ -107,7 +108,7 @@
 <a href="ponlo.htm"><img src="icon/camera.png" alt="camera-icon"><span>Ponlo en 4bolas.</span><img src="icon/pencil.png" alt="pencil-icon"></a>
 </div>
 </fieldset>
-</div><!-- end of postea -->
+</div><!-- end of links-->
 
 
 
@@ -116,8 +117,8 @@
 <div class="fotoentradas" id="uno"></div>
 <div class="fotoentradas" id="dos"></div>
 <div class="fotoentradas" id="tres"></div>
+
 <script type="text/javascript">
-  <?php require_once 'escritos/php/portada.php'; ?>
   var entry  = <?php echo json_encode($entry); ?>;
   var mqSmall = window.matchMedia("screen and (max-width: 700px)");
   var mqMedium = window.matchMedia("screen and (min-width: 701px) and (max-width: 1200px)");

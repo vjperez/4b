@@ -12,11 +12,11 @@
   echo '<p>Usando base de datos, ' . DB_NOMBRE . '.</p>';
   */
   $cxn = mysqli_connect(DB_HOST, DB_USUARIO, DB_PASSWORD, DB_NOMBRE);
-  if(mysqli_connect_errno()){
+  if(! $cxn){
     $mensaje1 = 'Error logueando a base de datos ' . DB_NOMBRE . '.';
-    $mensaje2 = 'conecta.php: ' . mysqli_connect_error(); 
-    header('Location:error.php?error1=' . $mensaje1 . '&error2=' . $mensaje2);
+    $mensaje2 =  HOST_FS_ROOT . 'escritos/php/config/conecta.php: ' . mysqli_connect_error(); 
+    brega_error($mensaje1, $mensaje2);
   }else{
-    //  echo '<p>' . DB_USUARIO . ' esta logueado en MySQL, usando base de datos ' . DB_NOMBRE . '.</p>';
+    echo '<p>' . DB_USUARIO . ' esta logueado en MySQL, usando base de datos ' . DB_NOMBRE . '.</p>';
   }
 ?>

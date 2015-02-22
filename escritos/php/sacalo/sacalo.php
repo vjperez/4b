@@ -11,20 +11,16 @@ $entry = array();
 //columnas en foto   
 //id = foto[0]     ancho = foto[1]     alto = foto[2]   tipo = foto[3]     fotoentradaid = foto[4]
 require_once 'escritos/php/config/datosConfig.php';
-require_once 'config/conecta.php';
-require_once 'muestralo_masajeout.php';
-
-
+require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
+require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo_masajeout.php';
 
 $elQuery = "SELECT * FROM fotoentrada;";
 if(isset($_REQUEST['x'])) { $var = $_REQUEST['x'];   $elQuery = "SELECT * FROM fotoentrada WHERE deporte=$var;"; }
 if(isset($_REQUEST['y'])) { $var = $_REQUEST['y'];   $elQuery = "SELECT * FROM fotoentrada WHERE nivel=$var;"; }
 
-
-
 if( ! $entradasarray = mysqli_query($cxn, $elQuery) ){
-  $mensaje1 = 'No tengo arreglo de entradas.';
-  $mensaje2 = 'portada.php: ' . mysqli_error($cxn);    
+  $mensaje1 = 'No entries.';
+  $mensaje2 = 'No tengo arreglo de entradas.' . '<br>' . HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php: ' . mysqli_error($cxn);    
   mysqli_close($cxn);  
   brega_error($mensaje1,$mensaje2);  
 }
