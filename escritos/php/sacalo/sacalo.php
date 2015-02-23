@@ -14,9 +14,9 @@ require_once 'escritos/php/config/datosConfig.php';
 require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
 require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo_masajeout.php';
 
-$elQuery = "SELECT * FROM fotoentrada;";
-if(isset($_REQUEST['x'])) { $var = $_REQUEST['x'];   $elQuery = "SELECT * FROM fotoentrada WHERE deporte=$var;"; }
-if(isset($_REQUEST['y'])) { $var = $_REQUEST['y'];   $elQuery = "SELECT * FROM fotoentrada WHERE nivel=$var;"; }
+$elQuery = "SELECT * FROM fotoentrada WHERE ver=1;";
+if(isset($_REQUEST['x'])) { $var = $_REQUEST['x'];   $elQuery = "SELECT * FROM fotoentrada WHERE ver=1 && deporte=$var;"; }
+if(isset($_REQUEST['y'])) { $var = $_REQUEST['y'];   $elQuery = "SELECT * FROM fotoentrada WHERE ver=1 && area=$var;"; }
 
 if( ! $entradasarray = mysqli_query($cxn, $elQuery) ){
   $mensaje1 = 'No entries.';

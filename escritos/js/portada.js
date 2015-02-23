@@ -7,7 +7,7 @@ function putHtml(elHtml){
       elHtml[index%showing] += "<div class='hora'>" + entry[index][1] + "</div>";
       if(entry[index][0] == 0 || entry[index][8] == "") {
       }else{
-          elHtml[index%showing] += "<a href='escritos/php/muestralo.php?id=" + entry[index][8].substring(0, entry[index][8].indexOf(".")) + "'><img src='loaded/" + entry[index][8] +  "' alt='foto' class='entry-main-img'></a>";
+          elHtml[index%showing] += "<a href='escritos/php/sacalo/muestralo.php?id=" + entry[index][8].substring(0, entry[index][8].indexOf(".")) + "'><img src='loaded/" + entry[index][8] +  "' alt='foto' class='entry-main-img'></a>";
       }
       elHtml[index%showing] += "<div class='tag12'>";
       elHtml[index%showing] += "<a href='portada.php?x=" + getdeporte(entry[index][2]) + "'><img src='icon/" + entry[index][2]  + "' alt='foto' class='entry-sport-img'></a><a href='portada.php?y=" + getnivel(entry[index][3]) + "'><span>" + entry[index][3]  + "</span></a>";

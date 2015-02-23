@@ -13,16 +13,15 @@
     'oeste' => 2,
     'este' => 3
   );
-  
-         
+  //usado para producir texto de acuerdo a los errores subiendo foto
   $errorLoadingFile = array(
     1 => 'Foto es mas grande de lo que dice php.ini.',
     2 => 'Foto es mas grande de lo que dice ponlo.htm.',
     3 => 'Foto subida parcialmente.',
     4 => 'No escogiste ninguna foto.'
   );
-  
-  
+  //usado para contruir el nombre de la foto de acuerdo a su tipo y moverla con move_uploaded_file() en ponlo.php
+  //el tipo en forma numerica sale de exif_imagetype() en ponlo.php
   $fotoTipo = array(
     1 => "gif",
     2 => "jpg",
