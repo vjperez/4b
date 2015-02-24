@@ -22,6 +22,7 @@
   );
   //usado para contruir el nombre de la foto de acuerdo a su tipo y moverla con move_uploaded_file() en ponlo.php
   //el tipo en forma numerica sale de exif_imagetype() en ponlo.php
+  //Tambien definido en masajeout (bad?)
   $fotoTipo = array(
     1 => "gif",
     2 => "jpg",
