@@ -23,20 +23,19 @@
     }
     return $exp;
   }
- function getTimeExpression($dayDiff, $timeString){
+ function getTimeExpression($minuteDiff, $timeString){
 	$timestamp = strtotime($timeString);
-	$diffHoras = (date("H") - date("H", $timestamp));
-	if ($diffHoras < 0) $diffHoras += 24; 
-    if($dayDiff < 1){
-      //$exp = 'Hace menos de 24 horas.';
-      if ($diffHoras == 0){
-	    $exp = 'Hece menos de 1 hora.';	  
-	  }else{
-        $exp = 'Hace ' . $diffHoras . ' hora' . ($diffHoras > 1?'s':'') . '.';
-	  }
-    }else if($dayDiff < 7){
-      //$exp =  'Hace menos de ' . ($dayDiff + 1) . ' dias.';
-      $exp = 'Hace ' . $dayDiff . ' dia'. ($dayDiff > 1?'s':'') . ($diffHoras != 0?' y ' . ($diffHoras . ' hora' . ($diffHoras > 1?'s':'')):'') . '.';
+	//$diffHoras = (date("H") - date("H", $timestamp));
+	//if ($diffHoras < 0) $diffHoras += 24; 
+    if($minuteDiff < 60){
+	  if ($minuteDiff == 1 || $minuteDiff == 0) $minuteDiff = 2;	
+      $exp = 'Hace ' . $minuteDiff . ' minutos.';	  
+	}else if ($minuteDiff < (24 * 60) ){  
+		$horas = (int)($minuteDiff / 60);    $minutes = $minuteDiff % 60;
+        $exp = 'Hace ' . $horas . ' hora' . ($horas > 1?'s':'') . ($minutes == 0?'':' y ' . $minutes . ' minuto' . ($minutes > 1?'s':'')) . '.';
+    }else if($minuteDiff < (7 * 24 * 60) ){
+	    $dias = (int)($minuteDiff / (24 * 60));    $horas = ((int)($minuteDiff / 60)) - (24 * $dias);	
+        $exp = 'Hace ' . $dias . ' dia' . ($dias > 1?'s':'') . ($horas == 0?'':' y ' . $horas . ' hora' . ($horas > 1?'s':'')) . '.';
     }else{
 	  $exp = date("F j, Y", $timestamp) . '.';	
 	}

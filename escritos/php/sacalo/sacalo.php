@@ -17,15 +17,19 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo_masajeout.php';
 if(isset($_REQUEST['deporte'])) { 
 	$var = $_REQUEST['deporte']; 
 	$var = $var % 4;    
-	$elQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(DAY, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
+	$elQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
 	FROM fotoentrada WHERE ver=1 && deporte=$var;"; 
 }else if(isset($_REQUEST['area'])) { 
 	$var = $_REQUEST['area'];
 	$var = $var % 4;   
-	$elQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(DAY, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
+	$elQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
 	FROM fotoentrada WHERE ver=1 && area=$var;"; 
+}else if(isset($_REQUEST['rotulo'])) { 
+	$var = $_REQUEST['rotulo'];
+	$elQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
+	FROM fotoentrada WHERE ver=1 && (tag3 like '%$var%' || tag4 like '%$var%' || tag5 like '%$var%');"; 
 }else{
-    $elQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(DAY, tiempo, CURRENT_TIMESTAMP), comentario, tiempo  
+    $elQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo  
 	FROM fotoentrada WHERE ver=1;";	
 }
 

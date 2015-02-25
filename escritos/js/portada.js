@@ -13,9 +13,9 @@ function putHtml(elHtml){
       elHtml[index%showing] += "<a href='portada.php?deporte=" + getDeporte(entry[index][2]) + "'><img src='icon/" + entry[index][2]  + "' alt='foto' class='entry-sport-img'></a><a href='portada.php?area=" + getArea(entry[index][3]) + "'><span>" + entry[index][3]  + "</span></a>";
       //if(entry[index][3].indexOf("nternacional") > -1) elHtml[index%showing] += "<img src='icon/pr.png' alt='foto' class='entry-country-img'>";
       elHtml[index%showing] += "</div>";
-      elHtml[index%showing] += "<div class='tag34'><a href='#'>" + entry[index][4] + "</a></div>";
-      elHtml[index%showing] += "<div class='tag34'><a href='#'>" + entry[index][5] + "</a></div>";
-      elHtml[index%showing] += "<div class='tag5'> <a href='#'>" + entry[index][6] + "</a></div>";
+      elHtml[index%showing] += "<div class='tag34'><a href='portada.php?rotulo=" + entry[index][4] + "'>" + entry[index][4] + "</a></div>";
+      elHtml[index%showing] += "<div class='tag34'><a href='portada.php?rotulo=" + entry[index][5] + "'>" + entry[index][5] + "</a></div>";
+      elHtml[index%showing] += "<div class='tag5'> <a href='portada.php?rotulo=" + entry[index][6] + "'>" + entry[index][6] + "</a></div>";
       if(entry[index][7] == ""){
       }else{
          elHtml[index%showing] += "<div class='comentario'><p>" + entry[index][7] + "</p></div>";
