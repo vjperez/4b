@@ -7,10 +7,11 @@ function putHtml(elHtml){
       elHtml[index%showing] += "<div class='hora'>" + entry[index][1] + "</div>";
       if(entry[index][0] == 0 || entry[index][8] == "") {
       }else{
-          elHtml[index%showing] += "<a href='escritos/php/sacalo/muestralo.php?entry=" + entry[index][8].substring(0, entry[index][8].indexOf(".")) + "'><img src='loaded/" + entry[index][8] +  "' alt='foto' class='entry-main-img'></a>";
+          //elHtml[index%showing] += "<a href='escritos/php/sacalo/muestralo.php?entry=" + entry[index][8].substring(0, entry[index][8].indexOf(".")) + "'><img src='loaded/" + entry[index][8] +  "' alt='foto' class='entry-main-img'></a>";
+          elHtml[index%showing] += "<img src='loaded/" + entry[index][8] +  "' alt='baloncesto beisbol volibol futbol soccer infantil juvenil puerto rico' class='entry-main-img'>";
       }
       elHtml[index%showing] += "<div class='tag12'>";
-      elHtml[index%showing] += "<a href='portada.php?deporte=" + getDeporte(entry[index][2]) + "'><img src='icon/" + entry[index][2]  + "' alt='foto' class='entry-sport-img'></a><a href='portada.php?area=" + getArea(entry[index][3]) + "'><span>" + entry[index][3]  + "</span></a>";
+      elHtml[index%showing] += "<a href='portada.php?q=" + "4" + getDeporte(entry[index][2]) + "4" + getArea(entry[index][3]) + "4" + "'><img src='icon/" + entry[index][2]  + "' alt='foto' class='entry-sport-img'></a><a href='portada.php?q=" + "8" + getArea(entry[index][3]) + "8" + getDeporte(entry[index][2]) + "8" + "'><span>" + entry[index][3]  + "</span></a>";
       //if(entry[index][3].indexOf("nternacional") > -1) elHtml[index%showing] += "<img src='icon/pr.png' alt='foto' class='entry-country-img'>";
       elHtml[index%showing] += "</div>";
       elHtml[index%showing] += "<div class='tag34'><a href='portada.php?rotulo=" + entry[index][4] + "'>" + entry[index][4] + "</a></div>";

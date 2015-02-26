@@ -1,3 +1,62 @@
+#selecciona{
+  border:2px solid #bfbfbf;   /* #828592 o #e8e8e8 */
+  border-radius:5px;
+  width:98%;
+  margin:100px auto 0px auto;
+}
+.select-img{
+ width:30px;
+ height:30px;
+}
+
+
+#baloncesto-inputbox-div, #beisbol-inputbox-div,
+#volibol-inputbox-div, #futbol-soccer-inputbox-div,
+#norte-inputbox-div, #sur-inputbox-div,
+#oeste-inputbox-div, #este-inputbox-div{
+  width:16%;
+  margin:5px 4% 5px 4%;
+  padding:4px 0px;
+  display:inline;
+  float:left; 
+}
+
+
+#baloncesto-inputbox-div img, #beisbol-inputbox-div img, #volibol-inputbox-div img, #futbol-soccer-inputbox-div img, 
+#baloncesto-inputbox-div input, #beisbol-inputbox-div input, #volibol-inputbox-div input, #futbol-soccer-inputbox-div input
+/* #baloncesto-inputbox-div label, #beisbol-boton label, #volibol-boton label, #futbol-boton label */
+{
+  vertical-align:middle;
+}
+#baloncesto-inputbox-div, #beisbol-inputbox-div, #volibol-inputbox-div, #futbol-soccer-inputbox-div{
+  border-radius:5px; 
+}
+#norte-inputbox-div, #sur-inputbox-div, #oeste-inputbox-div, #este-inputbox-div{
+  border-radius:5px; 
+}  
+/* #baloncesto-inputbox-div label, #beisbol-inputbox-div label, #volibol-inputbox-div label, #futbol-soccer-inputbox-div label{
+  cursor:pointer;  
+} */
+#baloncesto-inputbox-div input,  #beisbol-inputbox-div input, #volibol-inputbox-div input, #futbol-soccer-inputbox-div input{
+  cursor:pointer; 
+}
+#norte-inputbox-div input,  #sur-inputbox-div input, #oeste-inputbox-div input, #este-inputbox-div input{
+  cursor:pointer; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #file-Y-comentario{
   border:0px solid #00ff00;   /* #828592 o #e8e8e8 */
   width:100%;
@@ -17,10 +76,10 @@
 }
 
 #file-select-div,
-#tag3-input-div, #tag4-input-div, #tag5-input-div,  /* esta div tiene height default minimo, no 40px, so necesito padding */
+#tag3-input-div, #tag4-input-div, #tag5-input-div,
 #comentario-div{
   border-radius:5px;
-  padding:4px 0px;
+  padding:10px 0px;
 }
 
 #file-select-div input,
@@ -55,5 +114,5 @@
 }
 */
 #deporte-feedback-paragraph, #tag4-feedback-paragraph, #tag5-feedback-paragraph{
-  margin-top:15px;   
+  margin-top:30px;   
 }

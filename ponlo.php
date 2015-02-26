@@ -13,7 +13,7 @@
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1025px)' href='estilo/portada-1000.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1260px)' href='estilo/portada-1250.css'>
 -->
-<script type="text/javascript" src="escritos/js/comun.js"></script>
+
 <script type="text/javascript" src="escritos/js/ponlo.js"></script>
 </head>
 
@@ -117,7 +117,7 @@
 <div class="">
 <p id="comentario-feedback-paragraph"><!--   inserted by js   --></p>
 </div>
-<div class="" id="comentario-div">
+<div id="comentario-div">
 <textarea rows="4" cols="30"  id="comentario-area" name="comentario-area" onkeyup="coloreaComentario();daComentarioFbk();coloreaFile();daFileFbk();bregaConSubmitButton();"></textarea>
 </div>
 <script type="text/javascript">

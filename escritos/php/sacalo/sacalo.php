@@ -55,7 +55,8 @@ while($row = mysqli_fetch_array($entradasarray, MYSQLI_NUM)){
   }else{
     $entry[$tal][0] = 0;  
     $entry[$tal][8] = '';
-  }    
+  }
+  mysqli_free_result($fotosarray);    
   $entry[$tal][1] = getTimeExpression($row[6], $row[8]);
   $entry[$tal][2] = getDeporteFotopath($row[1]);
   $entry[$tal][3] = getAreaExpression($row[2]); 
@@ -67,7 +68,9 @@ while($row = mysqli_fetch_array($entradasarray, MYSQLI_NUM)){
            
   $tal++;
 }// while rows
-mysqli_free_result($fotosarray);
+
+//si el size entradasarray == 0; o sea no tienes rows; entonces alguien hizo un search o alguien cambio el url a mano
+
 mysqli_free_result($entradasarray);
 mysqli_close($cxn);
 ?> 

@@ -25,16 +25,7 @@ body{
   width:100%;
   margin:25px auto 0px auto;
 }
-#selecciona{
-  border:2px solid #bfbfbf;   /* #828592 o #e8e8e8 */
-  border-radius:5px;
-  width:98%;
-  margin:100px auto 0px auto;
-}
-.select-img{
- width:30px;
- height:30px;
-}
+
 
 
 
@@ -68,7 +59,7 @@ body{
   font-weight: bold;
   font-size:1.5em;
   /* color:#039dc3; */
-  color:#199eb8;
+  color:#000000;
     }
 fieldset{
   border:0px solid #ff0000;    /* #bfbfbf; /* #828592 o #e8e8e8 */
@@ -76,39 +67,7 @@ fieldset{
   margin:0px auto;
 }
 
-#baloncesto-inputbox-div, #beisbol-inputbox-div,
-#volibol-inputbox-div, #futbol-soccer-inputbox-div,
-#norte-inputbox-div, #sur-inputbox-div,
-#oeste-inputbox-div, #este-inputbox-div{
-  width:16%;
-  margin:5px 4% 5px 4%;
-  padding:4px 0px;
-  display:inline;
-  float:left; 
-}
 
-
-#baloncesto-inputbox-div img, #beisbol-inputbox-div img, #volibol-inputbox-div img, #futbol-soccer-inputbox-div img, 
-#baloncesto-inputbox-div input, #beisbol-inputbox-div input, #volibol-inputbox-div input, #futbol-soccer-inputbox-div input
-/* #baloncesto-inputbox-div label, #beisbol-boton label, #volibol-boton label, #futbol-boton label */
-{
-  vertical-align:middle;
-}
-#baloncesto-inputbox-div, #beisbol-inputbox-div, #volibol-inputbox-div, #futbol-soccer-inputbox-div{
-  border-radius:5px; 
-}
-#norte-inputbox-div, #sur-inputbox-div, #oeste-inputbox-div, #este-inputbox-div{
-  border-radius:5px; 
-}  
-/* #baloncesto-inputbox-div label, #beisbol-inputbox-div label, #volibol-inputbox-div label, #futbol-soccer-inputbox-div label{
-  cursor:pointer;  
-} */
-#baloncesto-inputbox-div input,  #beisbol-inputbox-div input, #volibol-inputbox-div input, #futbol-soccer-inputbox-div input{
-  cursor:pointer; 
-}
-#norte-inputbox-div input,  #sur-inputbox-div input, #oeste-inputbox-div input, #este-inputbox-div input{
-  cursor:pointer; 
-}
 
 .warning{
   color:#ff0000;    
