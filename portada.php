@@ -57,7 +57,10 @@
 <div class="fotoentradas" id="tres"></div>
 
 <script type="text/javascript">
-  var entry  = <?php echo json_encode($entry); ?>;
+  var baseEntries  = <?php echo json_encode($baseEntries); ?>;
+  var extraEntries  = <?php echo json_encode($extraEntries); ?>;
+  var entries = baseEntries.concat(extraEntries);
+  
   var mqSmall = window.matchMedia("screen and (max-width: 700px)");
   var mqMedium = window.matchMedia("screen and (min-width: 701px) and (max-width: 1200px)");
   var mqBig = window.matchMedia("screen and (min-width: 1201px)");  
