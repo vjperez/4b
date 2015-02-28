@@ -14,9 +14,9 @@ function putHtml(elHtml, entry){
       elHtml[index%showing] += "<a href='portada.php?q=" + "2" + getDeporte(entry[index][2]) + "2" + getArea(entry[index][3]) + "2" + "'><img src='icon/" + entry[index][2]  + "' alt='foto' class='entry-sport-img'></a><a href='portada.php?q=" + "4" + getDeporte(entry[index][2]) + "4" + getArea(entry[index][3]) + "4" + "'><span>" + entry[index][3]  + "</span></a>";
       //if(entry[index][3].indexOf("nternacional") > -1) elHtml[index%showing] += "<img src='icon/pr.png' alt='foto' class='entry-country-img'>";
       elHtml[index%showing] += "</div>";
-      elHtml[index%showing] += "<div class='tag34'><a href='portada.php?q=" + "8" + getDeporte(entry[index][2]) + "8" + getArea(entry[index][3]) + "8" + explota(entry[index][4]) + "'>" + entry[index][4] + "</a></div>";
-      elHtml[index%showing] += "<div class='tag34'><a href='portada.php?q=" + "8" + getDeporte(entry[index][2]) + "8" + getArea(entry[index][3]) + "8" + explota(entry[index][5]) + "'>" + entry[index][5] + "</a></div>";
-      elHtml[index%showing] += "<div class='tag5'> <a href='portada.php?q=" + "8" + getDeporte(entry[index][2]) + "8" + getArea(entry[index][3]) + "8" + explota(entry[index][6]) + "'>" + entry[index][6] + "</a></div>";
+      elHtml[index%showing] += "<div class='tag34'><a href='portada.php?q=" + "8" + getDeporte(entry[index][2]) + "8" + getArea(entry[index][3]) + "8" + ":" + entry[index][4] + explota(entry[index][4]) + "'>" + entry[index][4] + "</a></div>";
+      elHtml[index%showing] += "<div class='tag34'><a href='portada.php?q=" + "8" + getDeporte(entry[index][2]) + "8" + getArea(entry[index][3]) + "8" + ":" + entry[index][5] + explota(entry[index][5]) + "'>" + entry[index][5] + "</a></div>";
+      elHtml[index%showing] += "<div class='tag5'> <a href='portada.php?q=" + "8" + getDeporte(entry[index][2]) + "8" + getArea(entry[index][3]) + "8" + ":" + entry[index][6] + explota(entry[index][6]) + "'>" + entry[index][6] + "</a></div>";
       if(entry[index][7] == ""){
       }else{
          elHtml[index%showing] += "<div class='comentario'><p>" + entry[index][7] + "</p></div>";

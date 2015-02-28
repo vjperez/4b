@@ -44,13 +44,13 @@ function queryFormat($q){
   if ($test2 && $test3) { ; }
   else return $result; // false
   
-  $index = 1;
+  $index = 2; // index 0 son los numeros y ya los chequee arriba; index 1 ignoralo pq ese es el rorulo literal; chequeando solo los rotulos explotados q son los q estan del index 2 pa lante
   while( $index < count($arreglo) ){
     $rotulo = $arreglo[$index];
     if (ctype_alnum($rotulo)) { //Returns TRUE if every character in text is either a letter or a digit, FALSE otherwise.
       ; 
     }else{
-      return $result; // false
+      return $result; // false  si los rotulos explotados
     }
     $index++;
   }
