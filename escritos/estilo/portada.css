@@ -6,23 +6,25 @@
 }
 .link{
   border-radius:5px;
-  background:#f3efe3;     /*#d5d5d5;               /*#0591e8;   /*:#bfbfff;*/
-  border:1px solid #bfbfbf;
-  width:300px;
+  background:#ffffff;  /* #f3efe3;     /*#d5d5d5;               /*#0591e8;   /*:#bfbfff;*/
+  border:1px solid #098ea8;    /* 1px solid #bfbfbf; */
+  width:200px;
   margin:0px auto;
+  padding:3px;
 }
 .link img{
   width:30px;
   height:30px;
   vertical-align:middle;  
 }
+/*
 .link span{
   vertical-align:middle; 
   margin:0px 10px;
 }
 .link a{
   text-decoration:none;
-  color:#098ea8;
+  color:#3eb3e4; #098ea8; 
   font-weight:bolder;
 }
 .link a:hover{
@@ -30,7 +32,7 @@
   color:#000000;
   font-weight:bolder;
 }
-
+*/
 
 
 
@@ -81,21 +83,32 @@
   padding:5px 0px 5px 0px;	
   margin:10px 0px 0px 0px;
   border-radius:0px;
-  background:#e8d7c5; /*#f3efe3;       /*#d5d5d5;       /*#d6c2aa;      /*#e3dcbf;    /*#cfcfcf;       /*#dbceba;      #bfbfff;*/
+  background:#f5f5f5;/* #e8d7c5; /*#f3efe3;       /*#d5d5d5;       /*#d6c2aa;      /*#e3dcbf;    /*#cfcfcf;       /*#dbceba;      #bfbfff;*/
   /* font-size:1.00em; */
+  border-bottom:1px solid #d5d5d5;
+  border-top:1px solid #d5d5d5; */
+}
+.tag12:hover{
+  background-color:#098e8a; /* #f3efe3; */
 }
 .tag12 span, .tag12 img{
   vertical-align:middle;
 }
 .tag12 a{
   text-decoration:none;
-  color:#098ea8;
+  color:#000000; /* #3eb3e4 */
   padding:0px 5px;
   font-weight:bolder;
 }
 .entry-sport-img{
  width:30px;
  height:30px;
+}
+.entry-sport-img:hover{
+ /* border:1px solid #ffffff; */
+ background-color:#ffffff; 
+ border-radius:30px;
+ padding:1px;
 }
 .entry-country-img{
  width:20px;
@@ -106,7 +119,11 @@
   border-radius:5px;
   font-size:0.75em;
   display:inline-block;
-  background:#e8d7c5; /* #f3efe3; */ 
+  background:#ffffff; /* #f5f5f5; /* #e8d7c5; /* #f3efe3; */
+  border:1px solid #098ea8;
+}
+.tag34:hover, .tag5:hover, .link:hover{
+  background:#098e8a; /* #f3efe3; */
 }
 .tag34 a, .tag5 a{
   text-decoration:none;
@@ -117,8 +134,8 @@
   font-weight:bolder;
 }
 .tag12 a:hover, .tag34 a:hover, .tag5 a:hover{
-  text-decoration:none;
-  color:#000000;
+  /* text-decoration:none; */
+  color:#ffffff;
   font-weight:bolder;
 }
 .comentario{

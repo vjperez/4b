@@ -4,7 +4,7 @@ function putHtml(elHtml, entry){
     var index = 0;
     while(index < entry.length){
       elHtml[index%showing] += "<div class='entry'>";
-      elHtml[index%showing] += "<div class='hora'>" + entry[index][1] + "<img src='icon/camera.png' class='entry-post-img'><img src='icon/pencil.png' class='entry-post-img'>" + "</div>";
+      elHtml[index%showing] += "<div class='hora'>" + entry[index][1] + "<img src='icon/upload.png' class='entry-post-img'>" + "</div>";
       if(entry[index][0] == 0 || entry[index][8] == "") {
       }else{
           //elHtml[index%showing] += "<a href='escritos/php/sacalo/muestralo.php?entry=" + entry[index][8].substring(0, entry[index][8].indexOf(".")) + "'><img src='loaded/" + entry[index][8] +  "' alt='foto' class='entry-main-img'></a>";

@@ -3,6 +3,7 @@
   border-radius:5px;
   width:98%;
   margin:100px auto 0px auto;
+  
 }
 .select-img{
  width:30px;
@@ -58,16 +59,18 @@
 
 
 #file-Y-comentario{
-  border:0px solid #00ff00;   /* #828592 o #e8e8e8 */
+  border-top:0px solid #d5d5d5;   /* #828592 o #e8e8e8 */
   width:100%;
   margin:100px auto 0px auto;
+  
 }
 #etiquetas{
   clear:both;
   display:block;
-  border:0px solid #0000ff;   /* #828592 o #e8e8e8 */
+  border-top:0px solid #d5d5d5;   /* #828592 o #e8e8e8 */
   width:100%;
   margin:100px auto 0px auto;
+  
 }
 #submit-div{
   border:0px solid #00ff00;   /* #828592 o #e8e8e8 */
