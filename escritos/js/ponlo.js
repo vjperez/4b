@@ -46,8 +46,8 @@
         //labels[0].style.color='#ffffff';
         //labels[0].style.fontWeight='bold';
       }else{
-        ladivision.style.backgroundColor='#f3efe3'; //'#d5d5d5'; // f5f5f5
-        ladivision.style.border="1px solid #bfbfbf";
+        ladivision.style.backgroundColor='#f5f5f5';  //'#f3efe3'; //'#d5d5d5'; // f5f5f5
+        ladivision.style.border="1px solid #b5b5b5"; //"1px solid #bfbfbf";
         //labels[0].style.color='#000000';
         //labels[0].style.fontWeight='normal';
       }
@@ -85,8 +85,8 @@
         labels[0].style.color='#ffffff';
         labels[0].style.fontWeight='bold';
       }else{
-        ladivision.style.backgroundColor='#f3efe3'; //'#d5d5d5'; // f5f5f5
-        ladivision.style.border="1px solid #bfbfbf";
+        ladivision.style.backgroundColor='#f5f5f5';  //'#f3efe3'; //'#d5d5d5'; // f5f5f5
+        ladivision.style.border="1px solid #b5b5b5";   //"1px solid #bfbfbf";
         labels[0].style.color='#000000';
         labels[0].style.fontWeight='normal';
       }
@@ -126,8 +126,8 @@
         labels[0].style.color='#ffffff';
         labels[0].style.fontWeight='bold';
       }else{
-        ladivision.style.backgroundColor='#f3efe3'; //'#d5d5d5'; //aeb2c3
-        ladivision.style.border="1px solid #bfbfbf";
+        ladivision.style.backgroundColor='#f5f5f5';  //'#f3efe3'; //'#d5d5d5'; //aeb2c3
+        ladivision.style.border="1px solid #b5b5b5";  //"1px solid #bfbfbf";
         labels[0].style.color='#000000';
         labels[0].style.fontWeight='normal';
       }
@@ -148,7 +148,7 @@
       var parrafo = document.getElementById(parrafoArr[index]);
       if(faltanArr[index] == limit){
         parrafo.style.color='red';
-        parrafo.innerHTML='Taguea la foto usando hasta ' + limit + ' letras.';    
+        parrafo.innerHTML='Taguea la foto.<br>' + limit + ' letras.';    
       }else if(faltanArr[index] >= 0){
         parrafo.style.color='green';
         if(faltanArr[index] >= 2) parrafo.innerHTML= 'Puedes usar ' + faltanArr[index] + ' letras mas.';
@@ -209,8 +209,8 @@
 
     var faltan = noUsado();    
     if(faltan < 0 || ( ! escogioFoto() && faltan == limit) ){
-      ladivision.style.backgroundColor='#f3efe3'; //'#d5d5d5'; //bfbfbf
-      ladivision.style.border="1px solid #bfbfbf";
+      ladivision.style.backgroundColor='#f5f5f5';  //'#f3efe3'; //'#d5d5d5'; //bfbfbf
+      ladivision.style.border="1px solid #b5b5b5";  //"1px solid #bfbfbf";
     }else{
       ladivision.style.backgroundColor='#7ec97b';
       ladivision.style.border="1px solid #bfbfbf";
@@ -225,10 +225,10 @@
     var faltan = noUsado(); 
     if(faltan == limit && escogioFoto()){
       parrafo.style.color='green';
-      parrafo.innerHTML='Comentario opcional de ' + limit + ' letras o menos.';    
+      parrafo.innerHTML='Comentario opcional sobre tu foto.<br>' + limit + ' letras o menos.';    
     }else if(faltan == limit && ! escogioFoto()){
       parrafo.style.color='red';
-      parrafo.innerHTML='Comentario de ' + limit + ' letras o menos.';    
+      parrafo.innerHTML='Comentario sobre tu foto.<br>' + limit + ' letras o menos.';    
     }else if(faltan > 1){
       parrafo.style.color='green';
       parrafo.innerHTML= 'Puedes usar ' + faltan + ' letras mas.';
