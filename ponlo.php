@@ -38,6 +38,45 @@
 
 
 
+
+<!---------------------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------------------->
+<div id="file-Y-comentario">
+    
+<!---------------------------------------------------------------------------------------------------->
+<div id="file-foto">
+<div>
+<p id="file-feedback-paragraph"><!--   inserted by js   --></p>
+</div>
+<div id="file-select-div">
+<input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+<input type="file" id="file-choose-boton" name="laFoto" accept="image/*" onchange="coloreaFile();daFileFbk();coloreaComentario();daComentarioFbk();bregaConSubmitButton();" ></input>
+</div>
+</div><!-- end of file-foto -->
+
+
+
+<!---------------------------------------------------------------------------------------------------->
+<div id="comentario">
+<div class="">
+<p id="comentario-feedback-paragraph"><!--   inserted by js   --></p>
+</div>
+<div id="comentario-div">
+<textarea rows="4" cols="30"  id="comentario-area" name="comentario-area" onkeyup="coloreaComentario();daComentarioFbk();coloreaFile();daFileFbk();bregaConSubmitButton();"></textarea>
+</div>
+<script type="text/javascript">
+  coloreaFile();
+  daFileFbk();    
+  coloreaComentario();
+  daComentarioFbk();
+</script>
+</div><!-- end of comentario -->
+<div id="justToClear"></div>
+</div><!-- end of file-Y-comentario --> 
+
+
+
+
 <!--------------------------------------------------------------------------------------------------->
 <div id="selecciona">
 <form action="escritos/php/ponlo/ponlo.php" method="POST" enctype="multipart/form-data"> 
@@ -91,44 +130,7 @@
   escogeDeporte();
   daDeporteFeedback();
 </script>
-</div><!-- end of selecciona -->
-
-
-
-<!---------------------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------------------->
-<div id="file-Y-comentario">
-    
-<!---------------------------------------------------------------------------------------------------->
-<div id="file-foto">
-<div>
-<p id="file-feedback-paragraph"><!--   inserted by js   --></p>
-</div>
-<div id="file-select-div">
-<input type="hidden" name="MAX_FILE_SIZE" value="5000000">
-<input type="file" id="file-choose-boton" name="laFoto" accept="image/*" onchange="coloreaFile();daFileFbk();coloreaComentario();daComentarioFbk();bregaConSubmitButton();" ></input>
-</div>
-</div><!-- end of file-foto -->
-
-
-
-<!---------------------------------------------------------------------------------------------------->
-<div id="comentario">
-<div class="">
-<p id="comentario-feedback-paragraph"><!--   inserted by js   --></p>
-</div>
-<div id="comentario-div">
-<textarea rows="4" cols="30"  id="comentario-area" name="comentario-area" onkeyup="coloreaComentario();daComentarioFbk();coloreaFile();daFileFbk();bregaConSubmitButton();"></textarea>
-</div>
-<script type="text/javascript">
-  coloreaFile();
-  daFileFbk();    
-  coloreaComentario();
-  daComentarioFbk();
-</script>
-</div><!-- end of comentario -->
-<div id="justToClear"></div>
-</div><!-- end of file-Y-comentario -->          
+</div><!-- end of selecciona -->         
           
           
           
