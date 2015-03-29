@@ -1,8 +1,11 @@
 <?php
 
 define('DEBUG',TRUE);
-define('HOST_FS_ROOT','C:\\wamp\\www\\4b\\');
+//define('HOST_FS_ROOT','C:\\wamp\\www\\4b\\');
 //define('SITE_ROOT' , 'http://localhost/4b');
+
+define('HOST_FS_ROOT', '/var/www/htdocs/4b/');
+//define('SITE_ROOT' , 'http://yeco/4b/');
 
 //define('HOST_FS_ROOT', '/var/www/4b/11-4bolas-jsmQueries/');
 //define('SITE_ROOT' , 'http://localhost/4b/11-4bolas-jsmQueries/');  
