@@ -4,7 +4,7 @@ $mensaje2 = '';
 $entries0 = array();
 $entries1 = array();
 $entries2 = array();
-
+$entries  = array($entries0, $entries1, $entries2);
 //columnas en baseEntries[tal]
 // 0 alto    1 fecha    2 deporte foto path    3 area exp     4 tag3     5 tag4     6 tag5     7 comentario   8 fotopath
 
@@ -18,7 +18,6 @@ require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
 require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo_masajeout.php';
 
 $dbQueries = setDbQueries();
-$entries = array($entries0, $entries1, $entries2);
 
 $index = 0;
 while($index < 3){

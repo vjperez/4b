@@ -4,11 +4,11 @@ define('DEBUG',TRUE);
 //define('HOST_FS_ROOT','C:\\wamp\\www\\4b\\');
 //define('SITE_ROOT' , 'http://localhost/4b');
 
-//define('HOST_FS_ROOT', '/var/www/htdocs/4b/');
-//define('SITE_ROOT' , 'http://yeco/4b/');
+define('HOST_FS_ROOT', '/var/www/htdocs/4b/');
+define('SITE_ROOT' , 'http://yeco/4b/');
 
-define('HOST_FS_ROOT', '/var/www/4b/');
-define('SITE_ROOT' , 'http://localhost/4b/');  
+//define('HOST_FS_ROOT', '/var/www/4b/');
+//define('SITE_ROOT' , 'http://localhost/4b/');  
 
 function debug_print(){
   echo '<br><br><br><br>';
@@ -78,14 +78,14 @@ function setDbQueries(){
 	    $deporte = $q[1]; 
 	    $area = $q[3]; 
 	  if($q[0] == '2' || $q[0] == '4'){   
-	    $dbQuery0 = str_replace('xxyyzz', 'AND deporte=$deporte AND area=$area', $dbQueryInit); 
+	    $dbQuery0 = str_replace("xxyyzz", "AND deporte=$deporte AND area=$area", $dbQueryInit); 
 	    switch($q[0]){
 	    case('2'): // cliqueo deporte so el extra ... es el mismo deporte pero en OTROS lugares 
-	      $dbQuery1 = str_replace('xxyyzz', 'AND deporte=$deporte AND area<>$area', $dbQueryInit); 	   	  
+	      $dbQuery1 = str_replace("xxyyzz", "AND deporte=$deporte AND area<>$area", $dbQueryInit); 	   	  
 	      $dbQuery2 = '';
 	      break;
 	    case('4'): // cliqueo area so el extra ... es la misma area pero en OTROS deportes 
-	      $dbQuery1 = str_replace('xxyyzz', 'AND deporte<>$deporte AND area=$area', $dbQueryInit); 
+	      $dbQuery1 = str_replace("xxyyzz", "AND deporte<>$deporte AND area=$area", $dbQueryInit); 
 	      $dbQuery2 = '';
 	      break;
 	    }
@@ -107,14 +107,14 @@ function setDbQueries(){
 	  } // hasta aqui $q[0] es '8'
 	  
     }else{ // q esta seteado pero con bad format (un hacker);
-      $dbQuery0 = str_replace('xxyyzz', '', $dbQueryInit); 
-	  $dbQuery1 = '';
-	  $dbQuery2 = '';		
+      $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
+	  $dbQuery1 = "";
+	  $dbQuery2 = "";		
 	}
   }else{ // q NO esta seteado
-    $dbQuery0 = str_replace('xxyyzz', '', $dbQueryInit); 
-	$dbQuery1 = '';
-	$dbQuery2 = '';	
+    $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
+	$dbQuery1 = "";
+	$dbQuery2 = "";	
   }	
   return array($dbQuery0, $dbQuery1, $dbQuery2);
 }
