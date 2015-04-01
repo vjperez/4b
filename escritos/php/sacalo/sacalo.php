@@ -17,64 +17,7 @@ require_once 'escritos/php/config/datosConfig.php';  //    ../config/datosConfig
 require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
 require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo_masajeout.php';
 
-if(isset($_REQUEST['q'])){
-	$q = $_REQUEST['q'];
-	if(queryFormat($q)){  // q esta seteado y con buen format
-	    $deporte = $q[1]; 
-	    $area = $q[3]; 	
-	  if($q[0] == '2' || $q[0] == '4'){   
-	    $baseQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
-	    FROM fotoentrada WHERE ver=1 AND deporte=$deporte AND area=$area ORDER BY tiempo DESC;"; 
-	    if($q[0] == '2'){ // cliqueo deporte so el extra ... es el mismo deporte pero en OTROS lugares 
-	      $extraQuery1 = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
-	      FROM fotoentrada WHERE ver=1 AND deporte=$deporte AND area<>$area ORDER BY tiempo DESC;"; 	   	  
-	      $extraQuery2 = '';
-	    }else if($q[0] == '4'){ // cliqueo area so el extra ... es la misma area pero en OTROS deportes 
-	      $extraQuery1 = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
-	      FROM fotoentrada WHERE ver=1 AND deporte<>$deporte AND area=$area ORDER BY tiempo DESC;"; 
-	      $extraQuery2 = '';	 
-	    }
-	  }else{ // aqui se q $q[0] es '8' pq ya se q es un query que paso los test de queryFormat()
-	  //tienes q explotar $q   ($var = tag literal del url q viene dado como 80808:tag literal:partes de tags) y sacar 'tag literal' 
-	  //para usarlo en baseQuery y sacar partes de tags para usarlo en extraQuery
-	  
-	  //Si no defines $rotulo, php lo define como $rotulo=''; y machea todo
-		  $arreglo = explode(':', $q);
-	      $rotuloLiteral = $arreglo[1];
-	      $baseQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
-	      FROM fotoentrada WHERE ver=1 AND (tag3 like '%$rotuloLiteral%' OR tag4 like '%$rotuloLiteral%' OR tag5 like '%$rotuloLiteral%') AND (deporte=$deporte AND area=$area) ORDER BY tiempo DESC;"; 
-	      $extraQuery1 = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
-	      FROM fotoentrada WHERE ver=1 AND (tag3 like '%$rotuloLiteral%' OR tag4 like '%$rotuloLiteral%' OR tag5 like '%$rotuloLiteral%') AND ((deporte<>$deporte AND area=$area) OR (deporte=$deporte AND area<>$area)) ORDER BY tiempo DESC;";	
-	      //$extraQuery2 = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
-	      //FROM fotoentrada WHERE ver=1 AND (tag3 like '%$rotuloLiteral%' OR tag4 like '%$rotuloLiteral%' OR tag5 like '%$rotuloLiteral%') AND (deporte<>$deporte AND area<>$area) ORDER BY tiempo DESC;";
-	      $extraQuery2 = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
-	      FROM fotoentrada WHERE ver=1 AND (tag3 like '%$rotuloLiteral%' OR tag4 like '%$rotuloLiteral%' OR tag5 like '%$rotuloLiteral%') AND (deporte<>$deporte AND area<>$area) ORDER BY tiempo DESC;";
-	   
-	   /*  
-		  $index = 2; //chequeando solo los rotulos explotados q son los q estan del index 2 pa lante
-          while( $index < count($arreglo) ){
-            $rotulo = $arreglo[$index];
-            $extraQueryConditionRotuloExplotado += ":WHERE ver=1 AND (tag3 like '%$rotulo%' OR tag4 like '%$rotulo%' OR tag5 like '%$rotulo%') AND (deporte=$deporte OR area=$area)";
-            $index++;
-          }  
-	   */
-	     
-	      //cuando MySQL machea tags es CASE SENSITIVE? 
-	      //la funcion ctype_alnum() en queryFormat no protesta si cambian una letra en el URL por mayuscula mientras q los rotulos explotados llos defines como minusculas en explota
-	  }
-	  
-    }else{ // q esta seteado pero con bad format (un hacker);
-      $baseQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo  
-	  FROM fotoentrada WHERE ver=1 ORDER BY tiempo DESC;";
-	  $extraQuery1 = '';
-	  $extraQuery2 = '';		
-	}
-}else{ // q NO esta seteado
-    $baseQuery = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo  
-	FROM fotoentrada WHERE ver=1 ORDER BY tiempo DESC;";
-	$extraQuery1 = '';
-	$extraQuery2 = '';	
-}
+
 
 /////////////////////////////////////  do baseQuery  ////////////////////// 
 if( ! $entradasarray = mysqli_query($cxn, $baseQuery) ){
