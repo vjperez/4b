@@ -69,8 +69,8 @@ function urlQueryFormat($q){
 
 
 
-function setDbQuery(){
-  $dbQueryInit = "SELECT id, deporte, area, tag3, tag4, tag5, TIMESTAMPDIFF(MINUTE, tiempo, CURRENT_TIMESTAMP), comentario, tiempo 
+function setDbQueries(){
+  $dbQueryInit = "SELECT id, deporte, area, tag3, tag4, tag5, EXTRACT(MINUTE FROM CURRENT_TIMESTAMP - tiempo), comentario, tiempo 
   FROM entrada WHERE ver=1 xxyyzz ORDER BY tiempo DESC;"; 
   if(isset($_REQUEST['q'])){
 	$q = $_REQUEST['q'];
@@ -86,7 +86,7 @@ function setDbQuery(){
 	      break;
 	    case('4'): // cliqueo area so el extra ... es la misma area pero en OTROS deportes 
 	      $dbQuery1 = str_replace('xxyyzz', 'AND deporte<>$deporte AND area=$area', $dbQueryInit); 
-	      $dbQuery2 = '' 
+	      $dbQuery2 = '';
 	      break;
 	    }
 	  }else{ // aqui se q $q[0] es '8' pq ya se q es un query que paso los test de queryFormat()
@@ -116,6 +116,6 @@ function setDbQuery(){
 	$dbQuery1 = '';
 	$dbQuery2 = '';	
   }	
-  return array('dbQuery0' => $dbQuery0, 'dbQuery1' => $dbQuery1, 'dbQuery2' => $dbQuery2);
+  return array($dbQuery0, $dbQuery1, $dbQuery2);
 }
 ?>

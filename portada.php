@@ -61,9 +61,9 @@
 <div class="fotoentradas" id="tres"></div>
 
 <script type="text/javascript">
-  var baseEntries  = <?php echo json_encode($baseEntries); ?>;
-  var extraEntries1  = <?php echo json_encode($extraEntries1); ?>;
-  var extraEntries2  = <?php echo json_encode($extraEntries2); ?>;
+  var baseEntries    = <?php echo json_encode($entries0); ?>;
+  var extraEntries1  = <?php echo json_encode($entries1); ?>;
+  var extraEntries2  = <?php echo json_encode($entries2); ?>;
   var entries = baseEntries.concat(extraEntries1.concat(extraEntries2));
   
   var mqSmall = window.matchMedia("screen and (max-width: 700px)");

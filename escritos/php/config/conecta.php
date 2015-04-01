@@ -11,9 +11,9 @@
       echo '<p>' . DB_USUARIO . ' esta logueado en ' . DB_DBMS . ', usando base de datos ' . DB_NOMBRE . '.</p>';
     }
   }elseif(DB_DBMS == 'Postgre'){
-    $conn_string = "port=5432" . " host=" . DB_HOST . " dbname=" . DB_NOMBRE . " user=" . DB_USUARIO . " password=" . DB_PASSWORD; 
-    $dbconn = pg_connect($conn_string);
-    if(pg_connection_status($dbconn) === PGSQL_CONNECTION_OK){
+    $cxn_string = "port=5432" . " host=" . DB_HOST . " dbname=" . DB_NOMBRE . " user=" . DB_USUARIO . " password=" . DB_PASSWORD; 
+    $cxn = pg_connect($cxn_string);
+    if(pg_connection_status($cxn) === PGSQL_CONNECTION_OK){
 	  echo '<p>' . DB_USUARIO . ' esta logueado en ' . DB_DBMS . ', usando base de datos ' . DB_NOMBRE . '.</p>';
     }else{
       $mensaje1 = 'Error logueando a base de datos.';
