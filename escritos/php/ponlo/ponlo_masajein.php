@@ -34,18 +34,19 @@
     8 => "tiff"
   );
   
-  
-  // aqui cambio los valores
+  /*
   if( empty($_FILES['laFoto']['name']) ){
     $foto = FALSE;					// no foto selected to upload: entry will not have photo: not trying to upload a photo
   }else{
     $foto = $_FILES['laFoto'];   
   }
+  */
   
+  // aqui cambio los valores
   $deporte   = $deporteArray[ $_REQUEST['deporte'] ];
   $area = $areaArray[ $_REQUEST['area'] ];
 
-  //                                                    trim or deal with it in JS ?!?! 
+  //                                                  trim or deal with it in JS ?!?! 
   $tag3  = trim( $_REQUEST['tag3-input'] );
   $tag4  = trim( $_REQUEST['tag4-input'] );
   $tag5  = trim( $_REQUEST['tag5-input'] ) ; 
@@ -53,7 +54,7 @@
   if(isset($_REQUEST['comentario-area'])){
     $comentario = trim( $_REQUEST['comentario-area'] );
   }else{
-    $comentario = '';    
+    $comentario = FALSE;    
   }
  
   // //$originalfotoname  = $_REQUEST['laFoto'];

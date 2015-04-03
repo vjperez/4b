@@ -12,13 +12,15 @@ $entries  = array($entries0, $entries1, $entries2);
 //$id = $row[0];  $deporte = $row[1];  //$area = $row[2];  //$tag3 = $row[3];  //$tag4 = $row[4];  //$tag5 = $row[5];  //$tiempo-diff = $row[6];  //$comentario = $row[7]   //tiempo = $row[8]; 
 
 //columnas en foto   
-//id = foto[0]     ancho = foto[1]     alto = foto[2]   tipo = foto[3]     fotoentradaid = foto[4]
+//id = foto[0]     ancho = foto[1]     alto = foto[2]   tipo = foto[3]     entradaid = foto[4]
 require_once 'escritos/php/config/datosConfig.php';  //    ../config/datosConfig.php
 require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
 require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo_masajeout.php';
 
 $dbQueries = setDbQueries();
 
+
+// do pg queries
 $index = 0;
 while($index < count($entries)){
     if ($dbQueries[$index] != ''){
@@ -40,7 +42,7 @@ while($index < count($entries)){
       //el if funciona pq tengo 1 o ninguna foto, si hubieran mas necesitaba un while    
       if($foto = pg_fetch_row($fotosarray)){
           $entries[$index][$tal][0] = $foto[2]; // alto de la foto
-          $entries[$index][$tal][8] = $foto[4] . '.' . $fotoTipo[$foto[3]]; // usar el id de la fotoentrada como path de la foto tambien asume q hay solo una foto por fotoentrada
+          $entries[$index][$tal][8] = str_pad($foto[4], 10, '0', STR_PAD_LEFT) . '.' . $fotoTipo[$foto[3]]; // usar el id de la entrada como path de la foto tambien asume q hay solo una foto por fotoentrada
       }else{
           $entries[$index][$tal][0] = 0;  
           $entries[$index][$tal][8] = '';
@@ -58,7 +60,7 @@ while($index < count($entries)){
     }// while rows
   }
 $index++;
-}
+}// end do pg queries
 pg_free_result($entradasarray);
 pg_close($cxn);
 ?>

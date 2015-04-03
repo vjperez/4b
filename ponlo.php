@@ -42,7 +42,9 @@
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
 <div id="file-Y-comentario">
-    
+
+<form action="escritos/php/ponlo/ponlo.php" method="POST" enctype="multipart/form-data">
+	
 <!---------------------------------------------------------------------------------------------------->
 <div id="file-foto">
 <div>
@@ -58,7 +60,7 @@
 
 <!---------------------------------------------------------------------------------------------------->
 <div id="comentario">
-<div class="">
+<div>
 <p id="comentario-feedback-paragraph"><!--   inserted by js   --></p>
 </div>
 <div id="comentario-div">
@@ -79,7 +81,6 @@
 
 <!--------------------------------------------------------------------------------------------------->
 <div id="selecciona">
-<form action="escritos/php/ponlo/ponlo.php" method="POST" enctype="multipart/form-data"> 
 <fieldset>
 <div>
 <p id="area-feedback-paragraph"><!--   inserted by js   --></p>
