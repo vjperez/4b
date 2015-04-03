@@ -106,6 +106,7 @@ if( ! empty($_FILES['laFoto']['name']) ){
 	}
   }
   
+  // redirect view
   $random = rand(0,3) % 2;
   if($random == 0){
     header('Location:' . SITE_ROOT . 'portada.php?q=2' . $deporte . '2' . $area . '2');	 
