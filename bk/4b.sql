@@ -1,14 +1,27 @@
-<br />
-<b>Strict Standards</b>:  Only variables should be assigned by reference in <b>/usr/share/phppgadmin/classes/database/Connection.php</b> on line <b>23</b><br />
 --
 -- PostgreSQL database dump
 --
 
 SET statement_timeout = 0;
+SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
 
 SET search_path = public, pg_catalog;
 
@@ -119,7 +132,6 @@ ALTER TABLE ONLY foto ALTER COLUMN id SET DEFAULT nextval('foto_id_seq'::regclas
 -- Data for Name: entrada; Type: TABLE DATA; Schema: public; Owner: victor
 --
 
-INSERT INTO entrada VALUES (1, 0, 0, 'donqueando', 'Carolina', 'en el caserio', '2015-02-24 19:32:44', 'Practicando me sale este donqueo, en el juego no es tan facil.', 1);
 INSERT INTO entrada VALUES (2, 0, 1, 'Copa 3 pa 3', 'Barrio San Anton', 'Ponce', '2015-02-23 02:54:45', 'El equipo de San Anton pudo ganar hoy su primer juego.', 1);
 INSERT INTO entrada VALUES (3, 0, 2, 'Little Lads', 'Aguadilla', 'Isabela', '2015-02-23 02:54:45', 'El equipo 13U de Isabela seguimos invictos. El Lunes pa Ponce.', 1);
 INSERT INTO entrada VALUES (4, 0, 3, 'Copa Little Lads del Caribe', 'U15', 'Panama', '2015-03-14 23:30:03', 'Este era uno de los juegos mas dificiles, pero Canovanas representando a Puerto Rico,  pudo ganar.', 1);
@@ -157,13 +169,14 @@ INSERT INTO entrada VALUES (30, 1, 0, 'fundamentos', 'fieldeo', 'coqui', '2015-0
 INSERT INTO entrada VALUES (32, 0, 0, 'dribleo', 'Mayaguez', 'clase de universidad', '2015-02-22 23:35:19', NULL, 0);
 INSERT INTO entrada VALUES (34, 0, 2, 'Hostos Mayaguez', 'Benites Canovanas', 'Cat 16 under', '2015-02-22 23:35:19', NULL, 0);
 INSERT INTO entrada VALUES (35, 0, 2, 'HACKER TEST :: Santa Margarita Caguas', 'Perpetuo Soccoro Maricao', 'Sub 16', '2015-02-27 20:07:25', NULL, 0);
+INSERT INTO entrada VALUES (1, 0, 0, 'donqueando', 'Carolina', 'en el caserio', '2015-04-02 07:21:55.75336', 'Practicando me sale este donqueo, en el juego no es tan facil.', 1);
 
 
 --
 -- Name: entrada_id_seq; Type: SEQUENCE SET; Schema: public; Owner: victor
 --
 
-SELECT pg_catalog.setval('entrada_id_seq', 1, false);
+SELECT pg_catalog.setval('entrada_id_seq', 38, true);
 
 
 --
@@ -212,7 +225,7 @@ INSERT INTO foto VALUES (36, 3264, 2448, 2, 38);
 -- Name: foto_id_seq; Type: SEQUENCE SET; Schema: public; Owner: victor
 --
 
-SELECT pg_catalog.setval('foto_id_seq', 1, false);
+SELECT pg_catalog.setval('foto_id_seq', 36, true);
 
 
 --
@@ -248,11 +261,12 @@ ALTER TABLE ONLY foto
 
 
 --
--- Name: public; Type: ACL; Schema: -; Owner: postgres
+-- Name: public; Type: ACL; Schema: -; Owner: victor
 --
 
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
+REVOKE ALL ON SCHEMA public FROM victor;
+GRANT ALL ON SCHEMA public TO victor;
 GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
