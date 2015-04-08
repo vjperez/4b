@@ -1,0 +1,3 @@
+Your error pages should be as simple as possible, avoid using your 
+database to create them.  There is no point in having error pages that 
+could create errors.
