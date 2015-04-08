@@ -63,10 +63,10 @@ function setDbQueries(){
 	  }else{ // aqui se q $q[0] es '8' pq ya se q es un query que paso los test de queryFormat()
 		  //tienes q explotar $q   ($var = tag literal del url q viene dado como 80808:tag literal:partes de tags) y sacar 'tag literal'
 		  $arreglo = explode(':', $q);
-	      $rotuloLiteral = $arreglo[1];
-	      $dbQuery0 = str_replace("xxyyzz", "AND (tag3 like '%$rotuloLiteral%' OR tag4 like '%$rotuloLiteral%' OR tag5 like '%$rotuloLiteral%') AND (deporte=$deporte AND area=$area)", $dbQueryInit);
-	      $dbQuery1 = str_replace("xxyyzz", "AND (tag3 like '%$rotuloLiteral%' OR tag4 like '%$rotuloLiteral%' OR tag5 like '%$rotuloLiteral%') AND ((deporte<>$deporte AND area=$area) OR (deporte=$deporte AND area<>$area))", $dbQueryInit);
-	      $dbQuery2 = str_replace("xxyyzz", "AND (tag3 like '%$rotuloLiteral%' OR tag4 like '%$rotuloLiteral%' OR tag5 like '%$rotuloLiteral%') AND (deporte<>$deporte AND area<>$area)", $dbQueryInit);
+	      $rotuloLiteral = strtolower($arreglo[1]);
+	      $dbQuery0 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' OR LOWER(tag5) like '%$rotuloLiteral%') AND (deporte=$deporte AND area=$area)", $dbQueryInit);
+	      $dbQuery1 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' OR LOWER(tag5) like '%$rotuloLiteral%') AND ((deporte<>$deporte AND area=$area) OR (deporte=$deporte AND area<>$area))", $dbQueryInit);
+	      $dbQuery2 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' OR LOWER(tag5) like '%$rotuloLiteral%') AND (deporte<>$deporte AND area<>$area)", $dbQueryInit);
 	   /*  
 		  $index = 2; //chequeando solo los rotulos explotados q son los q estan del index 2 pa lante
           while( $index < count($arreglo) ){
@@ -80,7 +80,14 @@ function setDbQueries(){
     }else{ // q esta seteado pero con bad format (un hacker);
       $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
 	  $dbQuery1 = "";
-	  $dbQuery2 = "";		
+	  $dbQuery2 = "";
+	/*
+	 * Aqui tambien podria enviarlo a la pagina de error EN VEZ de correr el query basico.
+	 * pero creo q es mejor seguir un flujo donde vea entries y no error.
+      $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
+      $mensaje2 = "No se encontro ninguna entrada, deberia ser buscando tag.";
+      brega_error($mensaje1, $mensaje2);			
+    */
 	}
   }else{ // q NO esta seteado
     $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
@@ -107,6 +114,16 @@ function urlQueryFormat($q){
   $test3 = ($numeros[1] >= 0 && $numeros[1] <= 3) && ($numeros[3] >= 0 && $numeros[3] <= 3);
   if ($test3) { ; }
   else return $result; // false
+
+  if($numeros[0] == '8'){
+    $test4 = count($arreglo) > 1;
+    if ($test4) { ; }
+    else return $result; // false
+  }elseif($numeros[0] == '2'  || $numeros[0] == '4'){
+    $test4 = count($arreglo) == 1;
+    if ($test4) { ; }
+    else return $result; // false	  
+  }
     
   $index = 2; // index 0 son los numeros y ya los chequee arriba; index 1 ignoralo pq ese es el rotulo literal; chequeando solo los rotulos explotados q son los q estan del index 2 pa lante
   while( $index < count($arreglo) ){

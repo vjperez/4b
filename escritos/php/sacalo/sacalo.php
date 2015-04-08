@@ -1,10 +1,7 @@
 <?php
 $mensaje1 = '';
 $mensaje2 = '';
-$entries0 = array();
-$entries1 = array();
-$entries2 = array();
-$entries  = array($entries0, $entries1, $entries2);
+$entries  = array(array(), array(), array());
 //columnas en entries[index][tal]
 // 0 alto    1 fecha    2 deporte foto path    3 area exp     4 tag3     5 tag4     6 tag5     7 comentario   8 fotopath
 
@@ -63,4 +60,9 @@ $index++;
 }// end do pg queries
 pg_free_result($entradasarray);
 pg_close($cxn);
+if(count($entries[0]) == 0 && count($entries[1]) == 0  && count($entries[2]) == 0){
+  $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
+  $mensaje2 = "No se encontro ninguna entrada, deberia ser buscando tag.";
+  brega_error($mensaje1, $mensaje2);
+}
 ?>

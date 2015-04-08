@@ -4,11 +4,11 @@ define('DEBUG',TRUE);
 //define('HOST_FS_ROOT','C:\\wamp\\www\\4b\\');
 //define('SITE_ROOT' , 'http://localhost/4b');
 
-define('HOST_FS_ROOT', '/var/www/htdocs/4b/');
-define('SITE_ROOT' , 'http://yeco/4b/');
+//define('HOST_FS_ROOT', '/var/www/htdocs/4b/');
+//define('SITE_ROOT' , 'http://yeco/4b/');
 
-//define('HOST_FS_ROOT', '/var/www/4b/');
-//define('SITE_ROOT' , 'http://localhost/4b/');  
+define('HOST_FS_ROOT', '/var/www/4b/');
+define('SITE_ROOT' , 'http://localhost/4b/');  
 
 function debug_print(){
   echo '<br><br><br><br>';
@@ -18,7 +18,7 @@ function debug_print(){
     echo '<p class="warning">error1 was not set. </p>';
   }
   echo '<br>';
-  echo '<img src="icon/error.png" alt="error-foto">';
+  echo '<img src="icon/error-homer.png" alt="error-foto">';
   echo '<br><br><hr>';
   if(DEBUG){
     if(isset($_REQUEST['error2'])){

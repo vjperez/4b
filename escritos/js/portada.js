@@ -100,8 +100,9 @@ function getArea(exp){
 }
 
 function explota(rotuloString){
-	var arreglo = rotuloString.split(' ');
-	var str = '';
+  var arreglo = rotuloString.split(' ');	
+  var str = '';
+  if(arreglo.length > 1){	
 	var index = 0;
     while(index < arreglo.length){
 	  arreglo[index] = arreglo[index].toLowerCase();	
@@ -111,7 +112,8 @@ function explota(rotuloString){
 	  }
 	  index++;
 	}
-	return str;
+  }
+  return str;
 }
 
-var descarta = ["vs", "en", "el", "ella", "lo", "los", "la", "las", "de", "del", "y", "o", "por", "que", "porque", "pa", "para", "entre", "to", "todo"];
+var descarta = ["vs", "en", "el", "ella", "lo", "los", "la", "las", "de", "del", "y", "o", "por", "que", "porque", "pa", "para", "entre", "to", "todo", "es", "son"];
