@@ -1,0 +1,24 @@
+Log as admin then ==> view as admin ver el entry en rojo 
+
+reduce images
+
+post from entries
+
+share to FB?
+
+DONE :: after upload redirect randomly to q=2x2x2 or 4x4x4
+
+si buscas por tag4 'torneo little lads', en un entry q sea de baloncesto, 
+lograr deducir q little lads aplica sobre 90% de
+las veces a baloncesto y devolver resultados con any tag like '%little lads%'
+
+convierte el big while de sacalo en una funcion do pg query(), y asi poder crear do mysql query().
+el EXTRACT EPOCH en setDbQueries() de sacalo_masageout lleva otro formato para MySQL
+en escritos/php/ponlo/ponlo.php crear funcion analoga para mysql
+
+
+
+===========================================================================================
+Your error pages should be as simple as possible, avoid using your 
+database to create them.  There is no point in having error pages that 
+could create errors.
