@@ -30,7 +30,7 @@ function debug_print(){
 }
 
 function brega_error($mensaje1, $mensaje2){
-  header('Location:' . SITE_ROOT . 'error.php' . '?error1=' . $mensaje1 . '&error2=' . $mensaje2);
-  exit();
+	header('Location:' . SITE_ROOT . 'error.php?error1=' . $mensaje1 . '&error2=' . $mensaje2);
+	exit();
 }
 ?>

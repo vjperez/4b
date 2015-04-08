@@ -23,41 +23,41 @@ $dbQueries = setDbQueries();
 // do pg queries
 $index = 0;
 while($index < count($entries)){
-    if ($dbQueries[$index] != ''){
+  if ($dbQueries[$index] != ''){
       if( ! $entradasarray = pg_query($cxn, $dbQueries[$index]) ){
           $mensaje1 = 'Error loading entries.';
-          $mensaje2 = $dbQueries[$index] . '<br>' . 'No tengo el PHP resource para sacar entradas. ' . '<br>' . HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php: ' . pg_last_error($cxn);    
+          $mensaje2 = 'No tengo el PHP resource para sacar entradas. ' . HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php: ' . pg_result_error($cxn);    
           pg_close($cxn);  
           brega_error($mensaje1,$mensaje2);  
       }
       $tal = 0;
- while($entrada = pg_fetch_row($entradasarray)){
-      if( ! $fotosarray = pg_query($cxn, sprintf("SELECT * FROM foto WHERE entradaid=%s;" , $entrada[0])) ){
-          $mensaje1 = 'Error loading fotos.';
-          $mensaje2 = 'No tengo el PHP resource para sacar fotos. ' . '<br>' . HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php: ' . pg_last_error($cxn); 
-          pg_free_result($entradasarray);
-          pg_close($cxn);
-          brega_error($mensaje1,$mensaje2); 
-      }      
-      //el if funciona pq tengo 1 row con foto o ningun row con foto, si hubieran mas necesitaba un while    
-      if($foto = pg_fetch_row($fotosarray)){
-          $entries[$index][$tal][0] = $foto[2]; // alto de la foto
-          $entries[$index][$tal][8] = str_pad($foto[4], 10, '0', STR_PAD_LEFT) . '.' . $fotoTipo[$foto[3]]; // usar el id de la entrada como path de la foto tambien asume q hay solo una foto por fotoentrada
-      }else{
-          $entries[$index][$tal][0] = 0;  
-          $entries[$index][$tal][8] = '';
-      }
-      pg_free_result($fotosarray);    
-      $entries[$index][$tal][1] = getTimeExpression($entrada[6], $entrada[8]);
-      $entries[$index][$tal][2] = getDeporteFotopath($entrada[1]);
-      $entries[$index][$tal][3] = getAreaExpression($entrada[2]); 
-      $entries[$index][$tal][4] = $entrada[3];
-      $entries[$index][$tal][5] = $entrada[4];
-      $entries[$index][$tal][6] = $entrada[5];
-      if( is_null($entrada[7]) )$entries[$index][$tal][7] = '';
-      else $entries[$index][$tal][7] = $entrada[7];   
-      $tal++;
-    }// while rows
+      while($entrada = pg_fetch_row($entradasarray)){
+          if( ! $fotosarray = pg_query($cxn, sprintf("SELECT * FROM foto WHERE entradaid=%s;" , $entrada[0])) ){
+            $mensaje1 = 'Error loading fotos.';
+            $mensaje2 = 'No tengo el PHP resource para sacar fotos. ' . HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php: ' . pg_result_error($cxn); 
+            pg_free_result($entradasarray);
+            pg_close($cxn);
+            brega_error($mensaje1,$mensaje2); 
+          }      
+          //el if funciona pq tengo 1 row con foto o ningun row con foto, si hubieran mas necesitaba un while    
+          if($foto = pg_fetch_row($fotosarray)){
+            $entries[$index][$tal][0] = $foto[2]; // alto de la foto
+            $entries[$index][$tal][8] = str_pad($foto[4], 10, '0', STR_PAD_LEFT) . '.' . $fotoTipo[$foto[3]]; // usar el id de la entrada como path de la foto tambien asume q hay solo una foto por fotoentrada
+          }else{
+            $entries[$index][$tal][0] = 0;  
+            $entries[$index][$tal][8] = '';
+          }
+          pg_free_result($fotosarray);    
+          $entries[$index][$tal][1] = getTimeExpression($entrada[6], $entrada[8]);
+          $entries[$index][$tal][2] = getDeporteFotopath($entrada[1]);
+          $entries[$index][$tal][3] = getAreaExpression($entrada[2]); 
+          $entries[$index][$tal][4] = $entrada[3];
+          $entries[$index][$tal][5] = $entrada[4];
+          $entries[$index][$tal][6] = $entrada[5];
+          if( is_null($entrada[7]) )$entries[$index][$tal][7] = '';
+          else $entries[$index][$tal][7] = $entrada[7];   
+          $tal++;
+      }// while rows
   }
 $index++;
 }// end do pg queries

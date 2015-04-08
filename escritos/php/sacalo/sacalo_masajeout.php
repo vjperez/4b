@@ -25,7 +25,6 @@
   }
  function getTimeExpression($minuteDiff, $timeString){
 	$minuteDiff = (int)$minuteDiff; 
-	$timestamp = strtotime($timeString);
     if($minuteDiff < 60){
 	  if ($minuteDiff == 0) $minuteDiff = 1;	
       $exp = 'Hace ' . $minuteDiff . ' minuto' . ($minuteDiff > 1?'s':'') . '.';	  
@@ -36,14 +35,14 @@
 	    $dias = (int)($minuteDiff / (24 * 60));    $horas = ((int)($minuteDiff / 60)) - (24 * $dias);	
         $exp = 'Hace ' . $dias . ' dia' . ($dias > 1?'s':'') . ($horas == 0?'':' y ' . $horas . ' hora' . ($horas > 1?'s':'')) . '.';
     }else{
+	  $timestamp = strtotime($timeString);
 	  $exp = date("F j, Y", $timestamp) . '.';	
 	}
     return $exp;
   }
   
 function setDbQueries(){
-  $dbQueryInit = "SELECT id, deporte, area, tag3, tag4, tag5, (EXTRACT(EPOCH FROM CURRENT_TIMESTAMP - tiempo))/60, comentario, tiempo 
-  FROM entrada WHERE ver=1 xxyyzz ORDER BY tiempo DESC;"; 
+  $dbQueryInit = "SELECT id, deporte, area, tag3, tag4, tag5, (EXTRACT(EPOCH FROM CURRENT_TIMESTAMP - tiempo))/60, comentario, tiempo FROM entrada WHERE ver=1 xxyyzz ORDER BY tiempo DESC;"; 
   if(isset($_REQUEST['q'])){
 	$q = $_REQUEST['q'];
 	if(urlQueryFormat($q)){  // q esta seteado y con buen format
