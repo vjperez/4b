@@ -86,7 +86,8 @@ function setDbQueries(){
 	 * pero creo q es mejor seguir un flujo donde vea entries y no error.
       $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
       $mensaje2 = "No se encontro ninguna entrada, deberia ser buscando tag.";
-      brega_error($mensaje1, $mensaje2);			
+      brega_error($mensaje1, $mensaje2);
+     * 			
     */
 	}
   }else{ // q NO esta seteado

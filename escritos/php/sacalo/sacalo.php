@@ -61,7 +61,7 @@ $index++;
 pg_free_result($entradasarray);
 pg_close($cxn);
 if(count($entries[0]) == 0 && count($entries[1]) == 0  && count($entries[2]) == 0){
-  $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
+  $mensaje1 = "D'Oh!<br>No lo encontre.<br>Ni el acento de la e.";
   $mensaje2 = "No se encontro ninguna entrada, deberia ser buscando tag.";
   brega_error($mensaje1, $mensaje2);
 }
