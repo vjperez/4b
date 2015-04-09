@@ -19,6 +19,65 @@ en escritos/php/ponlo/ponlo.php crear funcion analoga para mysql
 
 
 ===========================================================================================
+
+Ch 7 
+
+In Postgre documnetation they say that UNIQUE + NO NULL = Primary Key (5.3.4 Primary Keys)
+In MySQL, AUTO INCREMENT columns are unique and not null, thats why MYSQL will force you to add
+the Primary Key identifier to a column you have identified as AUTO INCREMENT.  (AUTO INCREMENT
+is MySQL's specific way to say "UNIQUE, NOT NULL".)
+
+A NOT NULL applies at the table level not a "whole app" level.  For example an entry may not have 
+a related image, but if it does have an image then it must have an image type. In this case 
+image_type could be defined as not null on the image table.  Note that you can still have entries 
+with no image_type related to them, simply because they dont have an image.
+
+Make a Mockup, replace some of the HTML with pseudo variables.  This pseudo variables represent 
+information that must come from the database.  This variables will provide an indication of 
+what columns you need on your tables.
+From HTML Mockup to a PHP script : This variables will show up in the browser simply as text.
+1)Add the <?php ?> aroung the variables and now these variables will probably show up as 
+empty strings. 2)At beginning of the script initilize the variables that are used later on the
+ script (all these values will really come from the database).  Now the script should look 
+essentially in the same way that it will look when all the values are selected from the database. 
+ This a way to test the script and the way it looks, without or before dealing with the database
+ code.  Now you know that the script will work properly when you insert in it values coming 
+from the database.
+ 
+Curly braces can be used sorrouding variables {$row[2]} inside a double string "" and PHP will
+substitute its value instead.  These does not work for single quotes.  It does not work either 
+for a function inside curly braces.
+
+It is a good idea to be consistent with variable names in the HTML view, in the PHP script and
+in tables or SQL code.
+
+
+
+
+Ch 8
+
+The sooner (before it reaches your server, before it reaches your database...)  you validate
+your user's input the better.  Dont wait until it reaches your server scripts (PHP or others)
+ if it can validated in the client side (using Javascript).
+
+It is not easy to create the views and make code at the same time, focus first on creating 
+at least a general mockup of your views.
+
 Your error pages should be as simple as possible, avoid using your 
 database to create them.  There is no point in having error pages that 
 could create errors.
+
+PHP scripts to handle errors, log into databases and things like that (which are really utilities) 
+should be keep apart from HTML pages or even PHP pages creating views.  Organize your files
+base on what they DO, not based on whether they are HTML, PHP or anything else.
+
+isset() returns TRUE if a variable has been initialized with a value that is not NULL.
+
+Using a $_REQUEST value comming from the URL to set a varialble in your script leaves 
+vulnerable to anyone with a little know how to set them with links and show form
+tha could be displayed on your page and use them for malicious purposes 
+(google search for phishing and subtle redirection in PHP).
+
+Be explicit in your scripts when they REQUIRE ant other utylity script.  Do not depend
+on a third script that already INCLUDES or REQUIRES the script you need. That is an uncessary 
+hidden dependency, an error waiting to happen, just use require_once '';.

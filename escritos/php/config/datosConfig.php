@@ -15,7 +15,7 @@ function debug_print(){
   if( isset($_REQUEST['error1']) ){
     echo '<p class="warning">' . $_REQUEST['error1'] . '</p>'; 
   }else{
-    echo '<p class="warning">error1 was not set. </p>';
+    echo '<p class="warning">Why are you on my error page?<br>Error1 was not set ! </p>';
   }
   echo '<br>';
   echo '<img src="icon/error-homer.png" alt="error-foto">';
