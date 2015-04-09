@@ -148,11 +148,13 @@
       var parrafo = document.getElementById(parrafoArr[index]);
       if(faltanArr[index] == limit){
         parrafo.style.color='red';
-        parrafo.innerHTML='Taguea la foto.<br>' + limit + ' letras.';    
+        //parrafo.innerHTML='Taguea la foto.<br>' + limit + ' letras.';    
+        parrafo.innerHTML='Taguea la foto.'; 
       }else if(faltanArr[index] >= 0){
         parrafo.style.color='green';
-        if(faltanArr[index] >= 2) parrafo.innerHTML= 'Puedes usar ' + faltanArr[index] + ' letras mas.';
-        if(faltanArr[index] == 1) parrafo.innerHTML= 'Puedes usar ' + faltanArr[index] + ' letra mas.';
+        //if(faltanArr[index] >= 2) parrafo.innerHTML= 'Puedes usar ' + faltanArr[index] + ' letras mas.';
+        //if(faltanArr[index] == 1) parrafo.innerHTML= 'Puedes usar ' + faltanArr[index] + ' letra mas.';
+        if(faltanArr[index] >= 1) parrafo.innerHTML= faltanArr[index];
         if(faltanArr[index] == 0) parrafo.innerHTML= 'Usando exactamente ' + limit + ' letras.';
       }else if(faltanArr[index] < 0){
         parrafo.style.color='red';
@@ -225,16 +227,20 @@
     var faltan = noUsado(); 
     if(faltan == limit && escogioFoto()){
       parrafo.style.color='green';
-      parrafo.innerHTML='Comentario opcional sobre tu foto.<br>' + limit + ' letras o menos.';    
+      //parrafo.innerHTML='Comentario opcional sobre tu foto.<br>' + limit + ' letras o menos.';
+      parrafo.innerHTML='Comentario opcional sobre tu foto.';    
     }else if(faltan == limit && ! escogioFoto()){
       parrafo.style.color='red';
-      parrafo.innerHTML='Comentario sobre tu foto.<br>' + limit + ' letras o menos.';    
+      //parrafo.innerHTML='Comentario sobre tu foto.<br>' + limit + ' letras o menos.';    
+      parrafo.innerHTML='Comentario sobre tu foto.'; 
     }else if(faltan > 1){
       parrafo.style.color='green';
-      parrafo.innerHTML= 'Puedes usar ' + faltan + ' letras mas.';
+      //parrafo.innerHTML= 'Puedes usar ' + faltan + ' letras mas.';
+      parrafo.innerHTML= faltan;
     }else if(faltan == 1){
       parrafo.style.color='green';
-      parrafo.innerHTML= 'Puedes usar ' + faltan + ' letra mas.';
+      //parrafo.innerHTML= 'Puedes usar ' + faltan + ' letra mas.';
+      parrafo.innerHTML= faltan;
     }else if(faltan == 0){
       parrafo.style.color='green';
       parrafo.innerHTML= 'Usando exactamente ' + limit + ' letras.';
