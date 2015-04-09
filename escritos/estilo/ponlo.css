@@ -1,5 +1,5 @@
 #selecciona{
-  border:0px solid #dfdfdf;   /* #828592 o #e8e8e8 */
+  border:5px solid #dfdfdf;   /* #828592 o #e8e8e8 */
   border-radius:5px;
   width:98%;
   margin:100px auto 0px auto;
@@ -59,7 +59,7 @@
 
 
 #file-Y-comentario{
-  border-top:0px solid #d5d5d5;   /* #828592 o #e8e8e8 */
+  border-top:5px solid #d5d5d5;   /* #828592 o #e8e8e8 */
   width:100%;
   margin:100px auto 0px auto;
   

@@ -6,8 +6,8 @@
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/ponlo.css">
 
-<link rel="stylesheet" type="text/css" media='screen and (max-width: 700px)' href="escritos/estilo/ponloSmall.css">
-<link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/ponloMedium.css'>
+<link rel="stylesheet" type="text/css" media='screen and (max-width: 700px)' href="escritos/estilo/ponloSmall-Medium.css">
+<link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/ponloSmall-Medium.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1201px)' href='escritos/estilo/ponloBig.css'>
 <!--
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1025px)' href='estilo/portada-1000.css'>
@@ -38,12 +38,11 @@
 
 
 
-
+<form action="escritos/php/ponlo/ponlo.php" method="POST" enctype="multipart/form-data">
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
 <div id="file-Y-comentario">
 
-<form action="escritos/php/ponlo/ponlo.php" method="POST" enctype="multipart/form-data">
 	
 <!---------------------------------------------------------------------------------------------------->
 <div id="file-foto">
@@ -64,7 +63,7 @@
 <p id="comentario-feedback-paragraph"><!--   inserted by js   --></p>
 </div>
 <div id="comentario-div">
-<textarea rows="4" cols="30"  id="comentario-area" name="comentario-area" onkeyup="coloreaComentario();daComentarioFbk();coloreaFile();daFileFbk();bregaConSubmitButton();"></textarea>
+<textarea rows="4" cols="50"  id="comentario-area" name="comentario-area" onkeyup="coloreaComentario();daComentarioFbk();coloreaFile();daFileFbk();bregaConSubmitButton();"></textarea>
 </div>
 <script type="text/javascript">
   coloreaFile();
@@ -170,14 +169,13 @@
 <div id="submit-div">
 <button type="submit" id="submit-boton">Submit</button>
 <!-- <input type="submit" value="Go" id="submit-boton">  -->
-</form>
 
 <script type="text/javascript">
   bregaConSubmitButton();
 </script>
 </div><!-- end of submit -->
 
-
+</form>
 
 <!---------------------------------------------------------------------------------------------------->
 <div id="despedida">

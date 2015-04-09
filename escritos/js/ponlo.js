@@ -3,14 +3,14 @@
     var ladivision = document.getElementById('file-select-div');
     
     if( ! escogioFoto() && noUsado() == limit){
-      //ladivision.style.backgroundColor='#d5d5d5';
-      //ladivision.style.border="1px solid #bfbfbf";
+      ladivision.style.backgroundColor='#f5f5f5';
+      ladivision.style.border="1px solid #b5b5b5";
     }else if( ! escogioFoto() && noUsado() < limit){
-      //ladivision.style.backgroundColor='#7ec97b';
-      //ladivision.style.border="1px solid #bfbfbf";
+      ladivision.style.backgroundColor='#7ec97b';
+      ladivision.style.border="1px solid #bfbfbf";
     }else{
-      //ladivision.style.backgroundColor='#7ec97b'; 
-      //ladivision.style.border="1px solid #bfbfbf";
+      ladivision.style.backgroundColor='#7ec97b'; 
+      ladivision.style.border="1px solid #bfbfbf";
     }
   }
   function daFileFbk(){

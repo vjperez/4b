@@ -13,14 +13,15 @@
   margin:0px 5% 0px 0%;
 }
 #file-select-div{
-  width:40%;
+  width:300px;
   margin:0px auto;
 }
 #comentario-div{
-  width:50%;
+  width:400px;
   margin:0px auto;
 }
+
 #tag3-input-div, #tag4-input-div, #tag5-input-div{
-  width:23%;
+  width:300px;
   margin:0px auto;
 }
