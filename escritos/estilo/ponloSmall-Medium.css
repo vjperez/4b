@@ -12,6 +12,10 @@
   width:400px;
   margin:0px auto;
 }
+#comentario-area{
+  width:360px;
+  margin:0px auto;
+}
 
 #tag3-input-div, #tag4-input-div, #tag5-input-div{
   width:250px;

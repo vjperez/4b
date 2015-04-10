@@ -63,7 +63,7 @@
 <p id="comentario-feedback-paragraph"><!--   inserted by js   --></p>
 </div>
 <div id="comentario-div">
-<textarea rows="4" cols="50"  id="comentario-area" name="comentario-area" onkeyup="coloreaComentario();daComentarioFbk();coloreaFile();daFileFbk();bregaConSubmitButton();"></textarea>
+<textarea rows="5" cols="40"  id="comentario-area" name="comentario-area" onkeyup="coloreaComentario();daComentarioFbk();coloreaFile();daFileFbk();bregaConSubmitButton();"></textarea>
 </div>
 <script type="text/javascript">
   coloreaFile();
