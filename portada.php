@@ -45,10 +45,14 @@
 <fieldset>
 <div class="link">
 <!--	
-<a href="ponlo.php"><img src="icon/camera.png" alt="camera-icon"><span></span><img src="icon/pencil.png" alt="pencil-icon"></a>
+<a href="ponlo.php">
+<img src="icon/camera.png" alt="camera-icon"><span></span>
+<img src="icon/pencil.png" alt="pencil-icon"><span></span>
+</a>
 -->
 <a href="ponlo.php"><img src="icon/upload.png" alt="load-icon"></a>
 </div>
+
 </fieldset>
 </div><!-- end of links-->
 
@@ -69,13 +73,15 @@
   var mqSmall = window.matchMedia("screen and (max-width: 700px)");
   var mqMedium = window.matchMedia("screen and (min-width: 701px) and (max-width: 1200px)");
   var mqBig = window.matchMedia("screen and (min-width: 1201px)");  
-  mqSmall.addListener( cambioSmall );
-  mqMedium.addListener( cambioMedium );
-  mqBig.addListener( cambioBig );
-  showing = 0;
+  
   cambioSmall( mqSmall ); 
   cambioMedium( mqMedium );
   cambioBig( mqBig );
+  
+  mqSmall.addListener( cambioSmall );
+  mqMedium.addListener( cambioMedium );
+  mqBig.addListener( cambioBig );  
+  //showing = 0;
   //showArray();
 </script>
 </div><!-- end mensaje-->

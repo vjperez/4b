@@ -67,6 +67,9 @@ function setDbQueries(){
 	      $dbQuery0 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' OR LOWER(tag5) like '%$rotuloLiteral%') AND (deporte=$deporte AND area=$area)", $dbQueryInit);
 	      $dbQuery1 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' OR LOWER(tag5) like '%$rotuloLiteral%') AND ((deporte<>$deporte AND area=$area) OR (deporte=$deporte AND area<>$area))", $dbQueryInit);
 	      $dbQuery2 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' OR LOWER(tag5) like '%$rotuloLiteral%') AND (deporte<>$deporte AND area<>$area)", $dbQueryInit);
+            /* deberia sacar entries que tengan el rotulo en el comentario, aunque no en los LIKE tags ??? 
+             * $dbQuery3 ???
+             */
 	   /*  
 		  $index = 2; //chequeando solo los rotulos explotados q son los q estan del index 2 pa lante
           while( $index < count($arreglo) ){
@@ -75,6 +78,7 @@ function setDbQueries(){
             $index++;
           }  
 	   */
+       
 	  } // hasta aqui $q[0] es '8'
 	  
     }else{ // q esta seteado pero con bad format (un hacker);

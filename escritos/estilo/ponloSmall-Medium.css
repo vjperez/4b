@@ -1,9 +1,13 @@
 #justToClear{
   display:none;
 }
-#comentario-feedback-paragraph{
-  margin-top:30px;   
+
+
+ #comentario-feedback-paragraph{
+  margin-top:50px;   
 }
+
+
 #file-select-div{
   width:400px;
   margin:0px auto;

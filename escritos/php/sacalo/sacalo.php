@@ -39,7 +39,9 @@ while($index < count($entries)){
           //el if funciona pq tengo 1 row con foto o ningun row con foto, si hubieran mas necesitaba un while    
           if($foto = pg_fetch_row($fotosarray)){
             $entries[$index][$tal][0] = $foto[2]; // alto de la foto
-            $entries[$index][$tal][8] = str_pad($foto[4], 10, '0', STR_PAD_LEFT) . '.' . $fotoTipo[$foto[3]]; // usar el id de la entrada como path de la foto tambien asume q hay solo una foto por fotoentrada
+            $entries[$index][$tal][8] = str_pad($foto[4], 9, '0', STR_PAD_LEFT) . '.' . $fotoTipo[$foto[3]]; // usar el id de la entrada como path de la foto tambien asume q hay solo una foto por fotoentrada
+            //postGre Integer goes from -2GB to -1+2Gb, usare 1Gb de espacios, from 0 to 999,999,999 that requires nine decimal digits
+            //STR_PAD_LEFT rellena de ceros hasta 9 digitos 
           }else{
             $entries[$index][$tal][0] = 0;  
             $entries[$index][$tal][8] = '';

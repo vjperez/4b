@@ -1,3 +1,50 @@
+function cambioSmall( mqSmall ){
+ if (mqSmall.matches){
+    showing = 1;
+    showArray();
+  }  
+}   
+
+function cambioMedium( mqMedium ){
+if (mqMedium.matches){
+    showing = 2;
+    showArray();
+  }
+}
+
+function cambioBig( mqBig ){
+  if(mqBig.matches){
+    showing = 3;
+    showArray();
+  } 
+} 
+
+
+function showArray(){
+ if (showing == 1){
+    var elHtml = [""];
+    putHtml(elHtml, entries);
+    //putHtml(elHtml, extraEntries);
+    document.getElementById("uno").innerHTML = elHtml[0];
+  }
+  if (showing == 2){
+    var elHtml = ["", ""];
+    putHtml(elHtml, entries);
+    //putHtml(elHtml, extraEntries);
+    document.getElementById("uno").innerHTML = elHtml[0];
+    document.getElementById("dos").innerHTML = elHtml[1];
+  }
+  if(showing == 3){
+    var elHtml = ["", "", ""];
+    putHtml(elHtml, entries);
+    //putHtml(elHtml, extraEntries);
+    document.getElementById("uno").innerHTML = elHtml[0];
+    document.getElementById("dos").innerHTML = elHtml[1];
+    document.getElementById("tres").innerHTML = elHtml[2];
+  }    
+}
+
+
 //columnas en entry[index]
 // 0  alto     1 fecha    2 deporte foto path    3 area exp     4 tag3     5 tag4     6 tag5     7 comentario     8 fotopath
 function putHtml(elHtml, entry){  
@@ -25,51 +72,8 @@ function putHtml(elHtml, entry){
       index++; 
     }	       
 }     
-        
-function showArray(){
- if (showing == 1){
-    var elHtml = [""];
-    putHtml(elHtml, entries);
-    //putHtml(elHtml, extraEntries);
-    document.getElementById("uno").innerHTML = elHtml[0];
-  }
-  if (showing == 2){
-    var elHtml = ["", ""];
-    putHtml(elHtml, entries);
-    //putHtml(elHtml, extraEntries);
-    document.getElementById("uno").innerHTML = elHtml[0];
-    document.getElementById("dos").innerHTML = elHtml[1];
-  }
-  if(showing == 3){
-    var elHtml = ["", "", ""];
-    putHtml(elHtml, entries);
-    //putHtml(elHtml, extraEntries);
-    document.getElementById("uno").innerHTML = elHtml[0];
-    document.getElementById("dos").innerHTML = elHtml[1];
-    document.getElementById("tres").innerHTML = elHtml[2];
-  }    
-}
 
-function cambioSmall( mqSmall ){
- if (mqSmall.matches){
-    showing = 1;
-    showArray();
-  }  
-}   
-
-function cambioMedium( mqMedium ){
-if (mqMedium.matches){
-    showing = 2;
-    showArray();
-  }
-}
-
-function cambioBig( mqBig ){
-  if(mqBig.matches){
-    showing = 3;
-    showArray();
-  } 
-} 
+ 
 
 
 
@@ -116,4 +120,4 @@ function explota(rotuloString){
   return str;
 }
 
-var descarta = ["vs", "en", "el", "ella", "lo", "los", "la", "las", "de", "del", "y", "a", "o", "por", "que", "porque", "pa", "para", "entre", "to", "todo", "es", "son", "un", "una", "unos", "unas"];
+var descarta = ["vs", "en", "el", "ella", "lo", "los", "la", "las", "de", "del", "y", "a", "o", "por", "que", "porque", "pa", "para", "entre", "to", "todo", "es", "son", "un", "una", "unos", "unas", "desde", "con"];
