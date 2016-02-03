@@ -54,7 +54,7 @@
     if(faltan == limit && escogioFoto()){
       parrafo.style.color='green';
       //parrafo.innerHTML='Comentario opcional sobre tu foto.<br>' + limit + ' letras o menos.';
-      parrafo.innerHTML='Comentario opcional sobre tu foto.';    
+      parrafo.innerHTML='Comentario opcional del juego.';    
     }else if(faltan == limit && ! escogioFoto()){
       parrafo.style.color='red';
       //parrafo.innerHTML='Comentario sobre tu foto.<br>' + limit + ' letras o menos.';    
@@ -83,8 +83,8 @@
 
  
    function escogeDeporte(){/*este chechea los 4, podrias setearlos inicialmente y luego solo cambiar el cliqueado usando division como parametro*/
-    var botonArr = ["baloncesto-boton", "beisbol-boton", "futbol-soccer-boton", "volibol-boton"];
-    var divArr = ["baloncesto-inputbox-div", "beisbol-inputbox-div", "futbol-soccer-inputbox-div", "volibol-inputbox-div"];
+    var botonArr = ["baloncesto-boton", "beisbol-boton", "futbol-soccer-boton", "volibol-boton", "otro-dxt-boton"];
+    var divArr = ["baloncesto-inputbox-div", "beisbol-inputbox-div", "futbol-soccer-inputbox-div", "volibol-inputbox-div", "otro-dxt-inputbox-div"];
     for(index = 0; index < botonArr.length; index++){
       var boton = document.getElementById(botonArr[index]);
       var ladivision = document.getElementById(divArr[index]);
@@ -108,7 +108,8 @@
     var boton2 = document.getElementById('futbol-soccer-boton');
     var boton3 = document.getElementById('beisbol-boton');
     var boton4 = document.getElementById('volibol-boton');
-    if(boton1.checked == true || boton2.checked == true || boton3.checked == true || boton4.checked == true){
+    var boton5 = document.getElementById('otro-dxt-boton');
+    if(boton1.checked == true || boton2.checked == true || boton3.checked == true || boton4.checked == true || boton5.checked == true){
       parrafo.style.color='green';
       parrafo.innerHTML='';    
     }else{

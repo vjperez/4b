@@ -38,7 +38,7 @@ label.loadLabel input[type="file"] {
 
 
 #baloncesto-inputbox-div img, #beisbol-inputbox-div img, #volibol-inputbox-div img, #futbol-soccer-inputbox-div img, 
-#baloncesto-inputbox-div input, #beisbol-inputbox-div input, #volibol-inputbox-div input, #futbol-soccer-inputbox-div input,
+#baloncesto-inputbox-div input, #beisbol-inputbox-div input, #volibol-inputbox-div input, #futbol-soccer-inputbox-div input, #otro-dxt-inputbox-div input,
 #norte-inputbox-div input, #sur-inputbox-div input,
 #oeste-inputbox-div input, #este-inputbox-div input,
 #metro-inputbox-div input, #centro-inputbox-div input,
@@ -49,7 +49,7 @@ label.loadLabel input[type="file"] {
   cursor:pointer; 
 }
   
-#baloncesto-inputbox-div label, #beisbol-inputbox-div label, #volibol-inputbox-div label, #futbol-soccer-inputbox-div label,
+#baloncesto-inputbox-div label, #beisbol-inputbox-div label, #volibol-inputbox-div label, #futbol-soccer-inputbox-div label, #otro-dxt-inputbox-div label,
 #norte-inputbox-div label, #sur-inputbox-div label,
 #oeste-inputbox-div label, #este-inputbox-div label,
 #metro-inputbox-div label, #centro-inputbox-div label,

@@ -149,6 +149,7 @@ function urlQueryFormat($q){
 //usado para crear el fotopath en sacalo.php, usando el fotoentradaid y el tipo de la foto
 //ambos vienen del DB (foto[4] y foto[3])
 //Tambien definido en masajein (bad?)
+/*
   $fotoTipo = array(
     1 => "gif",
     2 => "jpg",
@@ -159,4 +160,5 @@ function urlQueryFormat($q){
     7 => "tiff",
     8 => "tiff"
   );
+  */
 ?>

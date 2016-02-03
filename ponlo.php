@@ -77,8 +77,8 @@
   daComentarioFbk();
 </script>
 </div><!-- end of comentario -->
-<div id="justToClear"></div>
 
+<div id="justToClear"></div>
 </div><!-- end of file-Y-comentario --> 
 
 
@@ -147,6 +147,10 @@
 <div  id="volibol-inputbox-div">
 <input type="radio" name="deporte" id="volibol-boton" value="volibol" onclick="escogeDeporte();daDeporteFeedback();bregaConSubmitButton();">            
 <label for="volibol-boton"><img src="icon/volibol.png" alt="puerto rico voleibol infantil" class="select-img"></label>
+</div><br>
+<div  id="otro-dxt-inputbox-div">
+<input type="radio" name="deporte" id="otro-dxt-boton" value="otrodxt" onclick="escogeDeporte();daDeporteFeedback();bregaConSubmitButton();">            
+<label for="otro-dxt-boton">Otro</label>
 </div>
 </fieldset>
 <script type="text/javascript">

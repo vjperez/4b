@@ -33,4 +33,15 @@ function brega_error($mensaje1, $mensaje2){
 	header('Location:' . SITE_ROOT . 'error.php?error1=' . $mensaje1 . '&error2=' . $mensaje2);
 	exit();
 }
+
+$fotoTipo = array(
+    1 => "gif",
+    2 => "jpg",
+    3 => "png",
+    4 => "swf",
+    5 => "psd",
+    6 => "bmp",
+    7 => "tiff",
+    8 => "tiff"
+);
 ?>
