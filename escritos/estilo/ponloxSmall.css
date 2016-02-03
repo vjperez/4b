@@ -1,39 +1,38 @@
 #justToClear{
-  clear:both;
-  display:block;
+  display:none;
 }
-#file-foto{
-  float:left;
-  width:480px; /* 40% de 1200px */
-  margin:0px 60px 0px 60px; /* 60px = 5% de 1200px */
+ #comentario-feedback-paragraph{
+  margin-top:50px;   
 }
-#comentario{
-  float:left;
-  width:480px;
-  margin:0px 60px 0px 0px;
-}
+
 
 
 #file-select-div{
-  width:300px;
+  width:355px;
   margin:0px auto;
 }
 #comentario-div{
-  width:400px;
+  width:355px;
   margin:0px auto;
 }
 #comentario-area{
-  width:360px;
+  width:320px;
   margin:0px auto;
 }
 #tag3-input-div, #tag4-input-div, #tag5-input-div{
-  width:300px;
+  width:250px;
   margin:0px auto;
 }
+/*
+#file-select-div, #tag3-input-div, #tag4-input-div, #tag5-input-div, #comentario-div{
+  width:60%;
+  margin:0px auto;
+}
+*/
 
 #file-Y-comentario{
   border:1px solid #0000ff;
-  width:1200px;
+  width:360px;
   margin:100px auto 0px auto;
   background:#efefef; 
   /* 
@@ -45,7 +44,7 @@
 #selecciona{
   /* border:5px solid #dfdfdf;   /* #828592 o #e8e8e8 */
   /* border-radius:5px; */
-  width:1200px;
+  width:360px;
   margin:100px auto 0px auto;
   padding:10px 0px;
   border-bottom:1px solid #e5e5e5;
@@ -60,13 +59,13 @@
   border-bottom:0px solid #e5e5e5;
   */
   border:1px solid #ff0000;
-  width:1200px;
+  width:360px;
   margin:100px auto 0px auto;
   padding:10px 0px;
 }
 #submit-div{
   border:1px solid #00ff00;   /* #828592 o #e8e8e8 */
-  width:1200px;
+  width:360px;
   margin:100px auto 0px auto;
 }
 
@@ -76,8 +75,8 @@
 #oeste-inputbox-div, #este-inputbox-div,
 #metro-inputbox-div, #centro-inputbox-div,
 #usa-inputbox-div, #otro-inputbox-div{
-  width:192px; /* 16% de 1200px */
-  margin:5px 45px 5px 48px; /* 4% de 1200px */
+  width:45%;
+  margin:5px 2% 5px 2%;
   padding:4px 0px;
   display:inline;
   float:left; 

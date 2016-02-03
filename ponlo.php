@@ -6,8 +6,10 @@
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/ponlo.css">
 
-<link rel="stylesheet" type="text/css" media='screen and (max-width: 700px)' href="escritos/estilo/ponloSmall-Medium.css">
-<link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/ponloSmall-Medium.css'>
+
+<link rel="stylesheet" type="text/css" media='screen and (max-width: 500px)' href="escritos/estilo/ponloxSmall.css">
+<link rel='stylesheet' type="text/css" media='screen and (min-width: 501px) and (max-width: 700px)' href='escritos/estilo/ponloSmall.css'>
+<link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/ponloMedium.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1201px)' href='escritos/estilo/ponloBig.css'>
 <!--
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1025px)' href='estilo/portada-1000.css'>

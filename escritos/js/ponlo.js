@@ -58,7 +58,7 @@
     }else if(faltan == limit && ! escogioFoto()){
       parrafo.style.color='red';
       //parrafo.innerHTML='Comentario sobre tu foto.<br>' + limit + ' letras o menos.';    
-      parrafo.innerHTML='<b>Comentario sobre tu foto y el juego de hoy.</b>'; 
+      parrafo.innerHTML='<b>Comentario del juego de hoy.</b>'; 
     }else if(faltan > 1){
       parrafo.style.color='green';
       //parrafo.innerHTML= 'Puedes usar ' + faltan + ' letras mas.';
@@ -113,7 +113,7 @@
       parrafo.innerHTML='';    
     }else{
       parrafo.style.color='red';
-      parrafo.innerHTML='<b>De cual Deporte es tu post ?</b>';
+      parrafo.innerHTML='<b>Escoge el Deporte.</b>';
     }    
   }  
   
