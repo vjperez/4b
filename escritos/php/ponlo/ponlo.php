@@ -4,7 +4,7 @@
   require_once HOST_FS_ROOT . 'escritos/php/ponlo/ponlo_masajein.php';  
   
   
-  
+// 0)  
 // check if actually i am uploading a foto at all 
 //si foto es falso es pq no estoy uploading any foto 
 if( ! empty($_FILES['laFoto']['name']) ){
@@ -53,12 +53,13 @@ if( ! empty($_FILES['laFoto']['name']) ){
       brega_error($mensaje1,$mensaje2);
   }
 }//if escogio foto
+ // end of 0) 
   
   
+//At this point am either uploading photo without error or not loading a photo at all   
   
   
-  
-  //insertando texto en entrada table
+  // 1) insertando texto en entrada table
   require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
   if($comentario == FALSE){ // con === me cubre solo el caso de unset en masajein; con == cubre unset en masajein y tambien set en masajein pero vacio
     $query = "INSERT INTO entrada (deporte,area,tag3,tag4,tag5) VALUES ($deporte, $area, '$tag3', '$tag4', '{$tag5}' );"; // comentario will be set to NULL since thats the default in postgre
@@ -71,9 +72,13 @@ if( ! empty($_FILES['laFoto']['name']) ){
     $mensaje2 = HOST_FS_ROOT . 'escritos/php/ponlo/ponlo.php:insert_query1 ' . '<br>' . pg_last_error($cxn);
     brega_error($mensaje1,$mensaje2);
   }
+  // end of 1)
       
-  //tengo foto? then muevela e insertala
+      
+      
+  // 2) if loading photo (without error) then muevela e insertala
   if( ! empty($_FILES['laFoto']['name']) ){
+    //get entradaid  
 	$query = "SELECT currval(pg_get_serial_sequence('entrada', 'id'));";  
     $entradaid_query_result = pg_query($cxn, $query);
     if( ! $entradaid_query_result ){
@@ -86,7 +91,7 @@ if( ! empty($_FILES['laFoto']['name']) ){
     
     //muevo la foto; antes de insertar en foto table
     $directorio = HOST_FS_ROOT . 'loaded/';
-    if(@move_uploaded_file(  $_FILES['laFoto']['tmp_name']  , $directorio . str_pad($entradaid, 10, '0', STR_PAD_LEFT) . '.' . $fotoTipo[$tipo] )){
+    if(@move_uploaded_file(  $_FILES['laFoto']['tmp_name']  , $directorio . str_pad($entradaid, 9, '0', STR_PAD_LEFT) . '.' . $fotoTipo[$tipo] )){
       // existe una nueva foto 00000008.jpg ; ya puedes insertar en foto table un entry q apunte a fotoentrada 00000008
     }else{
       $mensaje1 = 'Error moviendo foto.';
@@ -105,7 +110,11 @@ if( ! empty($_FILES['laFoto']['name']) ){
 	  // cree un entry en foto table que apunta a entrada 00000008, la entrada 00000008 usara 00000008.jpg
 	}
   }
+  // end of 2)
   
+  
+  
+  // 3)
   // redirect view
   $random = rand(0,3) % 2;
   if($random == 0){

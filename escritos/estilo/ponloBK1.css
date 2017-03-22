@@ -1,0 +1,107 @@
+.select-img{
+ width:30px;
+ height:30px;
+}
+
+
+
+label.loadLabel input[type="file"] {
+    position: fixed;
+    top: -1000px;
+}
+.loadLabel {
+    border: 1px solid #098ea8;
+    border-radius: 4px;
+    padding: 2px 5px;
+    margin: 2px;
+    background: #ffffff;
+    color:#000000;
+    display: inline-block;
+    font-weight:bolder;
+}
+.loadLabel:hover {
+    background:#098ea8;
+    color:#ffffff;
+    font-weight:bolder;
+}
+/*
+ .loadLabel:active {
+    background: #ff0000;
+}
+.loadLabel :invalid + span {
+    color: #f00;
+}
+.loadLabel :valid + span {
+    color: #000;
+}
+*/
+
+
+#baloncesto-inputbox-div img, #beisbol-inputbox-div img, #volibol-inputbox-div img, #futbol-soccer-inputbox-div img, 
+#baloncesto-inputbox-div input, #beisbol-inputbox-div input, #volibol-inputbox-div input, #futbol-soccer-inputbox-div input, #otro-dxt-inputbox-div input,
+#norte-inputbox-div input, #sur-inputbox-div input,
+#oeste-inputbox-div input, #este-inputbox-div input,
+#metro-inputbox-div input, #centro-inputbox-div input,
+#usa-inputbox-div input, #otro-inputbox-div input
+/* #baloncesto-inputbox-div label, #beisbol-boton label, #volibol-boton label, #futbol-boton label */
+{
+  vertical-align:middle;
+  cursor:pointer; 
+}
+  
+#baloncesto-inputbox-div label, #beisbol-inputbox-div label, #volibol-inputbox-div label, #futbol-soccer-inputbox-div label, #otro-dxt-inputbox-div label,
+#norte-inputbox-div label, #sur-inputbox-div label,
+#oeste-inputbox-div label, #este-inputbox-div label,
+#metro-inputbox-div label, #centro-inputbox-div label,
+#usa-inputbox-div label, #otro-inputbox-div label, .loadLabel
+{
+  cursor:pointer;  
+}
+
+#file-select-div,
+#tag3-input-div, #tag4-input-div, #tag5-input-div,
+#comentario-div{
+  border-radius:5px;
+  padding:10px 0px;
+}
+
+
+#submit-boton{
+  height:40px;
+  width:120px;
+ /* background:#23a09a  /*#5fcf80;*/
+ /* background: linear-gradient(#aeb2c3, #bfbfbf);   /* (#828592, #aeb2c3);  */
+ /* font-weight:bolder;*/
+ /* cursor:pointer;*/
+  border-radius:5px;
+  /*color:#00ff00;*/
+}
+
+
+#deporte-feedback-paragraph, #tag4-feedback-paragraph, #tag5-feedback-paragraph
+{
+  margin-top:50px;   
+}
+
+
+/*
+#submit-boton:disabled{
+  height:40px;
+  width:120px;
+  /* background:#23a09a  /*#5fcf80;
+  background: linear-gradient(#aeb2c3, #bfbfbf);   /* (#828592, #aeb2c3);  
+  font-weight:bolder;
+  cursor:pointer;
+  border-radius:5px;
+  color:#ff0000;
+}
+
+#submit-boton:hover{
+  color:#ff0000;
+}
+#file-select-div input,
+#tag3-input-div label, #tag4-input-div label, #tag5-input-div label,
+#tag3-input-div input, #tag4-input-div input, #tag5-input-div input{
+  cursor:pointer; 
+}
+*/

@@ -57,7 +57,7 @@ while($index < count($entries)){
           else $entries[$index][$tal][7] = $entrada[7];   
           $tal++;
       }// while rows
-  }
+  }// if dbQueries tiene algun query
 $index++;
 }// end do pg queries
 pg_free_result($entradasarray);

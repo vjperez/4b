@@ -4,7 +4,6 @@
 }
 
 
-
 label.loadLabel input[type="file"] {
     position: fixed;
     top: -1000px;
@@ -38,28 +37,20 @@ label.loadLabel input[type="file"] {
 
 
 #baloncesto-inputbox-div img, #beisbol-inputbox-div img, #volibol-inputbox-div img, #futbol-soccer-inputbox-div img, 
-#baloncesto-inputbox-div input, #beisbol-inputbox-div input, #volibol-inputbox-div input, #futbol-soccer-inputbox-div input, #otro-dxt-inputbox-div input,
-#norte-inputbox-div input, #sur-inputbox-div input,
-#oeste-inputbox-div input, #este-inputbox-div input,
-#metro-inputbox-div input, #centro-inputbox-div input,
-#usa-inputbox-div input, #otro-inputbox-div input
-/* #baloncesto-inputbox-div label, #beisbol-boton label, #volibol-boton label, #futbol-boton label */
+#baloncesto-inputbox-div input, #beisbol-inputbox-div input, #volibol-inputbox-div input, #futbol-soccer-inputbox-div input
 {
   vertical-align:middle;
   cursor:pointer; 
 }
   
-#baloncesto-inputbox-div label, #beisbol-inputbox-div label, #volibol-inputbox-div label, #futbol-soccer-inputbox-div label, #otro-dxt-inputbox-div label,
-#norte-inputbox-div label, #sur-inputbox-div label,
-#oeste-inputbox-div label, #este-inputbox-div label,
-#metro-inputbox-div label, #centro-inputbox-div label,
-#usa-inputbox-div label, #otro-inputbox-div label, .loadLabel
+#baloncesto-inputbox-div label, #beisbol-inputbox-div label, #volibol-inputbox-div label, #futbol-soccer-inputbox-div label,
+.loadLabel
 {
   cursor:pointer;  
 }
 
 #file-select-div,
-#tag3-input-div, #tag4-input-div, #tag5-input-div,
+#tag1-input-div, #tag2-input-div, #tag3-input-div, #tag4-input-div, #tag5-input-div,
 #comentario-div{
   border-radius:5px;
   padding:10px 0px;
@@ -78,30 +69,19 @@ label.loadLabel input[type="file"] {
 }
 
 
-#deporte-feedback-paragraph, #tag4-feedback-paragraph, #tag5-feedback-paragraph
+#tag2-feedback-paragraph, #tag3-feedback-paragraph, #tag4-feedback-paragraph, #tag5-feedback-paragraph
 {
   margin-top:50px;   
 }
 
 
-/*
-#submit-boton:disabled{
-  height:40px;
-  width:120px;
-  /* background:#23a09a  /*#5fcf80;
-  background: linear-gradient(#aeb2c3, #bfbfbf);   /* (#828592, #aeb2c3);  
-  font-weight:bolder;
-  cursor:pointer;
-  border-radius:5px;
-  color:#ff0000;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
-
-#submit-boton:hover{
-  color:#ff0000;
-}
-#file-select-div input,
-#tag3-input-div label, #tag4-input-div label, #tag5-input-div label,
-#tag3-input-div input, #tag4-input-div input, #tag5-input-div input{
-  cursor:pointer; 
-}
-*/

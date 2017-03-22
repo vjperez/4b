@@ -8,18 +8,28 @@
       $path = 'futbol-soccer.png';
     }else if($deporte == 3){
       $path = 'volibol.png';  
+    }else if($deporte == 9){
+      $path = 'x.png';  
     }
     return $path;
   }
   function getAreaExpression($area){
     if($area == 0){
-      $exp = '  Norte';
+      $exp = '  Norte, PR';
     }else if($area == 1){
-      $exp =  '  Sur';
+      $exp =  '  Sur, PR';
     }else if($area == 2){
-      $exp = '  Oeste';
+      $exp = '  Oeste, PR';
     }else if($area == 3){
-      $exp = '  Este';  
+      $exp = '  Este, PR';  
+    }else if($area == 4){
+      $exp = '  Metro, PR';
+    }else if($area == 5){
+      $exp = '  Centro, PR';  
+    }else if($area == 6){
+      $exp = '  U.S.A';
+    }else if($area == 7){
+      $exp = 'Representando PR';  
     }
     return $exp;
   }
@@ -116,7 +126,7 @@ function urlQueryFormat($q){
   if ($test2) { ; }
   else return $result; // false
   
-  $test3 = ($numeros[1] >= 0 && $numeros[1] <= 3) && ($numeros[3] >= 0 && $numeros[3] <= 3);
+  $test3 = (($numeros[1] >= 0 && $numeros[1] <= 3) || ($numeros[1] == 9)) && ($numeros[3] >= 0 && $numeros[3] <= 7);
   if ($test3) { ; }
   else return $result; // false
 

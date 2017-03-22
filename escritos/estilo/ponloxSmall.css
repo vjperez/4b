@@ -19,7 +19,7 @@
   width:320px;
   margin:0px auto;
 }
-#tag3-input-div, #tag4-input-div, #tag5-input-div{
+#tag1-input-div, #tag2-input-div, #tag3-input-div, #tag4-input-div, #tag5-input-div{
   width:250px;
   margin:0px auto;
 }
@@ -70,13 +70,9 @@
 }
 
 #baloncesto-inputbox-div, #beisbol-inputbox-div,
-#volibol-inputbox-div, #futbol-soccer-inputbox-div, #otro-dxt-inputbox-div,
-#norte-inputbox-div, #sur-inputbox-div,
-#oeste-inputbox-div, #este-inputbox-div,
-#metro-inputbox-div, #centro-inputbox-div,
-#usa-inputbox-div, #otro-inputbox-div{
-  width:45%;
-  margin:5px 2% 5px 2%;
+#volibol-inputbox-div, #futbol-soccer-inputbox-div{
+  width:45%;  /*podrias calcular los porcientos de 500px y usar pixeles, es lo mismo despues q selecciona sea pixels*/
+  margin:5px 2% 5px 2%;  /*podrias calcular los porcientos de 500px y usar pixeles, es lo mismo despues q selecciona sea pixels*/
   padding:4px 0px;
   display:inline;
   float:left; 

@@ -5,7 +5,8 @@
     'baloncesto' => 0,
     'beisbol' => 1,
     'futbol-soccer' => 2,
-    'volibol' => 3
+    'volibol' => 3,
+    'otrodxt' => 9
   );
   $areaArray = array(
     'norte' => 0,

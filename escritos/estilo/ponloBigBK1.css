@@ -26,7 +26,7 @@
   width:360px;
   margin:0px auto;
 }
-#tag1-input-div, #tag2-input-div, #tag3-input-div, #tag4-input-div, #tag5-input-div{
+#tag3-input-div, #tag4-input-div, #tag5-input-div{
   width:300px;
   margin:0px auto;
 }
@@ -71,7 +71,11 @@
 }
 
 #baloncesto-inputbox-div, #beisbol-inputbox-div,
-#volibol-inputbox-div, #futbol-soccer-inputbox-div{
+#volibol-inputbox-div, #futbol-soccer-inputbox-div, #otro-dxt-inputbox-div,
+#norte-inputbox-div, #sur-inputbox-div,
+#oeste-inputbox-div, #este-inputbox-div,
+#metro-inputbox-div, #centro-inputbox-div,
+#usa-inputbox-div, #otro-inputbox-div{
   width:192px; /* 16% de 1200px */
   margin:5px 45px 5px 48px; /* 4% de 1200px */
   padding:4px 0px;
