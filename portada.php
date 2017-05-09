@@ -11,11 +11,6 @@
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/portadaMedium.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1201px)' href='escritos/estilo/portadaBig.css'>
 
-<!--
-<link rel='stylesheet' type="text/css" media='screen and (min-width: 1025px)' href='estilo/portada-1000.css'>
-<link rel='stylesheet' type="text/css" media='screen and (min-width: 1260px)' href='estilo/portada-1250.css'>
--->
-
 <script type="text/javascript" src="escritos/js/portada.js"></script>
 </head>
 
@@ -42,7 +37,6 @@
 
 <!---------------------------------------------------------------------------------------------------->
 <div id="links">
-<fieldset>
 <div class="link">
 <!--	
 <a href="ponlo.php">
@@ -52,8 +46,6 @@
 -->
 <a href="ponlo.php"><img src="icon/upload.png" alt="load-icon"></a>
 </div>
-
-</fieldset>
 </div><!-- end of links-->
 
 

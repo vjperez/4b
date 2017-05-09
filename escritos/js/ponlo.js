@@ -1,18 +1,18 @@
+  //cambia color de divisiones
   function coloreaFile(){
     var limit = 150;
     var ladivision = document.getElementById('file-select-div');
     
-    if( ! escogioFoto() && noUsado() == limit){
-      ladivision.style.backgroundColor='#f5f5f5';
-      ladivision.style.border="1px solid #e5e5e5";
-    }else if( ! escogioFoto() && noUsado() < limit){
-      ladivision.style.backgroundColor='#7ec97b';
-      ladivision.style.border="1px solid #bfbfbf";
-    }else{
+    if( escogioFoto() ){
       ladivision.style.backgroundColor='#7ec97b'; 
       ladivision.style.border="1px solid #bfbfbf";
+    }else{
+      ladivision.style.backgroundColor='#f5f5f5';
+      ladivision.style.border="1px solid #e5e5e5";
     }
   }
+  
+  //cambia color de letra de parrafo
   function daFileFbk(){
     var limit = 150;  
     var parrafo = document.getElementById('file-feedback-paragraph');
@@ -22,10 +22,10 @@
       parrafo.innerHTML='<b>Escoge una foto del juego de hoy.</b>';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
     }else if( ! escogioFoto() && noUsado() < limit){
       parrafo.style.color='green';
-      parrafo.innerHTML='Aun puedes escoger una foto.';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
+      parrafo.innerHTML='<b>Aun puedes escoger una foto.</b>';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
     }else{
       parrafo.style.color='green';
-      parrafo.innerHTML='Ya escogiste la foto !';
+      parrafo.innerHTML='<b>Ya escogiste la foto !</b>';
     }    
   }
   
@@ -36,14 +36,18 @@
     var ladivision = document.getElementById('comentario-div');
 
     var faltan = noUsado();    
-    if(faltan < 0 || ( ! escogioFoto() && faltan == limit) ){
+    if(faltan == limit){
       ladivision.style.backgroundColor='#f5f5f5';  //'#f3efe3'; //'#d5d5d5'; //bfbfbf
       ladivision.style.border="1px solid #e5e5e5";  //"1px solid #bfbfbf";
-    }else{
+    }else if(faltan < 0){
+      ladivision.style.backgroundColor='#ff0000';  
+      ladivision.style.border="1px solid #bfbfbf";         
+    }else{ // ha escrito algo y no se ha pasado
       ladivision.style.backgroundColor='#7ec97b';
       ladivision.style.border="1px solid #bfbfbf";
     }
   }
+  
   //cambia color de letra de parrafo
   function daComentarioFbk(){
     var limit = 150;  
@@ -51,31 +55,31 @@
     var parrafo = document.getElementById('comentario-feedback-paragraph');
     
     var faltan = noUsado(); 
-    if(faltan == limit && escogioFoto()){
-      parrafo.style.color='green';
-      //parrafo.innerHTML='Comentario opcional sobre tu foto.<br>' + limit + ' letras o menos.';
-      parrafo.innerHTML='Comentario opcional del juego.';    
-    }else if(faltan == limit && ! escogioFoto()){
+    if(faltan == limit && ! escogioFoto()){
       parrafo.style.color='red';
-      //parrafo.innerHTML='Comentario sobre tu foto.<br>' + limit + ' letras o menos.';    
       parrafo.innerHTML='<b>Comentario del juego de hoy.</b>'; 
+    }else if(faltan == limit && escogioFoto()){
+      parrafo.style.color='green';
+      parrafo.innerHTML='<b>Comentario opcional del juego.</b>';    
     }else if(faltan > 1){
       parrafo.style.color='green';
       //parrafo.innerHTML= 'Puedes usar ' + faltan + ' letras mas.';
-      parrafo.innerHTML= faltan;
+      parrafo.innerHTML= '<b>' + faltan + '</b>';
+      parrafo.style.textAlign = 'right';
     }else if(faltan == 1){
       parrafo.style.color='green';
       //parrafo.innerHTML= 'Puedes usar ' + faltan + ' letra mas.';
-      parrafo.innerHTML= faltan;
+      parrafo.innerHTML= '<b>' + faltan + '</b>';
     }else if(faltan == 0){
       parrafo.style.color='green';
-      parrafo.innerHTML= 'Usando exactamente ' + limit + ' letras.';
+      //parrafo.innerHTML= 'Usando exactamente ' + limit + ' letras.';
+      parrafo.innerHTML= '<b>' + faltan + '</b>';   
     }else if(faltan == -1 ){
       parrafo.style.color='red';
-      parrafo.innerHTML='Tienes ' + (-1 * faltan) + ' letra de mas.';
+      parrafo.innerHTML='<b>Tienes ' + (-1 * faltan) + ' letra de mas.</b>';
     }else if(faltan < -1 ){
       parrafo.style.color='red';
-      parrafo.innerHTML='Tienes ' + (-1 * faltan) + ' letras de mas.';
+      parrafo.innerHTML='<b>Tienes ' + (-1 * faltan) + ' letras de mas.</b>';
     }
   }
  

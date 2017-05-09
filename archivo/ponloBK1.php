@@ -6,10 +6,15 @@
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/ponlo.css">
 
+
 <link rel="stylesheet" type="text/css" media='screen and (max-width: 500px)' href="escritos/estilo/ponloxSmall.css">
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 501px) and (max-width: 700px)' href='escritos/estilo/ponloSmall.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/ponloMedium.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1201px)' href='escritos/estilo/ponloBig.css'>
+<!--
+<link rel='stylesheet' type="text/css" media='screen and (min-width: 1025px)' href='estilo/portada-1000.css'>
+<link rel='stylesheet' type="text/css" media='screen and (min-width: 1260px)' href='estilo/portada-1250.css'>
+-->
 
 <script type="text/javascript" src="escritos/js/ponlo.js"></script>
 </head>
@@ -40,6 +45,7 @@
 <!---------------------------------------------------------------------------------------------------->
 <div id="file-Y-comentario">
 
+	
 <!---------------------------------------------------------------------------------------------------->
 <div id="file-foto">
 <div>
@@ -53,6 +59,7 @@
 </label>
 </div>
 </div><!-- end of file-foto -->
+
 
 
 <!---------------------------------------------------------------------------------------------------->
@@ -76,8 +83,52 @@
 
 
 
+
 <!--------------------------------------------------------------------------------------------------->
 <div id="selecciona">
+<fieldset>
+<div>
+<p id="area-feedback-paragraph"><!--   inserted by js   --></p>
+</div>
+<div id="norte-inputbox-div">
+<input type="radio" name="area" id="norte-boton" value="norte" onclick="escogeArea();daAreaFeedback();bregaConSubmitButton();">
+<label for="norte-boton">Norte, PR</label>
+</div>
+<div  id="sur-inputbox-div">
+<input type="radio" name="area" id="sur-boton" value="sur" onclick="escogeArea();daAreaFeedback();bregaConSubmitButton();">
+<label for="sur-boton">Sur, PR</label>
+</div>
+<div  id="oeste-inputbox-div">
+<input type="radio" name="area" id="oeste-boton" value="oeste" onclick="escogeArea();daAreaFeedback();bregaConSubmitButton();">
+<label for="oeste-boton">Oeste, PR</label>
+</div>
+<div  id="este-inputbox-div">
+<input type="radio" name="area" id="este-boton" value="este" onclick="escogeArea();daAreaFeedback();bregaConSubmitButton();">            
+<label for="este-boton">Este, PR</label>
+</div>
+<div id="metro-inputbox-div">
+<input type="radio" name="area" id="metro-boton" value="metro" onclick="escogeArea();daAreaFeedback();bregaConSubmitButton();">
+<label for="metro-boton">Metro, PR</label>
+</div>
+<div  id="centro-inputbox-div">
+<input type="radio" name="area" id="centro-boton" value="centro" onclick="escogeArea();daAreaFeedback();bregaConSubmitButton();">
+<label for="centro-boton">Centro, PR</label>
+</div>
+<div  id="usa-inputbox-div">
+<input type="radio" name="area" id="usa-boton" value="usa" onclick="escogeArea();daAreaFeedback();bregaConSubmitButton();">
+<label for="usa-boton">U.S.A</label>
+</div>
+<div  id="otro-inputbox-div">
+<input type="radio" name="area" id="otro-boton" value="otro" onclick="escogeArea();daAreaFeedback();bregaConSubmitButton();">            
+<label for="otro-boton">Otro</label>
+</div>
+
+</fieldset>
+<script type="text/javascript">
+  escogeArea();
+  daAreaFeedback();
+</script>
+<fieldset>
 <div>
 <p id="deporte-feedback-paragraph"><!--   inserted by js   --></p>
 </div>
@@ -96,63 +147,48 @@
 <div  id="volibol-inputbox-div">
 <input type="radio" name="deporte" id="volibol-boton" value="volibol" onclick="escogeDeporte();daDeporteFeedback();bregaConSubmitButton();">            
 <label for="volibol-boton"><img src="icon/volibol.png" alt="puerto rico voleibol infantil" class="select-img"></label>
+</div><br>
+<div  id="otro-dxt-inputbox-div">
+<input type="radio" name="deporte" id="otro-dxt-boton" value="otrodxt" onclick="escogeDeporte();daDeporteFeedback();bregaConSubmitButton();">            
+<label for="otro-dxt-boton">Otro</label>
 </div>
-
+</fieldset>
 <script type="text/javascript">
   escogeDeporte();
   daDeporteFeedback();
 </script>
-<div id="justToClear"></div>
-</div><!-- end of selecciona --> 
-
-
-
+</div><!-- end of selecciona -->         
+          
+          
+          
 <!---------------------------------------------------------------------------------------------------->
 <div id="etiquetas">
-<div>
-<p id="tag1-feedback-paragraph"><!--   inserted by js   --></p>
-</div>
-<div id="tag1-input-div">
-<label for="tag1-input" class="sr-only">Torneo</label>
-<input type="text" id="tag1-input" name="tag1-input" placeholder="Nombre del Torneo" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();" required="true">
-</div>
-<div>
-<p id="tag2-feedback-paragraph"><!--   inserted by js   --></p>
-</div>
-<div id="tag2-input-div">
-<label for="tag2-input" class="sr-only">Equipo</label> 
-<input type="text" id="tag2-input" name="tag2-input" placeholder="Nombre del Equipo" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();" required="true">
-</div>
-
 <div>
 <p id="tag3-feedback-paragraph"><!--   inserted by js   --></p>
 </div>
 <div id="tag3-input-div">
-<label for="tag3-input" class="sr-only">Tag</label>
-<input type="text" id="tag3-input" name="tag3-input" placeholder="Categoria" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();" required="true">
+<label for="tag3-input">Tag 1</label>
+<input type="text" id="tag3-input" name="tag3-input" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();" required="true">
 </div>
 <div>
 <p id="tag4-feedback-paragraph"><!--   inserted by js   --></p>
 </div>
 <div id="tag4-input-div">
-<label for="tag4-input" class="sr-only">Tag</label> 
-<input type="text" id="tag4-input" name="tag4-input" placeholder="Opcional" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();">
+<label for="tag4-input">Tag 2</label> 
+<input type="text" id="tag4-input" name="tag4-input" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();" required="true">
 </div>
 <div>
 <p id="tag5-feedback-paragraph"><!--   inserted by js   --></p>
 </div>
 <div id="tag5-input-div">
-<label for="tag5-input" class="sr-only">Tag</label>
-<input type="text" id="tag5-input" name="tag5-input" placeholder="Opcional" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();">
+<label for="tag5-input">Tag 3</label>
+<input type="text" id="tag5-input" name="tag5-input" onkeyup="coloreaTags();daTagsFbk();bregaConSubmitButton();" required="true">
 </div>
 <script type="text/javascript">
   coloreaTags();
   daTagsFbk();
 </script>
-</div><!-- end of etiquetas -->        
-          
-          
-          
+</div><!-- end of etiquetas -->
 
 
 

@@ -1,22 +1,28 @@
 function cambioSmall( mqSmall ){
- if (mqSmall.matches){
+  if (mqSmall.matches){
     showing = 1;
     showArray();
-  }  
+  //document.getElementById("mensaje").style.backgroundColor = "red"; 
+  }
+  //document.getElementById("mensaje").style.backgroundColor = "yellow";
 }   
 
 function cambioMedium( mqMedium ){
-if (mqMedium.matches){
+  if (mqMedium.matches){
     showing = 2;
-    showArray();
+    showArray();  
+  //document.getElementById("mensaje").style.backgroundColor = "green";
   }
+  //document.getElementById("mensaje").style.backgroundColor = "black";
 }
 
 function cambioBig( mqBig ){
   if(mqBig.matches){
     showing = 3;
     showArray();
-  } 
+  //document.getElementById("mensaje").style.backgroundColor = "blue";
+  }
+  //document.getElementById("mensaje").style.backgroundColor = "white";
 } 
 
 
