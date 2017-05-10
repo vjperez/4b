@@ -5,7 +5,7 @@
     
     if( escogioFoto() ){
       ladivision.style.backgroundColor='#7ec97b'; 
-      ladivision.style.border="1px solid #bfbfbf";
+      ladivision.style.border="1px solid #8f8f8f";
     }else{
       ladivision.style.backgroundColor='#f5f5f5';
       ladivision.style.border="1px solid #e5e5e5";
@@ -22,7 +22,7 @@
       parrafo.innerHTML='<b>Escoge una foto del juego de hoy.</b>';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
     }else if( ! escogioFoto() && noUsado() < limit){
       parrafo.style.color='green';
-      parrafo.innerHTML='<b>Aun puedes escoger una foto.</b>';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
+      parrafo.innerHTML='<b>Escoge una foto.</b>';                                       /* es posible subir un file llamado algo.css o algo.exe .... need to work on this */
     }else{
       parrafo.style.color='green';
       parrafo.innerHTML='<b>Ya escogiste la foto !</b>';
@@ -41,10 +41,10 @@
       ladivision.style.border="1px solid #e5e5e5";  //"1px solid #bfbfbf";
     }else if(faltan < 0){
       ladivision.style.backgroundColor='#ff0000';  
-      ladivision.style.border="1px solid #bfbfbf";         
+      ladivision.style.border="1px solid #8f8f8f";         
     }else{ // ha escrito algo y no se ha pasado
       ladivision.style.backgroundColor='#7ec97b';
-      ladivision.style.border="1px solid #bfbfbf";
+      ladivision.style.border="1px solid #8f8f8f";
     }
   }
   
@@ -58,28 +58,34 @@
     if(faltan == limit && ! escogioFoto()){
       parrafo.style.color='red';
       parrafo.innerHTML='<b>Comentario del juego de hoy.</b>'; 
+      parrafo.style.fontSize = '1.00em';
     }else if(faltan == limit && escogioFoto()){
       parrafo.style.color='green';
-      parrafo.innerHTML='<b>Comentario opcional del juego.</b>';    
+      parrafo.innerHTML='<b>Comentario opcional del juego.</b>'; 
+      parrafo.style.fontSize = '1.00em';   
     }else if(faltan > 1){
       parrafo.style.color='green';
       //parrafo.innerHTML= 'Puedes usar ' + faltan + ' letras mas.';
       parrafo.innerHTML= '<b>' + faltan + '</b>';
-      parrafo.style.textAlign = 'right';
+      parrafo.style.fontSize = '0.70em';
     }else if(faltan == 1){
       parrafo.style.color='green';
       //parrafo.innerHTML= 'Puedes usar ' + faltan + ' letra mas.';
       parrafo.innerHTML= '<b>' + faltan + '</b>';
+      parrafo.style.fontSize = '0.70em';
     }else if(faltan == 0){
       parrafo.style.color='green';
       //parrafo.innerHTML= 'Usando exactamente ' + limit + ' letras.';
       parrafo.innerHTML= '<b>' + faltan + '</b>';   
+      parrafo.style.fontSize = '0.70em';
     }else if(faltan == -1 ){
       parrafo.style.color='red';
       parrafo.innerHTML='<b>Tienes ' + (-1 * faltan) + ' letra de mas.</b>';
+      parrafo.style.fontSize = '1.00em';
     }else if(faltan < -1 ){
       parrafo.style.color='red';
       parrafo.innerHTML='<b>Tienes ' + (-1 * faltan) + ' letras de mas.</b>';
+      parrafo.style.fontSize = '1.00em';
     }
   }
  
@@ -95,7 +101,7 @@
       //var labels = ladivision.getElementsByTagName('label');
       if(boton.checked == true){
         ladivision.style.backgroundColor='#7ec97b';
-        ladivision.style.border="1px solid #bfbfbf";
+        ladivision.style.border="1px solid #8f8f8f";
         //labels[0].style.color='#ffffff';
         //labels[0].style.fontWeight='bold';
       }else{
@@ -114,7 +120,7 @@
     var boton4 = document.getElementById('volibol-boton');
     if(boton1.checked == true || boton2.checked == true || boton3.checked == true || boton4.checked == true){
       parrafo.style.color='green';
-      parrafo.innerHTML='';    
+      parrafo.innerHTML='<b>  </b>';    
     }else{
       parrafo.style.color='red';
       parrafo.innerHTML='<b>Escoge el Deporte.</b>';
@@ -136,7 +142,7 @@
       var labels = ladivision.getElementsByTagName('label'); /*  get the elements named 'label' from  "ladivision" NOT FROM document */
       if(boton.value != '' && boton.value.length <= limit){
         ladivision.style.backgroundColor='#7ec97b';
-        ladivision.style.border="1px solid #bfbfbf";
+        ladivision.style.border="1px solid #8f8f8f";
         labels[0].style.color='#ffffff';
         labels[0].style.fontWeight='bold';
       }else{
@@ -168,16 +174,20 @@
         parrafo.style.color='red';
         //parrafo.innerHTML='Taguea la foto.<br>' + limit + ' letras.';    
         parrafo.innerHTML='<b>Taguea la foto.</b>'; 
+        parrafo.style.fontSize = '1.00em';
       }else if(faltanArr[index] >= 0){
         parrafo.style.color='green';
+        parrafo.innerHTML= '<b>' + faltanArr[index] + '</b>';
+        parrafo.style.fontSize = '0.75em';
         //if(faltanArr[index] >= 2) parrafo.innerHTML= 'Puedes usar ' + faltanArr[index] + ' letras mas.';
         //if(faltanArr[index] == 1) parrafo.innerHTML= 'Puedes usar ' + faltanArr[index] + ' letra mas.';
-        if(faltanArr[index] >= 1) parrafo.innerHTML= faltanArr[index];
-        if(faltanArr[index] == 0) parrafo.innerHTML= 'Usando exactamente ' + limit + ' letras.';
+        //if(faltanArr[index] >= 1) parrafo.innerHTML= faltanArr[index];
+        //if(faltanArr[index] == 0) parrafo.innerHTML= 'Usando exactamente ' + limit + ' letras.';
       }else if(faltanArr[index] < 0){
         parrafo.style.color='red';
-        if(faltanArr[index] == -1) parrafo.innerHTML= 'Tienes ' + (-1 * faltanArr[index]) + ' letra de mas.';
-        if(faltanArr[index] <  -1) parrafo.innerHTML= 'Tienes ' + (-1 * faltanArr[index]) + ' letras de mas.';
+        if(faltanArr[index] == -1) parrafo.innerHTML= '<b>Tienes ' + (-1 * faltanArr[index]) + ' letra de mas.</b>';
+        if(faltanArr[index] <  -1) parrafo.innerHTML= '<b>Tienes ' + (-1 * faltanArr[index]) + ' letras de mas.</b>';
+        parrafo.style.fontSize = '1.00em';
       }
     }
 
@@ -200,12 +210,12 @@
       document.getElementById('submit-boton').disabled=false;
       document.getElementById('submit-boton').style.color='#ffffff';
       document.getElementById('submit-boton').style.fontWeight='bold';
-      document.getElementById('submit-boton').style.backgroundColor='#098ea8';
+      document.getElementById('submit-boton').style.backgroundColor='#092eef';   //'#098ea8'
       document.getElementById('submit-boton').style.cursor='pointer';
       feedback.innerHTML=''; 
     }else{
       feedback.style.color='red';  
-      feedback.innerHTML='<b>Falta alguna informacion antes de postear.</b>';
+      feedback.innerHTML='<b>Falta informacion antes de postear.</b>';
       document.getElementById('submit-boton').disabled=true;
       document.getElementById('submit-boton').style.color='#000000';
       document.getElementById('submit-boton').style.fontWeight='normal';

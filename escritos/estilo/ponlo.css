@@ -71,7 +71,8 @@ label.loadLabel input[type="file"] {
   /*color:#00ff00;*/
 }
 
-#tag2-feedback-paragraph, #tag3-feedback-paragraph, #tag4-feedback-paragraph, #tag5-feedback-paragraph{
+#tag1-feedback-paragraph, #tag2-feedback-paragraph, #tag3-feedback-paragraph, #tag4-feedback-paragraph, #tag5-feedback-paragraph,
+#file-feedback-paragraph, #deporte-feedback-paragraph{
   margin-top:50px;   
 }
 
@@ -86,6 +87,10 @@ label.loadLabel input[type="file"] {
   border: 0;
 }
 
+.header{
+  font-weight:bolder;
+  color:#092eff;
+}
 /*
 fieldset{
   border:1px solid #ff0000;    /* #bfbfbf; /* #828592 o #e8e8e8  
