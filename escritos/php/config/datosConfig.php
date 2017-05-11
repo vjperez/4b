@@ -11,20 +11,21 @@ define('HOST_FS_ROOT', '/var/www/4b/');
 define('SITE_ROOT' , 'http://localhost/4b/');  
 
 function debug_print(){
-  echo '<br><br><br><br>';
+  //echo '<br><br><br><br>';
+  //echo '<br>';
+  echo '<img src="icon/error-homer.png" alt="error-foto">';
+  
   if( isset($_REQUEST['error1']) ){
     echo '<p class="warning">' . $_REQUEST['error1'] . '</p>'; 
   }else{
-    echo '<p class="warning">Why are you on my error page?<br>Error1 was not set ! </p>';
+    echo '<p class="warning">Don\'t hack my site, i\'m still learning.<br>Error1 was not set ! </p>';
   }
   echo '<br>';
-  echo '<img src="icon/error-homer.png" alt="error-foto">';
-  echo '<br><br><hr>';
   if(DEBUG){
     if(isset($_REQUEST['error2'])){
-      echo '<br>' . $_REQUEST['error2'];    
+      echo '<hr><br>' . $_REQUEST['error2'];    
     }else{
-      echo '<p>error2 was not set. </p>';
+      echo '<hr><br>' . '<p>error2 was not set. </p>';
     }
   }
 }

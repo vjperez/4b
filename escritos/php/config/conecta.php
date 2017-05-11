@@ -15,7 +15,7 @@
     $cxn_string = "port=5432" . " host=" . DB_HOST . " dbname=" . DB_NOMBRE . " user=" . DB_USUARIO . " password=" . DB_PASSWORD; 
     $cxn = pg_connect($cxn_string);
     if(pg_connection_status($cxn) === PGSQL_CONNECTION_OK){
-	  echo '<p>' . DB_USUARIO . ' esta logueado en ' . DB_DBMS . ', usando base de datos ' . DB_NOMBRE . '.</p>';
+	  echo '<p>' . DB_USUARIO . ' esta logueado en ' . DB_DBMS . ', usando base de datos ' . DB_NOMBRE . ' at ' . DB_HOST . '.</p>';
     }else{
       $mensaje1 = 'Error logueando a base de datos.';
       $mensaje2 = 'Attempting to log into ' . DB_DBMS . ' at <br>' . HOST_FS_ROOT . 'escritos/php/config/conecta.php. '; 

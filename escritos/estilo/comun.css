@@ -73,5 +73,6 @@ fieldset{
 
 
 .warning{
+  font-weight: bold;
   color:#ff0000;    
 }

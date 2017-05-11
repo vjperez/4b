@@ -1,5 +1,5 @@
 <?php
-  require_once '../config/datosConfig.php'; //   'escritos/php/config/datosConfig.php'; 
+  require_once  '../config/datosConfig.php'; // 'escritos/php/config/datosConfig.php'; 
   //los masajeo
   require_once HOST_FS_ROOT . 'escritos/php/ponlo/ponlo_masajein.php';  
   
