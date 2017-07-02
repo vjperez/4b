@@ -1,4 +1,7 @@
-<?php require_once 'escritos/php/sacalo/sacalo.php'; ?>
+<?php 
+require_once 'escritos/php/config/datosConfig.php';
+require_once 'escritos/php/sacalo/sacalo.php'; 
+?>
 <!doctype html>
 <html>
 <head>
@@ -16,8 +19,6 @@
 
 
 <body>
-
-
 <div id="papel">    
 
 
@@ -31,22 +32,20 @@
 <li><a href='portada.php'><img src="icon/volibol.png" alt="puerto rico volibol infantil"></a></li>
 <li id="titulo-text">Infantil y Juvenil</li>
 </ul>
-</div><!--end of titulo--> 
+</div>
+<!--end of titulo--> 
 
 
 
 <!---------------------------------------------------------------------------------------------------->
+<!--
 <div id="links">
 <div class="link">
-<!--	
-<a href="ponlo.php">
-<img src="icon/camera.png" alt="camera-icon"><span></span>
-<img src="icon/pencil.png" alt="pencil-icon"><span></span>
-</a>
--->
 <a href="ponlo.php"><img src="icon/upload.png" alt="load-icon"></a>
 </div>
-</div><!-- end of links-->
+</div>
+-->
+<!-- end of links-->
 
 
 
@@ -62,17 +61,17 @@
   var extraEntries2  = <?php echo json_encode($entries[2]); ?>;
   var entries = baseEntries.concat(extraEntries1.concat(extraEntries2));
   
-  var mqSmall = window.matchMedia("screen and (max-width: 700px)");
-  var mqMedium = window.matchMedia("screen and (min-width: 701px) and (max-width: 1200px)");
-  var mqBig = window.matchMedia("screen and (min-width: 1201px)");  
+  var smallScreen = window.matchMedia("screen and (max-width: 700px)");
+  var mediumScreen = window.matchMedia("screen and (min-width: 701px) and (max-width: 1200px)");
+  var bigScreen = window.matchMedia("screen and (min-width: 1201px)");  
   
-  cambioSmall( mqSmall ); 
-  cambioMedium( mqMedium );
-  cambioBig( mqBig );
+  cambioSmall( smallScreen ); 
+  cambioMedium( mediumScreen );
+  cambioBig( bigScreen );
   
-  mqSmall.addListener( cambioSmall );
-  mqMedium.addListener( cambioMedium );
-  mqBig.addListener( cambioBig );  
+  smallScreen.addListener( cambioSmall );
+  mediumScreen.addListener( cambioMedium );
+  bigScreen.addListener( cambioBig );  
   //showing = 0;
   //showArray();
 </script>

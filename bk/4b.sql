@@ -1,9 +1,10 @@
+<br />
+<b>Strict Standards</b>:  Only variables should be assigned by reference in <b>/usr/share/phppgadmin/classes/database/Connection.php</b> on line <b>23</b><br />
 --
 -- PostgreSQL database dump
 --
 
 SET statement_timeout = 0;
-SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
@@ -132,51 +133,34 @@ ALTER TABLE ONLY foto ALTER COLUMN id SET DEFAULT nextval('foto_id_seq'::regclas
 -- Data for Name: entrada; Type: TABLE DATA; Schema: public; Owner: victor
 --
 
-INSERT INTO entrada VALUES (2, 0, 1, 'Copa 3 pa 3', 'Barrio San Anton', 'Ponce', '2015-02-23 02:54:45', 'El equipo de San Anton pudo ganar hoy su primer juego.', 1);
-INSERT INTO entrada VALUES (3, 0, 2, 'Little Lads', 'Aguadilla', 'Isabela', '2015-02-23 02:54:45', 'El equipo 13U de Isabela seguimos invictos. El Lunes pa Ponce.', 1);
-INSERT INTO entrada VALUES (4, 0, 3, 'Copa Little Lads del Caribe', 'U15', 'Panama', '2015-03-14 23:30:03', 'Este era uno de los juegos mas dificiles, pero Canovanas representando a Puerto Rico,  pudo ganar.', 1);
-INSERT INTO entrada VALUES (5, 1, 0, 'Toques', '11 y 12', 'Yankees', '2015-02-23 02:54:45', 'La practica de toques no es la favorita de ellos, pero aqui en la liga de Arecibo, se practican.', 1);
-INSERT INTO entrada VALUES (6, 1, 1, 'Liga Coamo', 'Maratonistas', '5 y 6', '2015-02-23 02:54:45', 'Ready y loco por empezar nuestro nuevo torneo local.', 1);
-INSERT INTO entrada VALUES (7, 1, 2, 'Coqui', 'Lares', 'San Sebastian', '2015-02-23 02:54:45', 'Pa la final del Torneo Estatal  Categoria Coqui.', 1);
-INSERT INTO entrada VALUES (8, 1, 3, 'Little League World Series', 'Loiza', 'Pre Major', '2015-02-23 02:54:45', 'En el Little League World Series ... hoy le ganamos a Costa Rica .... ahi, pa ti !', 1);
-INSERT INTO entrada VALUES (9, 2, 0, 'Manejo y Control de Balon', 'Bayamon Baby Soccer', 'Entrenamiento Individual', '2015-02-23 02:54:45', 'Trabajando con los fundamentos, esta es una inversion que vale la pena.', 1);
-INSERT INTO entrada VALUES (10, 2, 1, 'Leones Futbol', 'Torneo de Otono', 'Juego Amistoso', '2015-02-23 02:54:45', 'Durante el segundo juego de nuestra temporada del torneo de otono.', 1);
-INSERT INTO entrada VALUES (11, 2, 2, 'WeSOL', 'Asociacion del Oeste de Balompie', 'Copa de Campeones InterLiga', '2015-02-23 02:54:45', 'Hoy se decidio por penales, asi es que me gusta a mi.', 1);
-INSERT INTO entrada VALUES (12, 2, 3, 'Copa Internacional de Futbol Infantiil', 'Fajardo Soccer Kids', 'Republica Dominicana', '2015-02-23 02:54:45', 'Buen nivel de futbol en el caribe.  Necesitamos mas iniciativas como esta.', 1);
-INSERT INTO entrada VALUES (13, 3, 1, 'Quileando', 'Division A - 12Under', 'Nenas Yaucanas', '2015-02-23 02:54:45', 'Practicando los quileos... , hoy salieron casi todos.', 1);
-INSERT INTO entrada VALUES (14, 3, 2, 'Lares', 'Torneo Entre Escuelas', '4to Grado', '2015-02-23 02:54:45', 'El que quiera ganarnos, que siga practicando ...', 1);
-INSERT INTO entrada VALUES (15, 3, 3, 'Rio Grande', 'Caguas Criollas', 'CNVPR', '2015-02-23 02:54:45', 'Resultado del juego Division Oro 14U.', 1);
-INSERT INTO entrada VALUES (16, 3, 0, 'Cien Fuegos, Cuba', 'Arecibo PR', 'Copa de Voleibol del Caribe', '2015-02-23 02:54:45', 'Pa demostrar, hoy le ganamos a Cuba, ya veras.', 1);
-INSERT INTO entrada VALUES (17, 0, 3, 'FIBA Americas', 'U17', '@ Dubai Emiratos Arabes', '2014-08-13 14:00:09', 'Ayer le ganamos a Espana y hoy a Italia, ni el cambio de hora nos detiene.', 0);
-INSERT INTO entrada VALUES (19, 3, 0, 'boleo', '8vo grado', 'Copa Municipal entre Escuelas', '2014-08-13 14:02:32', 'Estamos preparandonos pal torneo municipal en el pueblo de Luquillo. Las nenas de 8vo grado de la escuela Hostos empezaron en el verano a practicar.', 0);
-INSERT INTO entrada VALUES (21, 0, 3, 'FIBA Americas', 'U17', '@ Dubai Emeiratos Arabes', '2014-08-16 22:48:59', 'Con Egipto, ya en la etapa de cruces, pasamos un susto. GraciAS A Dios GANAMOS y estamos en los mejores 8 equipos U17 del mundo. Quien sera  proximo !', 0);
-INSERT INTO entrada VALUES (23, 0, 1, 'Yauco', 'Torneo de Colores', '11 y 12', '2014-08-16 22:52:58', 'Hoy hubo 4 juegos en el torneo local de nuestra liga en Yauco.', 0);
-INSERT INTO entrada VALUES (31, 1, 0, 'relajo', 'tripeo', 'diversion', '2015-02-24 17:09:14', 'Jugando y divirtiendose.', 0);
-INSERT INTO entrada VALUES (33, 0, 2, 'cat sub 15', 'ponce', 'lares', '2015-02-12 23:44:35', 'Este post lo escribo para dejarles saber que Lares le gano a Ponce, por 12.', 0);
-INSERT INTO entrada VALUES (36, 0, 2, 'viso perez', 'diego perez', 'carlos arroyo "el arroyato"', '2015-02-24 17:10:45', 'Aqui frente al Roberto Clemente, despues de una de las practicas pal FIBA 2014.  Vimos al Arroyato y aprovechamos.', 1);
-INSERT INTO entrada VALUES (37, 0, 2, 'viso perez', 'diego perez', 'jose juan barea', '2015-02-23 02:55:31', 'viso el gigante con barea el enano', 1);
-INSERT INTO entrada VALUES (38, 0, 2, 'viso perez', 'diego perez', 'el felo filiberto rivera', '2015-02-24 16:27:55', 'los nenes con filiberto rivera, tocayo de felo su abuelo', 1);
-INSERT INTO entrada VALUES (18, 2, 2, 'Rincon', 'Baby Soccer 8U', 'Leones vs Lobos', '2015-02-23 03:26:16', 'Resultado de un  juego de soccer en Rincon.', 1);
-INSERT INTO entrada VALUES (20, 3, 0, 'bompeo', 'Jayuya', 'Liga Jayuyana', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (22, 1, 0, 'bateo', 'fundamentos', 'toque', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (24, 2, 2, 'U15', 'Wesol', 'Sosol', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (25, 0, 0, 'donqueo', 'bebe', 'en pampers', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (26, 2, 0, 'femenino', 'fogueo', 'en la escuela', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (27, 2, 0, 'practicando', 'en el patio', 'manejo balon', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (28, 2, 0, 'manejo balon', 'en grupo', 'conos', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (29, 2, 0, 'pre escolar', 'edad 5', 'controlando balon', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (30, 1, 0, 'fundamentos', 'fieldeo', 'coqui', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (32, 0, 0, 'dribleo', 'Mayaguez', 'clase de universidad', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (34, 0, 2, 'Hostos Mayaguez', 'Benites Canovanas', 'Cat 16 under', '2015-02-22 23:35:19', NULL, 0);
-INSERT INTO entrada VALUES (35, 0, 2, 'HACKER TEST :: Santa Margarita Caguas', 'Perpetuo Soccoro Maricao', 'Sub 16', '2015-02-27 20:07:25', NULL, 0);
-INSERT INTO entrada VALUES (1, 0, 0, 'donqueando', 'Carolina', 'en el caserio', '2015-04-02 07:21:55.75336', 'Practicando me sale este donqueo, en el juego no es tan facil.', 1);
+INSERT INTO entrada VALUES (12, 2, 3, 'Copa Internacional de Futbol Infantiil', 'Fajardo Soccer Kids', 'Republica Dominicana', '2016-01-12 02:54:45', 'Buen nivel de futbol en el caribe.  Necesitamos mas iniciativas como esta.', 1);
+INSERT INTO entrada VALUES (16, 3, 0, 'Cien Fuegos, Cuba', 'Arecibo PR', 'Copa de Voleibol del Caribe', '2016-01-13 02:54:45', 'Pa demostrar, hoy le ganamos a Cuba, ya veras.', 1);
+INSERT INTO entrada VALUES (13, 3, 1, 'Quileando', 'Division A - 12Under', 'Nenas Yaucanas', '2016-01-14 02:54:45', 'Practicando los quileos... , hoy salieron casi todos.', 1);
+INSERT INTO entrada VALUES (14, 3, 2, 'Lares', 'Torneo Entre Escuelas', '4to Grado', '2016-01-15 02:54:45', 'El que quiera ganarnos, que siga practicando ...', 1);
+INSERT INTO entrada VALUES (15, 3, 3, 'Rio Grande', 'Caguas Criollas', 'CNVPR', '2016-01-16 02:54:45', 'Resultado del juego Division Oro 14U.', 1);
+INSERT INTO entrada VALUES (1, 0, 0, 'Donqueando', 'Carolina', 'Desde el caserio...', '2016-01-01 19:32:44', 'Practicando me sale este donqueo, en el juego no es tan facil.', 1);
+INSERT INTO entrada VALUES (2, 0, 1, 'Copa 3 pa 3', 'Barrio San Anton', 'Ponce', '2016-01-02 02:54:45', 'El equipo de San Anton gano hoy su primer juego.', 1);
+INSERT INTO entrada VALUES (3, 0, 2, 'Little Lads', 'Aguadilla', 'Isabela', '2016-01-03 02:54:45', 'El equipo 13U de Isabela sigue invicto. El Lunes pa Ponce.', 1);
+INSERT INTO entrada VALUES (4, 0, 3, 'Copa Little Lads del Caribe', 'U15', 'Panama', '2016-01-04 23:30:03', 'Este era uno de los juegos mas dificiles, pero Canovanas representando a Puerto Rico, gano ayer.', 1);
+INSERT INTO entrada VALUES (5, 1, 0, 'Toques', '11 y 12', 'Yankees', '2016-01-05 02:54:45', 'La practica de toques no es la favorita de ellos, pero aqui en la liga de Arecibo, se practican.', 1);
+INSERT INTO entrada VALUES (6, 1, 1, 'Liga Coamo', 'Maratonistas', '5 y 6', '2016-01-06 02:54:45', 'Ready y loco por empezar nuestro nuevo torneo local.', 1);
+INSERT INTO entrada VALUES (7, 1, 2, 'Coqui', 'Lares', 'San Sebastian', '2016-01-07 02:54:45', 'Pa la final del Torneo Estatal  Categoria Coqui.', 1);
+INSERT INTO entrada VALUES (8, 1, 3, 'Little League World Series', 'Loiza', 'Pre Major', '2016-01-08 02:54:45', 'En el Little League World Series ... hoy le ganamos a Costa Rica .... ahi, pa ti !', 1);
+INSERT INTO entrada VALUES (9, 2, 0, 'Manejo y Control de Balon', 'Bayamon Baby Soccer', 'Entrenamiento Individual', '2016-01-09 02:54:45', 'Trabajando con los fundamentos, esta es una inversion que vale la pena.', 1);
+INSERT INTO entrada VALUES (10, 2, 1, 'Leones Futbol', 'Torneo de Otono', 'Juego Amistoso - Fogueo', '2016-01-10 02:54:45', 'Durante el segundo juego de nuestra temporada del torneo de otono.', 1);
+INSERT INTO entrada VALUES (11, 2, 2, 'WeSOL', 'Asociacion del Oeste de Balompie', 'Copa de Campeones InterLiga', '2016-01-11 02:54:45', 'Hoy se decidio por penales, asi es que me gusta a mi.', 1);
+INSERT INTO entrada VALUES (17, 0, 3, 'FIBA Americas', 'U17', '@ Dubai Emiratos Arabes', '2016-01-17 14:00:09', 'Ayer le ganamos a Espana y hoy a Italia, ni el cambio de hora nos detiene.', 1);
+INSERT INTO entrada VALUES (18, 2, 2, 'Rincon', 'Baby Soccer 8U', 'Leones vs Lobos', '2016-01-18 03:26:16', 'Resultado de un  juego de soccer en Rincon.', 1);
+INSERT INTO entrada VALUES (19, 3, 0, 'boleo', '8vo grado', 'Copa Municipal entre Escuelas', '2016-01-19 14:02:32', 'Estamos preparandonos pal torneo municipal en el pueblo de Luquillo. Las nenas de 8vo grado de la escuela Hostos empezaron en el verano a practicar.', 1);
+INSERT INTO entrada VALUES (20, 3, 0, 'bompeo', 'Jayuya', 'Liga Jayuyana', '2016-01-20 23:35:19', NULL, 1);
+INSERT INTO entrada VALUES (21, 0, 3, 'FIBA Americas', 'U17', '@ Dubai Emeiratos Arabes', '2016-01-21 22:48:59', 'Con Egipto, ya en la etapa de cruces, pasamos un susto. GraciAS A Dios GANAMOS y estamos en los mejores 8 equipos U17 del mundo. Quien sera  proximo !', 1);
 
 
 --
 -- Name: entrada_id_seq; Type: SEQUENCE SET; Schema: public; Owner: victor
 --
 
-SELECT pg_catalog.setval('entrada_id_seq', 38, true);
+SELECT pg_catalog.setval('entrada_id_seq', 1, false);
 
 
 --
@@ -203,29 +187,13 @@ INSERT INTO foto VALUES (17, 1000, 667, 2, 17);
 INSERT INTO foto VALUES (18, 950, 516, 2, 19);
 INSERT INTO foto VALUES (19, 950, 516, 2, 20);
 INSERT INTO foto VALUES (20, 1000, 667, 2, 21);
-INSERT INTO foto VALUES (21, 312, 269, 2, 22);
-INSERT INTO foto VALUES (22, 614, 554, 2, 23);
-INSERT INTO foto VALUES (23, 640, 396, 2, 24);
-INSERT INTO foto VALUES (24, 880, 660, 3, 25);
-INSERT INTO foto VALUES (25, 459, 391, 2, 26);
-INSERT INTO foto VALUES (26, 300, 168, 2, 27);
-INSERT INTO foto VALUES (27, 1280, 720, 2, 28);
-INSERT INTO foto VALUES (28, 300, 400, 2, 29);
-INSERT INTO foto VALUES (29, 276, 182, 2, 30);
-INSERT INTO foto VALUES (30, 1067, 1600, 2, 31);
-INSERT INTO foto VALUES (31, 250, 202, 2, 32);
-INSERT INTO foto VALUES (32, 800, 622, 2, 34);
-INSERT INTO foto VALUES (33, 379, 284, 2, 35);
-INSERT INTO foto VALUES (34, 3264, 2448, 2, 36);
-INSERT INTO foto VALUES (35, 3264, 2448, 2, 37);
-INSERT INTO foto VALUES (36, 3264, 2448, 2, 38);
 
 
 --
 -- Name: foto_id_seq; Type: SEQUENCE SET; Schema: public; Owner: victor
 --
 
-SELECT pg_catalog.setval('foto_id_seq', 36, true);
+SELECT pg_catalog.setval('foto_id_seq', 1, false);
 
 
 --
@@ -261,12 +229,11 @@ ALTER TABLE ONLY foto
 
 
 --
--- Name: public; Type: ACL; Schema: -; Owner: victor
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
 
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM victor;
-GRANT ALL ON SCHEMA public TO victor;
+REVOKE ALL ON SCHEMA public FROM postgres;
 GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 

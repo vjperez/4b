@@ -1,5 +1,5 @@
-function cambioSmall( mqSmall ){
-  if (mqSmall.matches){
+function cambioSmall( smallScreen ){
+  if (smallScreen.matches){
     showing = 1;
     showArray();
   //document.getElementById("mensaje").style.backgroundColor = "red"; 
@@ -7,8 +7,8 @@ function cambioSmall( mqSmall ){
   //document.getElementById("mensaje").style.backgroundColor = "yellow";
 }   
 
-function cambioMedium( mqMedium ){
-  if (mqMedium.matches){
+function cambioMedium( mediumScreen ){
+  if (mediumScreen.matches){
     showing = 2;
     showArray();  
   //document.getElementById("mensaje").style.backgroundColor = "green";
@@ -16,8 +16,8 @@ function cambioMedium( mqMedium ){
   //document.getElementById("mensaje").style.backgroundColor = "black";
 }
 
-function cambioBig( mqBig ){
-  if(mqBig.matches){
+function cambioBig( bigScreen ){
+  if(bigScreen.matches){
     showing = 3;
     showArray();
   //document.getElementById("mensaje").style.backgroundColor = "blue";

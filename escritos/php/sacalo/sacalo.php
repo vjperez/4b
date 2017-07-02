@@ -10,7 +10,8 @@ $entries  = array(array(), array(), array());
 
 //columnas en foto   
 //id = foto[0]     ancho = foto[1]     alto = foto[2]   tipo = foto[3]     entradaid = foto[4]
-require_once 'escritos/php/config/datosConfig.php';  //    ../config/datosConfig.php
+
+//require_once 'escritos/php/config/datosConfig.php';  //    ../config/datosConfig.php
 require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
 require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo_masajeout.php';
 

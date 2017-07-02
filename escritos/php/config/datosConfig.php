@@ -7,8 +7,11 @@ define('DEBUG',TRUE);
 //define('HOST_FS_ROOT', '/var/www/htdocs/4b/');
 //define('SITE_ROOT' , 'http://yeco/4b/');
 
-define('HOST_FS_ROOT', '/srv/http/4b/');
-define('SITE_ROOT' , 'http://localhost/4b/');  
+//define('HOST_FS_ROOT', '/srv/http/4b/');
+//define('SITE_ROOT' , 'http://localhost/4b/');  
+
+define('HOST_FS_ROOT', '/var/www/4b/');
+define('SITE_ROOT' , 'http://localhost/4b/');
 
 function debug_print(){
   //echo '<br><br><br><br>';
@@ -35,6 +38,8 @@ function brega_error($mensaje1, $mensaje2){
 	exit();
 }
 
+
+// why here ?
 $fotoTipo = array(
     1 => "gif",
     2 => "jpg",

@@ -1,37 +1,6 @@
-Yo recibo un voice message de 1 minuto
-Debe contener 
-	1) yo busco (verde) o yo ofrezco (azul)
-	2) Que buscas o Que ofreces
-	3) Donde
-	4) Cuando
-	Ademas debe contener Contact Info
-Yo hago inputs al DB con 
-	1) tag  para "BUSCO o OFRESCO"	
-	2) tags para "QUE"	
-	3) tags para "DONDE"	
-	4) tags para "CUANDO"	
-		
-	
-
-1) Crea funciones en Php 
-	Class Entry
-	getBoO   (int EntryId)
-	getQue   (int EntryId)
-	getDonde (int EntryId)
-	getCuando(int EntryId)
-	
-1) Crea funcion getEntryScore(String que, String donde, String cuando);
-2) Crea funcion getEntries(); y usas como parametro un array de Ids; que Ids? Los Ids que obtengan mejor score en getEntryScore(que, donde, cuando)
-
-
 
 los tags de ponlo flotalos left, pon uno por cada dos de los labels deporte: 
 esos tags y los de deporte controlalos con class cols-4 o algo asi como en bootstrap
-
-
-
-
-
 
 
 Log as admin then ==> view as admin ver el entry en rojo 
