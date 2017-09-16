@@ -1,21 +1,21 @@
   //cambia color de divisiones
   function coloreaFile(){
     var limit = 150;
-    var ladivision = document.getElementById('file-select-div');
+    var ladivision = document.getElementById('foto-select-div');
     
     if( escogioFoto() ){
       ladivision.style.backgroundColor='#7ec97b'; 
       ladivision.style.border="1px solid #8f8f8f";
     }else{
       ladivision.style.backgroundColor='#f5f5f5';
-      ladivision.style.border="1px solid #e5e5e5";
+      ladivision.style.border="0px solid #e5e5e5";
     }
   }
   
   //cambia color de letra de parrafo
   function daFileFbk(){
     var limit = 150;  
-    var parrafo = document.getElementById('file-feedback-paragraph');
+    var parrafo = document.getElementById('foto-feedback-paragraph');
     
     if( ! escogioFoto() && noUsado() == limit){
       parrafo.style.color='red';
@@ -38,7 +38,7 @@
     var faltan = noUsado();    
     if(faltan == limit){
       ladivision.style.backgroundColor='#f5f5f5';  //'#f3efe3'; //'#d5d5d5'; //bfbfbf
-      ladivision.style.border="1px solid #e5e5e5";  //"1px solid #bfbfbf";
+      ladivision.style.border="0px solid #e5e5e5";  //"1px solid #bfbfbf";
     }else if(faltan < 0){
       ladivision.style.backgroundColor='#ff0000';  
       ladivision.style.border="1px solid #8f8f8f";         
@@ -106,7 +106,7 @@
         //labels[0].style.fontWeight='bold';
       }else{
         ladivision.style.backgroundColor='#f5f5f5';  //'#f3efe3'; //'#d5d5d5'; // f5f5f5
-        ladivision.style.border="1px solid #e5e5e5"; //"1px solid #bfbfbf";
+        ladivision.style.border="0px solid #e5e5e5"; //"1px solid #bfbfbf";
         //labels[0].style.color='#000000';
         //labels[0].style.fontWeight='normal';
       }
@@ -147,7 +147,7 @@
         labels[0].style.fontWeight='bold';
       }else{
         ladivision.style.backgroundColor='#f5f5f5';  //'#f3efe3'; //'#d5d5d5'; //aeb2c3
-        ladivision.style.border="1px solid #e5e5e5";  //"1px solid #bfbfbf";
+        ladivision.style.border="0px solid #e5e5e5";  //"1px solid #bfbfbf";
         labels[0].style.color='#000000';
         labels[0].style.fontWeight='normal';
       }
@@ -197,7 +197,7 @@
   
   
     function bregaConSubmitButton(){
-    var feedbackColor0 = document.getElementById('file-feedback-paragraph').style.color;
+    var feedbackColor0 = document.getElementById('foto-feedback-paragraph').style.color;
     var feedbackColor1 = document.getElementById('deporte-feedback-paragraph').style.color;
     var feedbackColor2 = document.getElementById('tag1-feedback-paragraph').style.color;
     var feedbackColor3 = document.getElementById('tag2-feedback-paragraph').style.color;
@@ -210,7 +210,7 @@
       document.getElementById('submit-boton').disabled=false;
       document.getElementById('submit-boton').style.color='#ffffff';
       document.getElementById('submit-boton').style.fontWeight='bold';
-      document.getElementById('submit-boton').style.backgroundColor='#092eef';   //'#098ea8'
+      document.getElementById('submit-boton').style.backgroundColor='#098ea8';   //'#098ea8 092eef'
       document.getElementById('submit-boton').style.cursor='pointer';
       feedback.innerHTML=''; 
     }else{
@@ -230,6 +230,6 @@
     return limit - usadas;        
   } 
   function escogioFoto(){
-    var filechboton = document.getElementById('file-choose-boton');  
-    return filechboton.value != '';  
+    var fotochboton = document.getElementById('foto-choose-boton');  
+    return fotochboton.value != '';  
   }

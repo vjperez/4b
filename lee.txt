@@ -1,0 +1,12 @@
+esta version es en php
+
+jsmqueries = 
+	javascript recibe un json con todos los entries q le envia php
+	js hace unos media queries para saber cuantas columnas debe printear
+	js printea en el browser una columna a la vez
+
+le faltan clases
+
+le falta rotar y reducir imagenes
+
+el view lo hice con css  y js apulso

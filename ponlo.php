@@ -38,22 +38,23 @@
 <form action="escritos/php/ponlo/ponlo.php" method="POST" enctype="multipart/form-data">
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
-<div id="file-Y-comentario">
+
+<div id="fotocomentario">
 <p class="header">Foto Y Comentario</p> 
 
 <!---------------------------------------------------------------------------------------------------->
-<div id="file-foto">
-<div>
-<p id="file-feedback-paragraph"><!--   inserted by js   --></p>
-</div>
-<div id="file-select-div">
+<div id="foto">
+
+<p id="foto-feedback-paragraph"><!--   inserted by js   --></p>
+
+<div id="foto-select-div">
 <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
 <label class="loadLabel">
-    <input type="file" id="file-choose-boton" name="laFoto" accept="image/*" onchange="coloreaFile();daFileFbk();coloreaComentario();daComentarioFbk();bregaConSubmitButton();" ></input>
+    <input type="file" id="foto-choose-boton" name="laFoto" accept="image/*" onchange="coloreaFile();daFileFbk();coloreaComentario();daComentarioFbk();bregaConSubmitButton();" ></input>
     <span>Foto</span>
 </label>
 </div>
-</div><!-- end of file-foto -->
+</div><!-- end of foto -->
 
 
 <!---------------------------------------------------------------------------------------------------->
@@ -73,7 +74,7 @@
 </div><!-- end of comentario -->
 
 <div id="justToClear"></div>
-</div><!-- end of file-Y-comentario --> 
+</div><!-- end of fotocomentario --> 
 
 
 

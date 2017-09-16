@@ -81,7 +81,7 @@ require_once 'escritos/php/sacalo/sacalo.php';
 
 <!---------------------------------------------------------------------------------------------------->
 <div id="despedida">
-4 bolas. Hecho en Puerto Rico. Feito em Puerto Rico. Made in Puerto Rico.
+4 bolas&copy; Hecho en Puerto Rico. Feito em Puerto Rico. Made in Puerto Rico.
 </div><!--end of despedida-->
 
 

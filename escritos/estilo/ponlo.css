@@ -53,7 +53,7 @@ label.loadLabel input[type="file"] {
   cursor:pointer;  
 }
 
-#file-select-div,
+#foto-select-div,
 #tag1-input-div, #tag2-input-div, #tag3-input-div, #tag4-input-div, #tag5-input-div,
 #comentario-div{
   border-radius:5px;
@@ -72,7 +72,7 @@ label.loadLabel input[type="file"] {
 }
 
 #tag1-feedback-paragraph, #tag2-feedback-paragraph, #tag3-feedback-paragraph, #tag4-feedback-paragraph, #tag5-feedback-paragraph,
-#file-feedback-paragraph, #deporte-feedback-paragraph{
+#foto-feedback-paragraph, #deporte-feedback-paragraph{
   margin-top:50px;   
 }
 
@@ -89,7 +89,7 @@ label.loadLabel input[type="file"] {
 
 .header{
   font-weight:bolder;
-  color:#092eff;
+  color:#098ea8;
 }
 /*
 fieldset{

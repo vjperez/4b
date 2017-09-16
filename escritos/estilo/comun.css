@@ -12,7 +12,7 @@ body{
   /* background: url(../foto/fondo03.jpg); */
   /* background: url(../foto/fondo04.jpg); */
   /* background: url(../foto/fondo05.jpg); */
-  font-family:freemono,verdana,Georgia,arial,helvetica,sans-serif; 
+  font-family:freemono, verdana, Georgia, arial, helvetica, serif, sans-serif; 
   font-weight: normal;
   font-size:1.00em;
   text-align:center;
@@ -61,7 +61,7 @@ body{
   font-weight: bold;
   font-size:1.5em;
   /* color:#039dc3; */
-  color:#000000;
+  color:#098ea8;
     }
 /*    
 fieldset{
