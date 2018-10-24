@@ -1,4 +1,4 @@
-function cambioSmall( smallScreen ){
+function cambiaSmall( smallScreen ){
   if (smallScreen.matches){
     showing = 1;
     showArray();
@@ -7,7 +7,7 @@ function cambioSmall( smallScreen ){
   //document.getElementById("mensaje").style.backgroundColor = "yellow";
 }   
 
-function cambioMedium( mediumScreen ){
+function cambiaMedium( mediumScreen ){
   if (mediumScreen.matches){
     showing = 2;
     showArray();  
@@ -16,7 +16,7 @@ function cambioMedium( mediumScreen ){
   //document.getElementById("mensaje").style.backgroundColor = "black";
 }
 
-function cambioBig( bigScreen ){
+function cambiaBig( bigScreen ){
   if(bigScreen.matches){
     showing = 3;
     showArray();
@@ -81,8 +81,8 @@ function putHtml(elHtml, entry){
 
  
 
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 function getDeporte(foto){

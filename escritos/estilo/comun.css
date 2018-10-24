@@ -3,15 +3,7 @@
     padding: 0px;
 }
 body{
-  /* background:#f3efe3; */
-  /* background:#f5f5dc; */
   background:#f5f5f5;    
-  /* background:#ffffcc;  */
-  /* background: url(../../fondo/fondo.jpg); */ 
-  /* background: url(../foto/fondo02.jpg); */
-  /* background: url(../foto/fondo03.jpg); */
-  /* background: url(../foto/fondo04.jpg); */
-  /* background: url(../foto/fondo05.jpg); */
   font-family:freemono, verdana, Georgia, arial, helvetica, serif, sans-serif; 
   font-weight: normal;
   font-size:1.00em;
@@ -27,11 +19,6 @@ body{
   margin:25px auto 0px auto;
   font-family:freemono,OliJo-Bold,bevan;
 }
-
-
-
-
-
 #despedida{
   border:0px solid #00ff00;/*#bfbfbf;   /*828592*/
   /* border-radius:5px; */
@@ -39,7 +26,6 @@ body{
   width:100%;
   margin:100px auto 10px auto;
 }
-
 
 
 #titulo img{
@@ -62,17 +48,10 @@ body{
   font-size:1.5em;
   /* color:#039dc3; */
   color:#098ea8;
-    }
-/*    
-fieldset{
-  border:1px solid #ff0000;    /* #bfbfbf; /* #828592 o #e8e8e8  
-  display:block;
-  margin:0px auto;
 }
-*/
 
 
 .warning{
-  font-weight: bold;
+  font-weight: bolder;
   color:#ff0000;    
 }

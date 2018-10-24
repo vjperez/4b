@@ -61,19 +61,17 @@ require_once 'escritos/php/sacalo/sacalo.php';
   var extraEntries2  = <?php echo json_encode($entries[2]); ?>;
   var entries = baseEntries.concat(extraEntries1.concat(extraEntries2));
   
-  var smallScreen = window.matchMedia("screen and (max-width: 700px)");
-  var mediumScreen = window.matchMedia("screen and (min-width: 701px) and (max-width: 1200px)");
-  var bigScreen = window.matchMedia("screen and (min-width: 1201px)");  
+  var isSmallScreen = window.matchMedia("screen and (max-width: 700px)");
+  var isMediumScreen = window.matchMedia("screen and (min-width: 701px) and (max-width: 1200px)");
+  var isBigScreen = window.matchMedia("screen and (min-width: 1201px)");  
   
-  cambioSmall( smallScreen ); 
-  cambioMedium( mediumScreen );
-  cambioBig( bigScreen );
+  cambiaSmall( isSmallScreen ); 
+  cambiaMedium( isMediumScreen );
+  cambiaBig( isBigScreen );
   
-  smallScreen.addListener( cambioSmall );
-  mediumScreen.addListener( cambioMedium );
-  bigScreen.addListener( cambioBig );  
-  //showing = 0;
-  //showArray();
+  isSmallScreen.addListener( cambiaSmall ); // the function is a listener; the function listen to changes of the VARIABLE
+  isMediumScreen.addListener( cambiaMedium );
+  isBigScreen.addListener( cambiaBig );  
 </script>
 </div><!-- end mensaje-->
 
