@@ -3,28 +3,30 @@
     padding: 0px;
 }
 body{
-  background:#f5f5f5;    
+  background:#b0d0d3;    
   font-family:freemono, verdana, Georgia, arial, helvetica, serif, sans-serif; 
   font-weight: normal;
   font-size:1.00em;
-  text-align:center;
+  text-align:right; 
 }
 #papel{
   width:100%;
 }
 #titulo{
-  border:0px solid #0000ff;   /* #828592 o #e8e8e8 */
+  border:1px solid #000000;   /* #828592 o #e8e8e8 */
   /* border-radius:5px; */ 
   width:100%;
-  margin:25px auto 0px auto;
+  margin:10px auto 0px auto;
   font-family:freemono,OliJo-Bold,bevan;
+  text-align:center;
 }
 #despedida{
-  border:0px solid #00ff00;/*#bfbfbf;   /*828592*/
+  border:1px solid #000000;/*#bfbfbf;   /*828592*/
   /* border-radius:5px; */
   font-size:0.625em;
   width:100%;
-  margin:100px auto 10px auto;
+  margin:10px auto 10px auto;
+  text-align:center;
 }
 
 
@@ -46,8 +48,7 @@ body{
   display:block;
   font-weight: bold;
   font-size:1.5em;
-  /* color:#039dc3; */
-  color:#098ea8;
+  color:#000000;
 }
 
 
