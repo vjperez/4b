@@ -1,13 +1,15 @@
+
+/*
 #links{
-  border:0px solid #00ff00;   /* #828592 o #e8e8e8 */
-  /* border-radius:5px; */ 
+  border:0px solid #00ff00;   
+  /* border-radius:5px; 
   width:100%;
   margin:100px auto 0px auto;
 }
 .link{
   border-radius:5px;
-  background:#ffffff;  /* #f3efe3;     /*#d5d5d5;               /*#0591e8;   /*:#bfbfff;*/
-  border:1px solid #098ea8;    /* 1px solid #bfbfbf; */
+  background:#ffffff;  
+  border:10px solid #098ea8;   
   width:50px;
   margin:0px auto;
   padding:3px;
@@ -17,7 +19,7 @@
   height:30px;
   vertical-align:middle;  
 }
-/*
+
 .link span{
   vertical-align:middle; 
   margin:0px 10px;
@@ -80,17 +82,22 @@
   margin:0px 10px 0px 0px;
   float:right;  
 }
+.entry-post-text{
+  height:20px;
+  margin:0px 10px 0px 0px;
+  float:right;  
+}
 .tag12{
   padding:5px 0px 5px 0px;	
   margin:10px 0px 0px 0px;
   border-radius:0px;
-  background:#f5f5f5;/* #e8d7c5; /*#f3efe3;       /*#d5d5d5;       /*#d6c2aa;      /*#e3dcbf;    /*#cfcfcf;       /*#dbceba;      #bfbfff;*/
+  background-color:#92aa83;
   /* font-size:1.00em; */
   border-bottom:1px solid #d5d5d5;
   border-top:1px solid #d5d5d5;
 }
 .tag12:hover{
-  background-color:#92aa83; 
+  background-color:#829a73; 
 }
 .tag12 span, .tag12 img{
   vertical-align:middle;
@@ -98,7 +105,7 @@
 .tag12 a{
   text-decoration:none;
   color:#000000; /* #3eb3e4 */
-  padding:0px 5px;
+  padding:0px 10px;
   font-weight:bolder;
 }
 .entry-sport-img{
@@ -107,9 +114,9 @@
 }
 .entry-sport-img:hover{
  /* border:1px solid #ffffff; */
- background-color:#ffffff; 
+ background-color:#92aa83; 
  border-radius:30px;
- padding:1px;
+ padding:0px;
 }
 .entry-country-img{
  width:20px;
@@ -120,25 +127,26 @@
   border-radius:5px;
   font-size:0.75em;
   display:inline-block;
-  background:#ffffff; 
+  background-color:#92aa83;
   border:1px solid #92aa83;
 }
-.tag34:hover, .tag5:hover, .link:hover{
-  background:#92aa83; 
+.tag34:hover, .tag5:hover{
+  background-color:#829a73;
 }
 .tag34 a, .tag5 a{
   text-decoration:none;
   color:#000000;
-  /*background:#e5ded2;            /* fcecd1;     14b9eb #7abae2 #62b2e2;      #4aa8e3;    f5f5f5*/
   padding:0px 10px;
   border-radius:25px;
   font-weight:bolder;
 }
+/*
 .tag12 a:hover, .tag34 a:hover, .tag5 a:hover{
-  /* text-decoration:none; */
+  /* text-decoration:none; 
   color:#ffffff;
   font-weight:bolder;
 }
+*/
 .comentario{
   margin:40px 2% 0px 2%;
   /*background:#e5ded2;*/

@@ -13,7 +13,7 @@ body{
   width:100%;
 }
 #titulo{
-  border:1px solid #000000;   /* #828592 o #e8e8e8 */
+  border:1px solid #000000; 
   /* border-radius:5px; */ 
   width:100%;
   margin:10px auto 0px auto;

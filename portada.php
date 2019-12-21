@@ -1,6 +1,6 @@
 <?php 
-require_once 'escritos/php/config/datosConfig.php';
-require_once 'escritos/php/sacalo/sacalo.php'; 
+require_once                'escritos/php/config/datosConfig.php';
+require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php'; 
 ?>
 <!doctype html>
 <html>
