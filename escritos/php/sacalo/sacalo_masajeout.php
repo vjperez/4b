@@ -58,19 +58,17 @@ function setDbQueries(){
     if(urlQueryFormat($q)){  // q esta seteado y con buen format
         $deporte = $q[1]; 
         $area = $q[3]; 
-        if($q[0] == '2' || $q[0] == '4'){   
-          $dbQuery0 = str_replace("xxyyzz", "AND deporte=$deporte AND area=$area", $dbQueryInit); 
-          switch($q[0]){
-          case('2'): // cliqueo deporte so el extra ... es el mismo deporte pero en OTROS lugares 
-            $dbQuery1 = str_replace("xxyyzz", "AND deporte=$deporte AND area<>$area", $dbQueryInit); 	   	  
-            $dbQuery2 = '';
-            break;
-          case('4'): // cliqueo area so el extra ... es la misma area pero en OTROS deportes 
-            $dbQuery1 = str_replace("xxyyzz", "AND deporte<>$deporte AND area=$area", $dbQueryInit); 
-            $dbQuery2 = '';
-            break;
-          }
-        }else{ // aqui se q $q[0] es '8' pq ya se q es un query que paso los test de queryFormat()
+        if($q[0] == '2'){ 
+          $dbQuery0 = str_replace("xxyyzz", "AND deporte=$deporte AND area=$area", $dbQueryInit);
+          $dbQuery1 = str_replace("xxyyzz", "AND deporte=$deporte AND area<>$area", $dbQueryInit);
+          $dbQuery2 = "";
+          //$dbQuery2 = str_replace("xxyyzz", "AND deporte<>$deporte AND area<>$area", $dbQueryInit);          
+        }elseif($q[0] == '4'){
+          $dbQuery0 = str_replace("xxyyzz", "AND deporte=$deporte AND area=$area", $dbQueryInit);
+          $dbQuery1 = str_replace("xxyyzz", "AND deporte<>$deporte AND area=$area", $dbQueryInit);
+          $dbQuery2 = "";
+          //$dbQuery2 = str_replace("xxyyzz", "AND deporte<>$deporte AND area<>$area", $dbQueryInit);         
+        }elseif($q[0] == '8'){ // aqui se q $q[0] es '8' pq ya se q es un query que paso los test de queryFormat()
           //tienes q explotar $q   ($var = tag literal del url q viene dado como 80808:tag literal:partes de tags) y sacar 'tag literal'
           $arreglo = explode(':', $q);
             $rotuloLiteral = strtolower($arreglo[1]);
