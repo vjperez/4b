@@ -1,29 +1,15 @@
-function cambiaSmall( smallScreen ){
-  if (smallScreen.matches){
+function cambia( isSmallScreen, isMediumScreen, isBigScreen ){
+  if (isSmallScreen.matches){
     showing = 1;
     showArray();
-  //document.getElementById("mensaje").style.backgroundColor = "red"; 
-  }
-  //document.getElementById("mensaje").style.backgroundColor = "yellow";
-}   
-
-function cambiaMedium( mediumScreen ){
-  if (mediumScreen.matches){
+  }else if (isMediumScreen.matches){
     showing = 2;
     showArray();  
-  //document.getElementById("mensaje").style.backgroundColor = "green";
-  }
-  //document.getElementById("mensaje").style.backgroundColor = "black";
-}
-
-function cambiaBig( bigScreen ){
-  if(bigScreen.matches){
+  }else if(isBigScreen.matches){
     showing = 3;
     showArray();
-  //document.getElementById("mensaje").style.backgroundColor = "blue";
   }
-  //document.getElementById("mensaje").style.backgroundColor = "white";
-} 
+}
 
 
 function showArray(){
@@ -121,7 +107,7 @@ function explota(rotuloString){
 	    if( (arreglo[index].length > 0) && (descarta.indexOf(arreglo[index]) == -1) ){ 
 	      str += ':' + arreglo[index];	// si token tiene mas de cero letras y si el token no es uno de los descartables...
 	    }
-	  index++;
+	    index++;
 	  }
   }
   return str;
