@@ -7,6 +7,7 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 <head>
 <meta charset="UTF-8">
 <title>4 bolas | Deporte Infantil Y Juvenil en Puerto Rico | Baloncesto Beisbol Volibol Futbol Soccer</title>
+<link rel="icon"       type="image/png" href="icon/baloncesto.png">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/portada.css">
 
@@ -20,6 +21,7 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 
 <body>
 <div id="papel">    
+
 
 
 
@@ -37,6 +39,7 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 
 
 
+
 <!---------------------------------------------------------------------------------------------------->
 <!--
 <div id="links">
@@ -49,6 +52,7 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 
 
 
+
 <!---------------------------------------------------------------------------------------------------->
 <div id="mensaje">
 <div class="fotoentradas" id="uno"></div>
@@ -56,24 +60,25 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 <div class="fotoentradas" id="tres"></div>
 
 <script type="text/javascript">
-  var baseEntries    = <?php echo json_encode($entries[0]); ?>;
-  var extraEntries1  = <?php echo json_encode($entries[1]); ?>;
-  var extraEntries2  = <?php echo json_encode($entries[2]); ?>;
-  var entries = baseEntries.concat(extraEntries1.concat(extraEntries2));
+  var entries0  = <?php echo json_encode($entries[0]); ?>;
+  var entries1  = <?php echo json_encode($entries[1]); ?>;
+  var entries2  = <?php echo json_encode($entries[2]); ?>;
+  var entries = entries0.concat(entries1.concat(entries2));
   
   var isSmallScreen = window.matchMedia("screen and (max-width: 700px)");
   var isMediumScreen = window.matchMedia("screen and (min-width: 701px) and (max-width: 1200px)");
   var isBigScreen = window.matchMedia("screen and (min-width: 1201px)");  
   
-  cambiaSmall( isSmallScreen ); 
-  cambiaMedium( isMediumScreen );
-  cambiaBig( isBigScreen );
-  
-  isSmallScreen.addListener( cambiaSmall ); // the function is a listener; the function listen to changes of the VARIABLE
-  isMediumScreen.addListener( cambiaMedium );
-  isBigScreen.addListener( cambiaBig );  
+ // the function is a listener; the function listen to changes of the VARIABLE
+  isMediumScreen.addListener( cambia ); 
+
+  cambia( isSmallScreen, isMediumScreen, isBigScreen ); 
 </script>
+<noscript>
+  This site is non functional withouth Javascript.
+</noscript>
 </div><!-- end mensaje-->
+
 
 
 
@@ -83,7 +88,8 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 </div><!--end of despedida-->
 
 
-          
+
+
 </div><!-- end of papel-->
 </body>
 </html>
