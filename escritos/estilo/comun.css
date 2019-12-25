@@ -1,4 +1,6 @@
- * {
+/*  https://coolors.co/dcc48e-92aa83-b0d0d3-5d2e46-e9806e
+    dcc48e 92aa83 b0d0d3 5d2e46 e9806e  */
+* {
     margin: 0px;
     padding: 0px;
 }
@@ -31,7 +33,7 @@ body{
 
 
 #titulo i{
-  color: #000000;
+  color: #5d2e46;
   font-size: 4em;
   vertical-align:middle;
 }
@@ -48,7 +50,7 @@ body{
   display:block;
   font-weight: bold;
   font-size:0.625em;
-  color:#000000;
+  color:#5d2e46;
 }
 
 
