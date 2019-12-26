@@ -8,9 +8,9 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 <meta charset="utf-8" name="4 bolas" description="">
 <title>4 bolas | Deporte Infantil Y Juvenil en Puerto Rico | Baloncesto Beisbol Volibol Futbol Soccer</title>
 <link rel="stylesheet" type="text/css" href="../fontawesome-free-5.12.0-web/css/all.css">
-
 <link rel="icon"       type="image/png" href="icon/baloncesto.png">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
+
 <link rel="stylesheet" type="text/css" href="escritos/estilo/portada.css">
 
 <link rel="stylesheet" type="text/css" media='screen and (max-width: 700px)' href="escritos/estilo/portadaSmall.css">

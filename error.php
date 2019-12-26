@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>4 bolas Deporte Infantil Y Juvenil en Puerto Rico Baloncesto Beisbol Volibol Futbol Soccer</title>
+<link rel="stylesheet" type="text/css" href="../fontawesome-free-5.12.0-web/css/all.css">
+<link rel="icon"       type="image/png" href="icon/baloncesto.png">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
 </head>
 
@@ -13,10 +15,10 @@
 <!---------------------------------------------------------------------------------------------------->
 <div id="titulo">
 <ul>
-<li><a href='portada.php'><img src="icon/baloncesto.png" alt="puerto rico baloncesto infantil"></a></li>
-<li><a href='portada.php'><img src="icon/beisbol.png" alt="puerto rico beisbol infantil"></a></li>
-<li><a href='portada.php'><img src="icon/futbol-soccer.png" alt="puerto rico futbol soccer infantil"></a></li>
-<li><a href='portada.php'><img src="icon/volibol.png" alt="puerto rico volibol infantil"></a></li>
+<li><a href='portada.php'><i class="fas fa-basketball-ball"></i></a></li>
+<li><a href='portada.php'><i class="fas fa-baseball-ball"></i></a></li>
+<li><a href='portada.php'><i class="fas fa-volleyball-ball"></i></a></li>
+<li><a href='portada.php'><i class="far fa-futbol"></i></a></li>
 <li id="titulo-text">Infantil y Juvenil</li>
 </ul>
 </div><!--end of titulo--> 
