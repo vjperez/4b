@@ -1,57 +1,7 @@
 <?php
-  function getDeporteFotopath($deporte){
-    if($deporte == 0){
-      $path = 'baloncesto.png';
-    }else if($deporte == 1){
-      $path =  'beisbol.png';
-    }else if($deporte == 2){
-      $path = 'futbol-soccer.png';
-    }else if($deporte == 3){
-      $path = 'volibol.png';  
-    }else if($deporte == 9){
-      $path = 'x.png';  
-    }
-    return $path;
-  }
-  function getAreaExpression($area){
-    if($area == 0){
-      $exp = '  Norte, PR';
-    }else if($area == 1){
-      $exp =  '  Sur, PR';
-    }else if($area == 2){
-      $exp = '  Oeste, PR';
-    }else if($area == 3){
-      $exp = '  Este, PR';  
-    }else if($area == 4){
-      $exp = '  Metro, PR';
-    }else if($area == 5){
-      $exp = '  Centro, PR';  
-    }else if($area == 6){
-      $exp = '  U.S.A';
-    }else if($area == 7){
-      $exp = 'Representando PR';  
-    }
-    return $exp;
-  }
- function getTimeExpression($minuteDiff, $timeString){
-	$minuteDiff = (int)$minuteDiff; 
-    if($minuteDiff < 60){
-      if ($minuteDiff == 0) $minuteDiff = 1;	
-      $exp = 'Hace ' . $minuteDiff . ' minuto' . ($minuteDiff > 1?'s':'') . '.';	  
-	  }else if ($minuteDiff < (24 * 60) ){  
-	    $horas = (int)($minuteDiff / 60);    $minutes = $minuteDiff % 60;
-      $exp = 'Hace ' . $horas . ' hora' . ($horas > 1?'s':'') . ($minutes == 0?'':' y ' . $minutes . ' minuto' . ($minutes > 1?'s':'')) . '.';
-    }else if($minuteDiff < (7 * 24 * 60) ){
-	    $dias = (int)($minuteDiff / (24 * 60));    $horas = ((int)($minuteDiff / 60)) - (24 * $dias);	
-      $exp = 'Hace ' . $dias . ' dia' . ($dias > 1?'s':'') . ($horas == 0?'':' y ' . $horas . ' hora' . ($horas > 1?'s':'')) . '.';
-    }else{
-	    $timestamp = strtotime($timeString);
-	    $exp = date("F j, Y", $timestamp) . '.';	
-	  }
-    return $exp;
-  }
-  
-function setDbQueries(){
+require_once HOST_FS_ROOT . 'escritos/php/sacalo/valida/urlQueryFormat.php';
+
+function buildQueries(){
   $dbQueryInit = "SELECT id, deporte, area, tag3, tag4, tag5, (EXTRACT(EPOCH FROM CURRENT_TIMESTAMP - tiempo))/60, comentario, tiempo FROM entrada WHERE ver=1 xxyyzz ORDER BY tiempo DESC;"; 
   if(isset($_REQUEST['q'])){
     $q = $_REQUEST['q'];
@@ -110,63 +60,4 @@ function setDbQueries(){
   return array($dbQuery0, $dbQuery1, $dbQuery2);
 }
 
-function urlQueryFormat($q){
-  $result = FALSE;
-  $arreglo = explode(':', $q);
-  
-  $numeros = $arreglo[0];
-  
-  $test1 = (strlen($numeros) == 5);
-  if($test1) { ; } 
-  else return $result; // false
-  
-  $test2 = ($numeros[0] == '2' || $numeros[0] == '4' || $numeros[0] == '8') && (($numeros[0] == $numeros[2]) && ($numeros[0] == $numeros[4]));
-  if ($test2) { ; }
-  else return $result; // false
-  
-  $test3 = (($numeros[1] >= 0 && $numeros[1] <= 3) || ($numeros[1] == 9)) && ($numeros[3] >= 0 && $numeros[3] <= 7);
-  if ($test3) { ; }
-  else return $result; // false
-
-  if($numeros[0] == '8'){
-    $test4 = count($arreglo) > 1;
-    if ($test4) { ; }
-    else return $result; // false
-  }elseif($numeros[0] == '2'  || $numeros[0] == '4'){
-    $test4 = count($arreglo) == 1;
-    if ($test4) { ; }
-    else return $result; // false	  
-  }
-    
-  $index = 2; // index 0 son los numeros y ya los chequee arriba; index 1 ignoralo pq ese es el rotulo literal; chequeando solo los rotulos explotados q son los q estan del index 2 pa lante
-  while( $index < count($arreglo) ){
-    $rotulo = $arreglo[$index];
-    if (ctype_alnum($rotulo)) { //Returns TRUE if every character in text is either a letter or a digit, FALSE otherwise.
-      ; 
-    }else{
-      return $result; // false  si los rotulos explotados
-    }
-    $index++;
-  }
-  
-  $result = TRUE;
-  return $result;
-}
-
-
-//usado para crear el fotopath en sacalo.php, usando el fotoentradaid y el tipo de la foto
-//ambos vienen del DB (foto[4] y foto[3])
-//Tambien definido en masajein (bad?)
-/*
-  $fotoTipo = array(
-    1 => "gif",
-    2 => "jpg",
-    3 => "png",
-    4 => "swf",
-    5 => "psd",
-    6 => "bmp",
-    7 => "tiff",
-    8 => "tiff"
-  );
-  */
 ?>

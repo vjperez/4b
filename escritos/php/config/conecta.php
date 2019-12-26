@@ -21,7 +21,7 @@
       $mensaje2 = 'Attempting to log into ' . DB_DBMS . ' at <br>' . HOST_FS_ROOT . 'escritos/php/config/conecta.php. '; 
       brega_error($mensaje1, $mensaje2);
     } 
-         
+  //no machea ningun DB DBMS      
   }else{
       $mensaje1 = 'Error configurando base de datos.';
       $mensaje2 =  HOST_FS_ROOT . 'escritos/php/config/conecta.php: No haz escogido correctamente el DBMS en datosConectarDb.php.'; 

@@ -45,7 +45,8 @@ function putHtml(elHtml, entry){
     while(index < entry.length){
       elHtml[index%showing] += "<div class='entry'>";
       elHtml[index%showing] += "<div class='hora'>" + entry[index][1] + "<span class='entry-post-text'>" + entry[index][0] + "</span></div>";
-      if(entry[index][9] == 0 || entry[index][8] == "") {
+      if(entry[index][9] == 0 || entry[index][10] == 0 || entry[index][8] == "") {
+      	//picture with ancho 0 or alto 0 or  name is "" : meaning there is no picture for this entry
       }else{
         //elHtml[index%showing] += "<a href='escritos/php/sacalo/muestralo.php?entry=" + entry[index][8].substring(0, entry[index][8].indexOf(".")) + "'><img src='loaded/" + entry[index][8] +  "' alt='foto' class='entry-main-img'></a>";
         elHtml[index%showing] += "<img src='loaded/" + entry[index][8] +  "' alt='baloncesto beisbol volibol futbol soccer infantil juvenil puerto rico' class='entry-main-img'>";

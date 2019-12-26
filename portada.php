@@ -12,7 +12,6 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
 
 <link rel="stylesheet" type="text/css" href="escritos/estilo/portada.css">
-
 <link rel="stylesheet" type="text/css" media='screen and (max-width: 700px)' href="escritos/estilo/portadaSmall.css">
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/portadaMedium.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1201px)' href='escritos/estilo/portadaBig.css'>

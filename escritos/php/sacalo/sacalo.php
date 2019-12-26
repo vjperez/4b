@@ -1,29 +1,30 @@
 <?php
-$mensaje1 = '';
-$mensaje2 = '';
-$entries  = array(array(), array(), array());
-//columnas en entries[aQuery][anEntry]
-// 0 id     1 fecha    2 deporte foto path  3 area exp     4 tag3
-// 5 tag4   6 tag5     7 comentario         8 fotopath     9 alto foto   10 ancho foto
-
-//columnas en entrada
+//columnas en entrada (postgreSQL)
 //$id = $entrada[0];           $deporte = $entrada[1];       $area  = $entrada[2];  
 //$tag3 = $entrada[3];         $tag4 = $entrada[4];          $tag5  = $entrada[5];  
 //$tiempo-diff = $entrada[6];  $comentario = $entrada[7]     tiempo = $entrada[8]; 
 
-//columnas en foto   
+//columnas en foto (postgreSQL)   
 //id = foto[0]     ancho = foto[1]     alto = foto[2]   tipo = foto[3]     entradaid = foto[4]
 
-//require_once 'escritos/php/config/datosConfig.php';  //    ../config/datosConfig.php
-require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
-require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo_masajeout.php';
+$mensaje1 = '';
+$mensaje2 = '';
+$entries  = array(array(), array(), array());
 
-$dbQueries = setDbQueries();
+//columnas en entries[aQuery][anEntry]
+// 0 id     1 fecha    2 deporte foto path  3 area exp     4 tag3
+// 5 tag4   6 tag5     7 comentario         8 fotopath     9 alto foto   10 ancho foto
+
+
+require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
+
+require_once HOST_FS_ROOT . 'escritos/php/sacalo/que/buildQueries.php';
+$dbQueries = buildQueries();
 
 
 // do pg queries
 $aQuery = 0;
-while($aQuery < count($entries)){
+while($aQuery < count($dbQueries)){
   if ($dbQueries[$aQuery] != ''){
       if( ! $entradasarray = pg_query($cxn, $dbQueries[$aQuery]) ){
           $mensaje1 = 'Error loading entries.';
@@ -40,7 +41,7 @@ while($aQuery < count($entries)){
             pg_close($cxn);
             brega_error($mensaje1,$mensaje2); 
           }      
-
+			 require_once HOST_FS_ROOT . 'escritos/php/sacalo/como/masaje.php';
           $entries[$aQuery][$anEntry][0] = $entrada[0];
           $entries[$aQuery][$anEntry][1] = getTimeExpression($entrada[6], $entrada[8]);
           $entries[$aQuery][$anEntry][2] = getDeporteFotopath($entrada[1]);
@@ -50,30 +51,34 @@ while($aQuery < count($entries)){
           $entries[$aQuery][$anEntry][6] = $entrada[5];
           if( is_null($entrada[7]) )$entries[$aQuery][$anEntry][7] = '';
           else $entries[$aQuery][$anEntry][7] = $entrada[7];  
-          //el if funciona pq tengo 1 row con foto o ningun row con foto, si hubieran mas necesitaba un while    
+          //el if funciona pq tengo 1 row con foto o ningun row con foto, si hubieran mas necesitaba un while 
+          // usar el id de la entrada como path de la foto ($foto[4]),  tambien asume q hay solo una foto por fotoentrada   
           if($foto = pg_fetch_row($fotosarray)){
-            $entries[$aQuery][$anEntry][8] = str_pad($foto[4], 9, '0', STR_PAD_LEFT) . '.' . $fotoTipo[$foto[3]]; // usar el id de la entrada como path de la foto tambien asume q hay solo una foto por fotoentrada
+            $entries[$aQuery][$anEntry][8] = str_pad($foto[4], 9, '0', STR_PAD_LEFT) . '.' . $fotoTipo[$foto[3]]; 
             //postGre Integer goes from -2GB to -1+2Gb, usare 1Gb de espacios, from 0 to 999,999,999 that requires nine decimal digits
             //STR_PAD_LEFT rellena de ceros hasta 9 digitos 
-            $entries[$aQuery][$anEntry][9]  = $foto[2]; // alto  de la foto
-            $entries[$aQuery][$anEntry][10] = $foto[1]; // ancho de la foto
+            $entries[$aQuery][$anEntry][9]  = $foto[1]; // ancho  de la foto
+            $entries[$aQuery][$anEntry][10] = $foto[2]; // alto   de la foto
           }else{
             $entries[$aQuery][$anEntry][8]  = ''; //no foto
-            $entries[$aQuery][$anEntry][9]  = 0;  //alto
-            $entries[$aQuery][$anEntry][10] = 0;  //ancho 
+            $entries[$aQuery][$anEntry][9]  = 0;  //ancho
+            $entries[$aQuery][$anEntry][10] = 0;  //alto 
           }
           pg_free_result($fotosarray);    
  
           $anEntry++;
-      }// while rows
+      }// while fetching entradasarray rows into entrada
   }// if dbQueries tiene algun query
-$aQuery++;
-}// end do pg queries
+  $aQuery++;
+}// end while aQuery
 pg_free_result($entradasarray);
 pg_close($cxn);
+
+
 if(count($entries[0]) == 0 && count($entries[1]) == 0  && count($entries[2]) == 0){
   $mensaje1 = 'D\'Oh!<br>No lo encontre.<br>Ni el acento de la e.';
   $mensaje2 = 'No se encontro ninguna entrada, deberia ser buscando tag.';
   brega_error($mensaje1, $mensaje2);
 }
+
 ?>

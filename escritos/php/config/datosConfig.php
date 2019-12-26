@@ -40,15 +40,4 @@ function brega_error($mensaje1, $mensaje2){
 }
 
 
-// why here ?
-$fotoTipo = array(
-    1 => "gif",
-    2 => "jpg",
-    3 => "png",
-    4 => "swf",
-    5 => "psd",
-    6 => "bmp",
-    7 => "tiff",
-    8 => "tiff"
-);
 ?>
