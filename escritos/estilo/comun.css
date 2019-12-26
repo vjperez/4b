@@ -9,7 +9,7 @@ body{
   font-family:freemono, verdana, Georgia, arial, helvetica, serif, sans-serif; 
   font-weight: normal;
   font-size:1.00em;
-  text-align:right; 
+  
 }
 #papel{
   width:100%;
@@ -18,7 +18,7 @@ body{
   border:1px solid #000000; 
   /* border-radius:5px; */ 
   width:100%;
-  margin:10px auto 10px auto;
+  margin:10px auto 100px auto;
   font-family:freemono,OliJo-Bold,bevan;
   text-align:center;
 }
@@ -26,8 +26,10 @@ body{
   border:1px solid #000000;/*#bfbfbf;   /*828592*/
   /* border-radius:5px; */
   font-size:0.625em;
+  font-weight: bold;
+  color:#e9806e;
   width:100%;
-  margin:10px auto 10px auto;
+  margin:100px auto 10px auto;
   text-align:center;
 }
 
@@ -57,4 +59,11 @@ body{
 .warning{
   font-weight: bolder;
   color:#ff0000;    
+}
+.exito{
+  font-weight: bolder;
+  color:#00ff00;    
+}
+.centro{
+	text-align:center;
 }
