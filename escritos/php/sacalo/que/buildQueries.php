@@ -45,28 +45,19 @@ function buildQueries(){
         } // hasta aqui $q[0] es '8'
       
       }else{ // q esta seteado pero con bad format (hackering!?);
-		  /*        
-        $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
-        $dbQuery1 = "";
-        $dbQuery2 = "";
-        */
-        /*
-        * Aqui tambien podria enviarlo a la pagina de error EN VEZ de correr el query basico.
-        * pero creo q es mejor seguir un flujo donde vea entries y no error.
-        */
-        $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
-        $mensaje2 = "No se encontro ninguna entrada, q with BAD format.";
+        $mensaje1 = "D'Oh!  No lo encontre.<br>No jodas !";
+        $mensaje2 = "q ... with BAD format.";
         brega_error($mensaje1, $mensaje2);
         exit();
         
       }
   }else{ // q NO esta seteado
-  	  if(strpos($_SERVER['REQUEST_URI'], '?') ) {//q no seteado aun with ? present
-  	    $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
-       $mensaje2 = "No se encontro ninguna entrada, q could NOT be set.";
+  	  if(strpos($_SERVER['REQUEST_URI'], '?') ) {//q no seteado aun with ? present 
+  	    $mensaje1 = "D'Oh!  No lo encontre.<br>No jodas !";
+       $mensaje2 = "q ... could NOT be set.";
        brega_error($mensaje1, $mensaje2);
        exit();
-     }else{
+     }else{//q no esta seteado pq estoy usando header links por ejemplo
   	    $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
 	    $dbQuery1 = "";
 	    $dbQuery2 = "";	
