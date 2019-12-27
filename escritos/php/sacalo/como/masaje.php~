@@ -9,12 +9,9 @@
       $path = 'futbol-soccer.png';
     }else if($deporte == 3){
       $path = 'volibol.png';  
-    }
-    /*
-    else if($deporte == 9){
+    }else if($deporte == 9){
       $path = 'x.png';  
     }
-   */ 
     return $path;
   }
   
@@ -31,14 +28,11 @@
       $exp = '  Metro, PR';
     }else if($area == 5){
       $exp = '  Centro, PR';  
-    }
-    /*
-    else if($area == 6){
+    }else if($area == 6){
       $exp = '  U.S.A';
     }else if($area == 7){
       $exp = 'Representando PR';  
     }
-    */
     return $exp;
   }
   

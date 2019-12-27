@@ -40,31 +40,22 @@ function buildQueries(){
         } // hasta aqui $q[0] es '8'
       
       }else{ // q esta seteado pero con bad format (un hacker);
-		  /*        
         $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
         $dbQuery1 = "";
         $dbQuery2 = "";
-        */
         /*
         * Aqui tambien podria enviarlo a la pagina de error EN VEZ de correr el query basico.
         * pero creo q es mejor seguir un flujo donde vea entries y no error.
-        */
         $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
-        $mensaje2 = "No se encontro ninguna entrada, Query with bad format.";
+        $mensaje2 = "No se encontro ninguna entrada, deberia ser buscando tag.";
         brega_error($mensaje1, $mensaje2);
-        exit();
-        
+        * 			
+        */
       }
   }else{ // q NO esta seteado
-  	  /*
-     $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
+    $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
 	  $dbQuery1 = "";
 	  $dbQuery2 = "";	
-	  */
-	  $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
-     $mensaje2 = "No se encontro ninguna entrada, Query was not set.";
-     brega_error($mensaje1, $mensaje2);
-     exit();
   }	
   return array($dbQuery0, $dbQuery1, $dbQuery2);
 }
