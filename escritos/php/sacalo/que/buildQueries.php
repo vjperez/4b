@@ -22,10 +22,15 @@ function buildQueries(){
           //tienes q explotar $q   ($var = tag literal del url q viene dado como 80808:tag literal:partes de tags) y sacar 'tag literal'
           $arreglo = explode(':', $q);
             $rotuloLiteral = strtolower($arreglo[1]);
-            $dbQuery0 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' OR LOWER(tag5) like '%$rotuloLiteral%') AND (deporte=$deporte AND area=$area)", $dbQueryInit);
-            $dbQuery1 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' OR LOWER(tag5) like '%$rotuloLiteral%') AND ((deporte<>$deporte AND area=$area) OR (deporte=$deporte AND area<>$area))", $dbQueryInit);
-            $dbQuery2 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' OR LOWER(tag5) like '%$rotuloLiteral%') AND (deporte<>$deporte AND area<>$area)", $dbQueryInit);
-                /* deberia sacar entries que tengan el rotulo en el comentario, aunque no en los LIKE tags ??? 
+            $dbQuery0 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' 
+            OR LOWER(tag5) like '%$rotuloLiteral%' OR LOWER(comentario) like '%$rotuloLiteral%') AND (deporte=$deporte AND area=$area)", $dbQueryInit);
+            
+            $dbQuery1 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%'
+            OR LOWER(tag5) like '%$rotuloLiteral%' OR LOWER(comentario) like '%$rotuloLiteral%') AND ((deporte<>$deporte AND area=$area) OR (deporte=$deporte AND area<>$area))", $dbQueryInit);
+            
+            $dbQuery2 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' 
+            OR LOWER(tag5) like '%$rotuloLiteral%' OR LOWER(comentario) like '%$rotuloLiteral%') AND (deporte<>$deporte AND area<>$area)", $dbQueryInit);
+                /* deberia sacar 
                 * $dbQuery3 ???
                 */
                 /*  
@@ -39,7 +44,7 @@ function buildQueries(){
           
         } // hasta aqui $q[0] es '8'
       
-      }else{ // q esta seteado pero con bad format (un hacker);
+      }else{ // q esta seteado pero con bad format (hackering!?);
 		  /*        
         $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
         $dbQuery1 = "";
@@ -50,21 +55,22 @@ function buildQueries(){
         * pero creo q es mejor seguir un flujo donde vea entries y no error.
         */
         $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
-        $mensaje2 = "No se encontro ninguna entrada, Query with bad format.";
+        $mensaje2 = "No se encontro ninguna entrada, q with BAD format.";
         brega_error($mensaje1, $mensaje2);
         exit();
         
       }
   }else{ // q NO esta seteado
-  	  /*
-     $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
-	  $dbQuery1 = "";
-	  $dbQuery2 = "";	
-	  */
-	  $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
-     $mensaje2 = "No se encontro ninguna entrada, Query was not set.";
-     brega_error($mensaje1, $mensaje2);
-     exit();
+  	  if(strpos($_SERVER['REQUEST_URI'], '?') ) {//q no seteado aun with ? present
+  	    $mensaje1 = "D'Oh!  No lo encontre.<br>Ni el acento de la e.";
+       $mensaje2 = "No se encontro ninguna entrada, q could NOT be set.";
+       brega_error($mensaje1, $mensaje2);
+       exit();
+     }else{
+  	    $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
+	    $dbQuery1 = "";
+	    $dbQuery2 = "";	
+	  }
   }	
   return array($dbQuery0, $dbQuery1, $dbQuery2);
 }
