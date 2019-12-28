@@ -37,34 +37,38 @@ function showArray(){
 }
 
 
-//columnas en entry[index]
+//columnas en datos[index]
 // 0 id       1 fecha    2 deporte foto path    3 area exp     
 // 4 tag3     5 tag4     6 tag5                 7 comentario     8 fotopath   9 alto de foto 10 ancho foto
-function putHtml(elHtml, entry){  
-    var index = 0;
-    while(index < entry.length){
-      elHtml[index%showing] += "<div class='entry'>";
-      elHtml[index%showing] += "<div class='hora'>" + entry[index][1] + "<span class='entry-post-text'>" + entry[index][0] + "</span></div>";
-      if(entry[index][9] == 0 || entry[index][10] == 0 || entry[index][8] == "") {
+function putHtml(elHtml, datos){  
+  var q = 0;
+  while(q < datos.length){
+    var e = 0;
+    while(e < datos[q].length){
+      elHtml[e%showing] += "<div class='entry'>";
+      elHtml[e%showing] += "<div class='hora'>" + datos[q][e][1] + "<span class='entry-post-text'>" + datos[q][e][0] + "</span></div>";
+      if(datos[q][e][9] == 0 || datos[q][e][10] == 0 || datos[q][e][8] == "") {
       	//picture with ancho 0 or alto 0 or  name is "" : meaning there is no picture for this entry
       }else{
         //elHtml[index%showing] += "<a href='escritos/php/sacalo/muestralo.php?entry=" + entry[index][8].substring(0, entry[index][8].indexOf(".")) + "'><img src='loaded/" + entry[index][8] +  "' alt='foto' class='entry-main-img'></a>";
-        elHtml[index%showing] += "<img src='loaded/" + entry[index][8] +  "' alt='baloncesto beisbol volibol futbol soccer infantil juvenil puerto rico' class='entry-main-img'>";
+        elHtml[e%showing] += "<img src='loaded/" + datos[q][e][8] +  "' alt='baloncesto beisbol volibol futbol soccer infantil juvenil puerto rico' class='entry-main-img'>";
       }
-      elHtml[index%showing] += "<div class='tag12'>";
-      elHtml[index%showing] += "<a href='portada.php?q=" + "2" + getDeporte(entry[index][2]) + "2" + getArea(entry[index][3]) + "2" + "'><img src='icon/" + entry[index][2]  + "' alt='foto' class='entry-sport-img'></a><a href='portada.php?q=" + "4" + getDeporte(entry[index][2]) + "4" + getArea(entry[index][3]) + "4" + "'><span>" + entry[index][3]  + "</span></a>";
+      elHtml[e%showing] += "<div class='tag12'>";
+      elHtml[e%showing] += "<a href='portada.php?q=" + "2" + getDeporte(datos[q][e][2]) + "2" + getArea(datos[q][e][3]) + "2" + "'><img src='icon/" + datos[q][e][2]  + "' alt='foto' class='entry-sport-img'></a><a href='portada.php?q=" + "4" + getDeporte(datos[q][e][2]) + "4" + getArea(datos[q][e][3]) + "4" + "'><span>" + datos[q][e][3]  + "</span></a>";
       //if(entry[index][3].indexOf("nternacional") > -1) elHtml[index%showing] += "<img src='icon/pr.png' alt='foto' class='entry-country-img'>";
-      elHtml[index%showing] += "</div>";
-      elHtml[index%showing] += "<div class='tag34'><a href='portada.php?q=" + "8" + getDeporte(entry[index][2]) + "8" + getArea(entry[index][3]) + "8" + ":" + entry[index][4] + explota(entry[index][4]) + "'>" + entry[index][4] + "</a></div>";
-      elHtml[index%showing] += "<div class='tag34'><a href='portada.php?q=" + "8" + getDeporte(entry[index][2]) + "8" + getArea(entry[index][3]) + "8" + ":" + entry[index][5] + explota(entry[index][5]) + "'>" + entry[index][5] + "</a></div>";
-      elHtml[index%showing] += "<div class='tag5'> <a href='portada.php?q=" + "8" + getDeporte(entry[index][2]) + "8" + getArea(entry[index][3]) + "8" + ":" + entry[index][6] + explota(entry[index][6]) + "'>" + entry[index][6] + "</a></div>";
-      if(entry[index][7] == ""){
+      elHtml[e%showing] += "</div>";
+      elHtml[e%showing] += "<div class='tag34'><a href='portada.php?q=" + "8" + getDeporte(datos[q][e][2]) + "8" + getArea(datos[q][e][3]) + "8" + ":" + datos[q][e][4] + explota(datos[q][e][4]) + "'>" + datos[q][e][4] + "</a></div>";
+      elHtml[e%showing] += "<div class='tag34'><a href='portada.php?q=" + "8" + getDeporte(datos[q][e][2]) + "8" + getArea(datos[q][e][3]) + "8" + ":" + datos[q][e][5] + explota(datos[q][e][5]) + "'>" + datos[q][e][5] + "</a></div>";
+      elHtml[e%showing] += "<div class='tag5'> <a href='portada.php?q=" + "8" + getDeporte(datos[q][e][2]) + "8" + getArea(datos[q][e][3]) + "8" + ":" + datos[q][e][6] + explota(datos[q][e][6]) + "'>" + datos[q][e][6] + "</a></div>";
+      if(datos[q][e][7] == ""){
       }else{
-        elHtml[index%showing] += "<div class='comentario'><p>" + entry[index][7] + "</p></div>";
+        elHtml[e%showing] += "<div class='comentario'><p>" + datos[q][e][7] + "</p></div>";
       }
-      elHtml[index%showing] += "</div>";
-      index++; 
-    }	       
+      elHtml[e%showing] += "</div>";
+      e++; 
+    }
+    q++;	       
+  }
 }     
 
  

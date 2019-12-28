@@ -7,13 +7,11 @@
 //columnas en foto (postgreSQL)   
 //id = foto[0]     ancho = foto[1]     alto = foto[2]   tipo = foto[3]     entradaid = foto[4]
 
-$mensaje1 = '';
-$mensaje2 = '';
-$entries  = array(array(), array(), array());
-
 //columnas en entries[aQuery][anEntry]
 // 0 id     1 fecha    2 deporte foto path  3 area exp     4 tag3
 // 5 tag4   6 tag5     7 comentario         8 fotopath     9 alto foto   10 ancho foto
+
+//$entries  = array(); // declaracion es opcional
 
 require_once HOST_FS_ROOT . 'escritos/php/sacalo/que/buildQueries.php';
 $searchModeAndQueries = buildQueries();

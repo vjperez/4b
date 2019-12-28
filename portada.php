@@ -61,10 +61,8 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 <div class="fotoentradas" id="tres"></div>
 
 <script type="text/javascript">
-  var entries0  = <?php echo json_encode($entries[0]); ?>;
-  var entries1  = <?php echo json_encode($entries[1]); ?>;
-  var entries2  = <?php echo json_encode($entries[2]); ?>;
-  var entries = entries0.concat(entries1.concat(entries2));
+  var entries  = <?php echo json_encode($entries);  ?>;
+  console.log(entries);
   
   var isSmallScreen = window.matchMedia("screen and (max-width: 700px)");
   var isMediumScreen = window.matchMedia("screen and (min-width: 701px) and (max-width: 1200px)");
