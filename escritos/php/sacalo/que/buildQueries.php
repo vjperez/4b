@@ -27,19 +27,23 @@ if(isset($_REQUEST['q'])){
           //$dbQuery2 = str_replace("xxyyzz", "AND deporte<>$deporte AND area<>$area", $dbQueryInit);         
         }elseif($q[0] == '8'){ // aqui se q $q[0] es '8' pq ya se q es un query que paso los test de queryFormat()
           $searchMode= 'tagWord';
-          $dbQuery0 = str_replace("xxyyzz", "AND deporte=$deporte AND area=$area", $dbQueryInit);
-          $dbQuery1 = str_replace("xxyyzz", "AND deporte=$deporte AND area<>$area", $dbQueryInit);
-          $dbQuery2 = str_replace("xxyyzz", "AND deporte<>$deporte AND area=$area", $dbQueryInit);
+          $dbQuery0 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte=$deporte AND area=$area", $dbQueryInit);
+          $dbQuery1 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte=$deporte AND area<>$area", $dbQueryInit);
+          $dbQuery2 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte<>$deporte AND area=$area", $dbQueryInit);
           $basicQueries = array($dbQuery0, $dbQuery1, $dbQuery2);
 
-          $index = 2; //chequeando solo los rotulos explotados q son los q estan del index 2 pa lante
-          $tagWordsArray = explode(':', $q);
-          while( $index < count($tagWordsArray) ){
-              $tagWord = $tagWordsArray[$index];
-              $tagWordQuery = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$tagWord%' OR LOWER(tag4) like '%$tagWord%' 
-              OR LOWER(tag5) like '%$tagWord%' OR LOWER(comentario) like '%$tagWord%')", $dbQueryInit);  
-              $tagWordQueries[-2+$index] = $tagWordQuery;
-              $index++;
+          $tagWordsArray = explode(':', $q);  // incluye en el array los primeros 2 items q en verdad no son tagWords
+          $tagWordsIndex = 2;                 // por eso salto 2 items          
+          while( $tagWordsIndex < count($tagWordsArray) ){
+              $tagWord = $tagWordsArray[$tagWordsIndex];
+              $tagWordQuery = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND (LOWER(tag3) like '%$tagWord%' OR LOWER(tag4) like '%$tagWord%' OR LOWER(tag5) like '%$tagWord%' OR LOWER(comentario) like '%$tagWord%')", $dbQueryInit);  
+         
+              array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery0 . ") ORDER BY tiempo DESC;") ;
+              array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery1 . ") ORDER BY tiempo DESC;") ; 
+              array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery2 . ") ORDER BY tiempo DESC;") ;
+              array_push($tagWordQueries, $tagWordQuery . " EXCEPT (" . $dbQuery0 . ") EXCEPT (" . $dbQuery1 . ") EXCEPT (" . $dbQuery2 .") ORDER BY tiempo DESC;") ;
+   
+              $tagWordsIndex++;
           }  
           /*
           $rotuloLiteral = strtolower($tagWordsArray[1]);
@@ -67,7 +71,7 @@ if(isset($_REQUEST['q'])){
       brega_error($mensaje1, $mensaje2);
       exit();
     }else{//q no esta seteado pq estoy usando header links por ejemplo
-      $searchMode= 'header';
+      $searchMode= 'home';
       $dbQuery0 = str_replace("xxyyzz", "", $dbQueryInit); 
       $basicQueries = array($dbQuery0);	
     }

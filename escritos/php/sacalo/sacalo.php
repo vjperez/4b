@@ -11,23 +11,40 @@
 // 0 id     1 fecha    2 deporte foto path  3 area exp     4 tag3
 // 5 tag4   6 tag5     7 comentario         8 fotopath     9 alto foto   10 ancho foto
 
-//$entries  = array(); // declaracion es opcional
-
 require_once HOST_FS_ROOT . 'escritos/php/sacalo/que/buildQueries.php';
 $searchModeAndQueries = buildQueries();
 $searchMode     = $searchModeAndQueries[0];
 $basicQueries   = $searchModeAndQueries[1];
 $tagWordQueries = $searchModeAndQueries[2];
 
-// do pg queries
+if( strcmp($searchMode, "home") == 0 || strcmp($searchMode, "deporte") == 0 || strcmp($searchMode, "area") == 0) {
+    $entries = doQueries($basicQueries);
+}elseif( strcmp($searchMode, "tagWord") == 0){                                                                        
+    $entries = doQueries($tagWordQueries);
+}
+/*
+use empty ?
+
+if(count($entries[0]) == 0 && count($entries[1]) == 0  && count($entries[2]) == 0){
+  $mensaje1 = 'D\'Oh!<br>No lo encontre.<br>Ni el acento de la e.';
+  $mensaje2 = 'No se encontro ninguna entrada, deberia ser buscando tag.';
+  brega_error($mensaje1, $mensaje2);
+}
+*/
+
+
+
+
+function doQueries($queriesArray){
 $aQuery = 0;
-while($aQuery < count($basicQueries)){
+while($aQuery < count($queriesArray)){
   require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
-  if( ! $entradasarray = pg_query($cxn, $basicQueries[$aQuery]) ){
+  if( ! $entradasarray = pg_query($cxn, $queriesArray[$aQuery]) ){
       $mensaje1 = 'Error loading entries.';
       $mensaje2 = 'No tengo el PHP resource para sacar entradas. ' . HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php: ' . pg_result_error($cxn);    
       pg_close($cxn);  
       brega_error($mensaje1,$mensaje2);  
+      exit();
   }
   $anEntry = 0;
   while($entrada = pg_fetch_row($entradasarray)){
@@ -37,6 +54,7 @@ while($aQuery < count($basicQueries)){
         pg_free_result($entradasarray);
         pg_close($cxn);
         brega_error($mensaje1,$mensaje2); 
+        exit();
       }      
       require_once HOST_FS_ROOT . 'escritos/php/sacalo/como/masaje.php';
       $entries[$aQuery][$anEntry][0] = $entrada[0];
@@ -68,14 +86,9 @@ while($aQuery < count($basicQueries)){
   $aQuery++;
 }// end while aQuery
 pg_free_result($entradasarray);
-pg_close($cxn);
-
-
-if(count($entries[0]) == 0 && count($entries[1]) == 0  && count($entries[2]) == 0){
-  $mensaje1 = 'D\'Oh!<br>No lo encontre.<br>Ni el acento de la e.';
-  $mensaje2 = 'No se encontro ninguna entrada, deberia ser buscando tag.';
-  brega_error($mensaje1, $mensaje2);
-}
+pg_close($cxn);  
+return $entries;
+} //function
 
 
 ?>
