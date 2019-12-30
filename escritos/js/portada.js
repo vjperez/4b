@@ -104,7 +104,7 @@ function getArea(exp){
 function explota(rotuloString){
   var arreglo = rotuloString.split(' ');	
   var str = '';
-  if(arreglo.length > 1){	
+  //if(arreglo.length > 0){	
 	  var index = 0;
     while(index < arreglo.length){
 	    arreglo[index] = arreglo[index].toLowerCase();	
@@ -114,7 +114,7 @@ function explota(rotuloString){
 	    }
 	    index++;
 	  }
-  }
+  //}
   return str;
 }
 
