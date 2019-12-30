@@ -1,3 +1,16 @@
+con pelota - sur    http://localhost/4b/portada.php?q=21212   http://localhost/4b/portada.php?q=41414
+no se ve parejo 2x2
+
+
+
+
+
+
+
+
+
+
+
 
 los tags de ponlo flotalos left, pon uno por cada dos de los labels deporte: 
 esos tags y los de deporte controlalos con class cols-4 o algo asi como en bootstrap
