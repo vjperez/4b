@@ -61,7 +61,8 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 <div class="fotoentradas" id="tres"></div>
 
 <script type="text/javascript">
-  var entries  = <?php echo json_encode($entries);  ?>;
+//si el arreglo php no esta sequencislmente completo, no lo convierte a JS array, si no a JS Object
+  var entries  = <?php echo json_encode(array_values($entries));  ?>;
   console.log(entries);
   
   var isSmallScreen = window.matchMedia("screen and (max-width: 700px)");
