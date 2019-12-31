@@ -18,13 +18,13 @@ $basicQueries   = $searchModeAndQueries[1];
 $tagWordQueries = $searchModeAndQueries[2];
 
 if( strcmp($searchMode, "home") == 0 || strcmp($searchMode, "deporte") == 0 || strcmp($searchMode, "area") == 0) {
-    $entries = doQueries($basicQueries);
+    $entries = doQueries($basicQueries, $searchMode);
 }elseif( strcmp($searchMode, "tagWord") == 0){                                                                        
-    $entries = doQueries($tagWordQueries);
+    $entries = doQueries($tagWordQueries, $searchMode);
 }
+
 /*
 use empty ?
-
 if(count($entries[0]) == 0 && count($entries[1]) == 0  && count($entries[2]) == 0){
   $mensaje1 = 'D\'Oh!<br>No lo encontre.<br>Ni el acento de la e.';
   $mensaje2 = 'No se encontro ninguna entrada, deberia ser buscando tag.';
@@ -35,7 +35,7 @@ if(count($entries[0]) == 0 && count($entries[1]) == 0  && count($entries[2]) == 
 
 
 
-function doQueries($queriesArray){
+function doQueries($queriesArray, $searchMode){
 $aQuery = 0;
 while($aQuery < count($queriesArray)){
   require_once HOST_FS_ROOT . 'escritos/php/config/conecta.php';
@@ -83,6 +83,7 @@ while($aQuery < count($queriesArray)){
 
       $anEntry++;
   }// while fetching entradasarray rows into entrada
+  if(!isset($entries[$aQuery]))  $entries[$aQuery] = "no entries for this query. searchMode:" . $searchMode . ". Query index:" . $aQuery;   //to avoid non sequential php arrays, specially in tagWord mode
   $aQuery++;
 }// end while aQuery
 pg_free_result($entradasarray);

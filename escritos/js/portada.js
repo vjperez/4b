@@ -43,6 +43,7 @@ function showArray(){
 function putHtml(elHtml, datos){  
   var q = 0;
   while(q < datos.length){
+   if(Array.isArray(datos[q])){ //if it is not an array, it does not have entries ... dont print 
     var e = 0;
     while(e < datos[q].length){
       elHtml[e%showing] += "<div class='entry'>";
@@ -67,6 +68,7 @@ function putHtml(elHtml, datos){
       elHtml[e%showing] += "</div>";
       e++; 
     }
+   }
     q++;	       
   }
 }     
@@ -118,4 +120,4 @@ function explota(rotuloString){
   return str;
 }
 
-var descarta = ["vs", "en", "el", "ella", "lo", "los", "la", "las", "de", "del", "y", "a", "o", "por", "que", "porque", "pa", "para", "entre", "to", "todo", "es", "son", "un", "una", "unos", "unas", "desde", "con"];
+var descarta = ["vs", "en", "el", "ella", "lo", "los", "la", "las", "de", "del", "y", "a", "o", "por", "que", "porque", "pa", "para", "entre", "to", "todo", "es", "son", "un", "una", "unos", "unas", "desde", "con", "san"];

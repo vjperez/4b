@@ -30,7 +30,7 @@ if(isset($_REQUEST['q'])){
           $dbQuery0 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte=$deporte AND area=$area", $dbQueryInit);
           $dbQuery1 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte=$deporte AND area<>$area", $dbQueryInit);
           $dbQuery2 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte<>$deporte AND area=$area", $dbQueryInit);
-          $basicQueries = array($dbQuery0, $dbQuery1, $dbQuery2);
+          //$basicQueries = array($dbQuery0, $dbQuery1, $dbQuery2);
 
           $tagWordsArray = explode(':', $q);  // incluye en el array los primeros 2 items q en verdad no son tagWords
           $tagWordsIndex = 2;                 // por eso salto 2 items          
