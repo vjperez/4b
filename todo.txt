@@ -10,6 +10,10 @@ pq en basic queries no salia el issue de non seq php array ?
 
 cada query pa printear en JS debe traer tagWord y/o deporte, area pa saber q claas anadir a los entry q estan ahi
 
+4 bolas en 1 icon - get someone
+
+isla area icon -  get someone
+
 
 
 

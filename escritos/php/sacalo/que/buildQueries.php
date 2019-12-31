@@ -33,7 +33,7 @@ if(isset($_REQUEST['q'])){
           //$basicQueries = array($dbQuery0, $dbQuery1, $dbQuery2);
 
           $tagWordsArray = explode(':', $q);  // incluye en el array los primeros 2 items q en verdad no son tagWords
-          $tagWordsIndex = 2;                 // por eso salto 2 items          
+          $tagWordsIndex = 2;                 // son los numeros y el literal, por eso salto 2 items          
           while( $tagWordsIndex < count($tagWordsArray) ){
               $tagWord = $tagWordsArray[$tagWordsIndex];
               $tagWordQuery = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND (LOWER(tag3) like '%$tagWord%' OR LOWER(tag4) like '%$tagWord%' OR LOWER(tag5) like '%$tagWord%' OR LOWER(comentario) like '%$tagWord%')", $dbQueryInit);  
@@ -45,17 +45,6 @@ if(isset($_REQUEST['q'])){
    
               $tagWordsIndex++;
           }  
-          /*
-          $rotuloLiteral = strtolower($tagWordsArray[1]);
-          $dbQuery0 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' 
-          OR LOWER(tag5) like '%$rotuloLiteral%' OR LOWER(comentario) like '%$rotuloLiteral%') AND (deporte=$deporte AND area=$area)", $dbQueryInit);
-          
-          $dbQuery1 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%'
-          OR LOWER(tag5) like '%$rotuloLiteral%' OR LOWER(comentario) like '%$rotuloLiteral%') AND ((deporte<>$deporte AND area=$area) OR (deporte=$deporte AND area<>$area))", $dbQueryInit);
-          
-          $dbQuery2 = str_replace("xxyyzz", "AND (LOWER(tag3) like '%$rotuloLiteral%' OR LOWER(tag4) like '%$rotuloLiteral%' 
-          OR LOWER(tag5) like '%$rotuloLiteral%' OR LOWER(comentario) like '%$rotuloLiteral%') AND (deporte<>$deporte AND area<>$area)", $dbQueryInit);
-          */
         } // hasta aqui $q[0] es '8'
       
     }else{ // q esta seteado pero con bad format

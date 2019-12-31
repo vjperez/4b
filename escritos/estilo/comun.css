@@ -35,9 +35,12 @@ body{
 
 
 #titulo i{
-  color: #5d2e46;
+  color: #92aa83;
   font-size: 4em;
   vertical-align:middle;
+}
+#titulo i:hover{
+  color:#829a73;
 }
 #titulo ul{
   margin:0px;
