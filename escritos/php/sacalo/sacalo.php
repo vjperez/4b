@@ -81,7 +81,8 @@ while($aQuery < count($queriesArray)){
       }
       pg_free_result($fotosarray);
       if($searchMode == 'tagWord'){
-        $entries[$aQuery][$anEntry][11] = 'tagWord found: ' . getTagWordFromQuery( $queriesArray[$aQuery] );    
+        $entries[$aQuery][$anEntry][11] = 'tagWord found: ' . getTagWordFromQuery( $queriesArray[$aQuery] );
+        $entries[$aQuery][$anEntry][12] = 'tagWord value: ' . getTagWordValueFromQueryIndex( $aQuery );    
       }
       $anEntry++;
   }// while fetching entradasarray rows into entrada

@@ -63,6 +63,13 @@
   function getTagWordFromQuery($query){
     return trim( substr($query, (4+strpos($query, 'like')), strpos($query, 'OR') - (4+strpos($query, 'like'))) ); // 4 is size of like
   }
+
+  function getTagWordValueFromQueryIndex($index){ // tagWord on tags == tagWord on comentario
+    if    ($index%4 == 0) return 1.0; // 4 is the amount of queries per every tagWord // this is the query INTERSECTING tagword with deporte and area
+    elseif($index%4 == 1) return 0.9; // 4 is the amount of queries per every tagWord // this is the query INTERSECTING tagword with deporte 
+    elseif($index%4 == 2) return 0.9; // 4 is the amount of queries per every tagWord // this is the query INTERSECTING tagword with area 
+    else                  return 0.7; // 4 is the amount of queries per every tagWord // this is the query NOT INTERSECTING tagword  
+  } 
  
 $fotoTipo = array(
     1 => "gif",
