@@ -60,6 +60,9 @@
     return $exp;
   }
   
+  function getTagWordFromQuery($query){
+    return trim( substr($query, (4+strpos($query, 'like')), strpos($query, 'OR') - (4+strpos($query, 'like'))) ); // 4 is size of like
+  }
  
 $fotoTipo = array(
     1 => "gif",

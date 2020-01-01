@@ -4,6 +4,7 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/valida/urlQueryFormat.php';
 function buildQueries(){
 $dbQueryInit = "SELECT id, deporte, area, tag3, tag4, tag5, (EXTRACT(EPOCH FROM CURRENT_TIMESTAMP - tiempo))/60, comentario, tiempo FROM entrada WHERE ver=1 xxyyzz ORDER BY tiempo DESC;"; 
 $searchMode;
+$tagWord = '';
 $basicQueries = array();
 $tagWordQueries = array();
 if(isset($_REQUEST['q'])){
@@ -33,26 +34,18 @@ if(isset($_REQUEST['q'])){
           //$basicQueries = array($dbQuery0, $dbQuery1, $dbQuery2);
 
           $tagWordsArray = explode(':', $q);  // incluye en el array los primeros 2 items q en verdad no son tagWords
-          $tagWordsIndex = 2;                 // son los numeros y el literal, por eso salto 2 items  
-          $tagWordQuery = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND ()", $dbQueryInit); 
-          
-          //echo $tagWordQuery; exit();
-
-          $theOrs = '';        
+          $tagWordsIndex = 2;                 // son los numeros y el literal, por eso salto 2 items          
           while( $tagWordsIndex < count($tagWordsArray) ){
               $tagWord = $tagWordsArray[$tagWordsIndex];
-              if($tagWordsIndex > 2) $theOrs = $theOrs . " OR "; 
-              $theOrs = $theOrs . " LOWER(tag3) like '%$tagWord%' OR LOWER(tag4) like '%$tagWord%' OR LOWER(tag5) like '%$tagWord%' OR LOWER(comentario) like '%$tagWord%' ";
+              $tagWordQuery = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND (LOWER(tag3) like '%$tagWord%' OR LOWER(tag4) like '%$tagWord%' OR LOWER(tag5) like '%$tagWord%' OR LOWER(comentario) like '%$tagWord%')", $dbQueryInit);  
+         
+              array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery0 . ") ORDER BY tiempo DESC;") ;
+              array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery1 . ") ORDER BY tiempo DESC;") ; 
+              array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery2 . ") ORDER BY tiempo DESC;") ;
+              array_push($tagWordQueries, $tagWordQuery . " EXCEPT (" . $dbQuery0 . ") EXCEPT (" . $dbQuery1 . ") EXCEPT (" . $dbQuery2 .") ORDER BY tiempo DESC;") ;
+   
               $tagWordsIndex++;
-          }
-          $tagWordQuery = str_replace("()", "( " . $theOrs . " )", $tagWordQuery);  
-
-          //echo $tagWordQuery; exit();
-
-          array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery0 . ") ORDER BY tiempo DESC;" ) ;
-          array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery1 . ") ORDER BY tiempo DESC;") ; 
-          array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery2 . ") ORDER BY tiempo DESC;") ;
-          array_push($tagWordQueries, $tagWordQuery . " EXCEPT (" . $dbQuery0 . ") EXCEPT (" . $dbQuery1 . ") EXCEPT (" . $dbQuery2 .") ORDER BY tiempo DESC;") ;
+          } 
         } // hasta aqui $q[0] es '8'
       
     }else{ // q esta seteado pero con bad format

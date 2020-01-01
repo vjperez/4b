@@ -79,8 +79,10 @@ while($aQuery < count($queriesArray)){
         $entries[$aQuery][$anEntry][9]  = 0;  //ancho
         $entries[$aQuery][$anEntry][10] = 0;  //alto 
       }
-      pg_free_result($fotosarray);    
-
+      pg_free_result($fotosarray);
+      if($searchMode == 'tagWord'){
+        $entries[$aQuery][$anEntry][11] = 'tagWord found: ' . getTagWordFromQuery( $queriesArray[$aQuery] );    
+      }
       $anEntry++;
   }// while fetching entradasarray rows into entrada
   if(!isset($entries[$aQuery]))  $entries[$aQuery] = "no entries for this query. searchMode:" . $searchMode . ". Query index:" . $aQuery;   //to avoid non sequential php arrays, specially in tagWord mode
