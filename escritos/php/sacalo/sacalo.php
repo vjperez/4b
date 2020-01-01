@@ -80,7 +80,7 @@ while($aQuery < count($queriesArray)){
         $entries[$aQuery][$anEntry][10] = 0;  //alto 
       }
       pg_free_result($fotosarray);
-      if($searchMode == 'tagWord'){
+      if(strcmp($searchMode, "tagWord") == 0){
         $entries[$aQuery][$anEntry][11] = 'tagWord found: ' . getTagWordFromQuery( $queriesArray[$aQuery] );
         $entries[$aQuery][$anEntry][12] = 'tagWord value: ' . getTagWordValueFromQueryIndex( $aQuery );    
       }

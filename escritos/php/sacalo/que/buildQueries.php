@@ -4,7 +4,6 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/valida/urlQueryFormat.php';
 function buildQueries(){
 $dbQueryInit = "SELECT id, deporte, area, tag3, tag4, tag5, (EXTRACT(EPOCH FROM CURRENT_TIMESTAMP - tiempo))/60, comentario, tiempo FROM entrada WHERE ver=1 xxyyzz ORDER BY tiempo DESC;"; 
 $searchMode;
-$tagWord = '';
 $basicQueries = array();
 $tagWordQueries = array();
 if(isset($_REQUEST['q'])){
