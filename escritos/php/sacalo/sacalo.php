@@ -80,9 +80,13 @@ while($aQuery < count($queriesArray)){
         $entries[$aQuery][$anEntry][10] = 0;  //alto 
       }
       pg_free_result($fotosarray);
+      if( strcmp($searchMode, "area") == 0 || strcmp($searchMode, "deporte") == 0 || strcmp($searchMode, "tagWord") == 0 ){
+        $entries[$aQuery][$anEntry][11] = 'original interest sport: ' . getOriginalSportInterestFromQuery( $queriesArray[$aQuery] );
+        $entries[$aQuery][$anEntry][12] = 'original interest area : ' . getOriginalAreaInterestFromQuery( $queriesArray[$aQuery] );
+      }
       if(strcmp($searchMode, "tagWord") == 0){
-        $entries[$aQuery][$anEntry][11] = 'tagWord found: ' . getTagWordFromQuery( $queriesArray[$aQuery] );
-        $entries[$aQuery][$anEntry][12] = 'tagWord value: ' . getTagWordValueFromQueryIndex( $aQuery );    
+        $entries[$aQuery][$anEntry][13] = 'tagWord found: ' . getTagWordFromQuery( $queriesArray[$aQuery] );
+        $entries[$aQuery][$anEntry][15] = 'tagWord value: ' . getTagWordValueFromQueryIndex( $aQuery );    
       }
       $anEntry++;
   }// while fetching entradasarray rows into entrada

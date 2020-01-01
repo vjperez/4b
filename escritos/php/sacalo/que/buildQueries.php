@@ -13,23 +13,23 @@ if(isset($_REQUEST['q'])){
         $area = $q[3]; 
         if($q[0] == '2'){ 
           $searchMode= 'deporte';
-          $dbQuery0 = str_replace("xxyyzz", "AND deporte=$deporte AND area=$area", $dbQueryInit);
-          $dbQuery1 = str_replace("xxyyzz", "AND deporte=$deporte AND area<>$area", $dbQueryInit);
+          $dbQuery0 = str_replace("xxyyzz", "AND deporte= $deporte AND area= $area", $dbQueryInit);
+          $dbQuery1 = str_replace("xxyyzz", "AND deporte= $deporte AND area<>$area", $dbQueryInit);
           //$dbQuery2 = "";
           $basicQueries = array($dbQuery0, $dbQuery1);
           //$dbQuery2 = str_replace("xxyyzz", "AND deporte<>$deporte AND area<>$area", $dbQueryInit);          
         }elseif($q[0] == '4'){
           $searchMode= 'area';
-          $dbQuery0 = str_replace("xxyyzz", "AND deporte=$deporte AND area=$area", $dbQueryInit);
-          $dbQuery1 = str_replace("xxyyzz", "AND deporte<>$deporte AND area=$area", $dbQueryInit);
+          $dbQuery0 = str_replace("xxyyzz", "AND deporte= $deporte AND area= $area", $dbQueryInit);
+          $dbQuery1 = str_replace("xxyyzz", "AND deporte<>$deporte AND area= $area", $dbQueryInit);
           //$dbQuery2 = "";
           $basicQueries = array($dbQuery0, $dbQuery1);
           //$dbQuery2 = str_replace("xxyyzz", "AND deporte<>$deporte AND area<>$area", $dbQueryInit);         
         }elseif($q[0] == '8'){ // aqui se q $q[0] es '8' pq ya se q es un query que paso los test de queryFormat()
           $searchMode= 'tagWord';
-          $dbQuery0 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte=$deporte AND area=$area", $dbQueryInit);
-          $dbQuery1 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte=$deporte AND area<>$area", $dbQueryInit);
-          $dbQuery2 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte<>$deporte AND area=$area", $dbQueryInit);
+          $dbQuery0 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte= $deporte AND area= $area", $dbQueryInit);
+          $dbQuery1 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte= $deporte AND area<>$area", $dbQueryInit);
+          $dbQuery2 = str_replace("xxyyzz ORDER BY tiempo DESC;", "AND deporte<>$deporte AND area= $area", $dbQueryInit);
           //$basicQueries = array($dbQuery0, $dbQuery1, $dbQuery2);
 
           $tagWordsArray = explode(':', $q);  // incluye en el array los primeros 2 items q en verdad no son tagWords
@@ -41,7 +41,7 @@ if(isset($_REQUEST['q'])){
               array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery0 . ") ORDER BY tiempo DESC;") ;
               array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery1 . ") ORDER BY tiempo DESC;") ; 
               array_push($tagWordQueries, $tagWordQuery . " INTERSECT (" . $dbQuery2 . ") ORDER BY tiempo DESC;") ;
-              array_push($tagWordQueries, $tagWordQuery . " EXCEPT (" . $dbQuery0 . ") EXCEPT (" . $dbQuery1 . ") EXCEPT (" . $dbQuery2 .") ORDER BY tiempo DESC;") ;
+              array_push($tagWordQueries, $tagWordQuery . " EXCEPT    (" . $dbQuery0 . ") EXCEPT (" . $dbQuery1 . ") EXCEPT (" . $dbQuery2 .") ORDER BY tiempo DESC;") ;
    
               $tagWordsIndex++;
           } 

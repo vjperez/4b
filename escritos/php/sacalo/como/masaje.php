@@ -70,7 +70,23 @@
     elseif($index%4 == 2) return 0.9; // 4 is the amount of queries per every tagWord // this is the query INTERSECTING tagword with area 
     else                  return 0.7; // 4 is the amount of queries per every tagWord // this is the query NOT INTERSECTING tagword  
   } 
+
+  function getOriginalSportInterestFromQuery($query){
+    if(strpos($query, 'deporte=') > 0)
+      $index = 9 + strpos($query, 'deporte='); // 9 is size of 'deporte= '
+    else
+      $index = 9 + strpos($query, 'deporte<>'); // 9 is size of 'deporte<>'
+    return substr($query, $index, 1); // assumes 1 digit deportes and 9 spaces after 'd'
+  }
  
+  function getOriginalAreaInterestFromQuery($query){
+    if(strpos($query, 'area=') > 0)
+      $index = 6 + strpos($query, 'area='); // 6 is size of 'area= '
+    else
+      $index = 6 + strpos($query, 'area<>'); // 6 is size of 'area<>'
+    return substr($query, $index, 1); // assumes 1 digit area and 6 spaces after 'a'
+  }
+
 $fotoTipo = array(
     1 => "gif",
     2 => "jpg",
