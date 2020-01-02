@@ -81,8 +81,8 @@ while($aQuery < count($queriesArray)){
       }
       pg_free_result($fotosarray);
       if( strcmp($searchMode, "area") == 0 || strcmp($searchMode, "deporte") == 0 || strcmp($searchMode, "tagWord") == 0 ){
-        $entries[$aQuery][$anEntry][11] = 'original interest sport: ' . getOriginalSportInterestFromQuery( $queriesArray[$aQuery] );
-        $entries[$aQuery][$anEntry][12] = 'original interest area : ' . getOriginalAreaInterestFromQuery( $queriesArray[$aQuery] );
+        $entries[$aQuery][$anEntry][11] = 'original interest sport: ' . getDeporteFotopath( getOriginalSportInterestFromQuery( $queriesArray[$aQuery] ) );
+        $entries[$aQuery][$anEntry][12] = 'original interest area : ' . getAreaExpression(  getOriginalAreaInterestFromQuery( $queriesArray[$aQuery]  ) );
       }
       if(strcmp($searchMode, "tagWord") == 0){
         $entries[$aQuery][$anEntry][13] = 'tagWord found: ' . getTagWordFromQuery( $queriesArray[$aQuery] );
