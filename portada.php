@@ -63,7 +63,9 @@ require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php';
 <script type="text/javascript">
 //si el arreglo php no esta secuencialmente completo, no lo convierte a JS array, si no a JS Object
 //array_values() will give you a JS array
-  var orderedEntries  = <?php echo json_encode($orderedEntries);  ?>;
+var entries  = <?php echo json_encode($entries);  ?>;
+  console.log(entries);
+var orderedEntries  = <?php echo json_encode($orderedEntries);  ?>;
   console.log(orderedEntries);
   
   var isSmallScreen = window.matchMedia("screen and (max-width: 700px)");
