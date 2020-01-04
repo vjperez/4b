@@ -19,9 +19,11 @@ $tagWordQueries = $searchModeAndQueries[2];
 
 if( strcmp($searchMode, "home") == 0 || strcmp($searchMode, "deporte") == 0 || strcmp($searchMode, "area") == 0) {
     $entries = doQueries($basicQueries, $searchMode);
+    $orderedEntries = $entries;
 }elseif( strcmp($searchMode, "tagWord") == 0){                                                                        
     $entries = doQueries($tagWordQueries, $searchMode);
-}
+    $orderedEntries = orderEntries($entries);
+  }
 
 /*
 use empty ?
@@ -31,8 +33,6 @@ if(count($entries[0]) == 0 && count($entries[1]) == 0  && count($entries[2]) == 
   brega_error($mensaje1, $mensaje2);
 }
 */
-
-
 
 
 function doQueries($queriesArray, $searchMode){
@@ -86,7 +86,7 @@ while($aQuery < count($queriesArray)){
       }
       if(strcmp($searchMode, "tagWord") == 0){
         $entries[$aQuery][$anEntry][13] = 'tagWord found: ' . getTagWordFromQuery( $queriesArray[$aQuery] );
-        $entries[$aQuery][$anEntry][15] = 'tagWord value: ' . getTagWordValueFromQueryIndex( $aQuery );    
+        $entries[$aQuery][$anEntry][14] = getTagWordValueFromQueryIndex( $aQuery );    
       }
       $anEntry++;
   }// while fetching entradasarray rows into entrada
@@ -95,8 +95,41 @@ while($aQuery < count($queriesArray)){
 }// end while aQuery
 pg_free_result($entradasarray);
 pg_close($cxn);  
+
+
+
 return $entries;
 } //function
 
+function orderEntries($unOrderedEntries){
+  $orderedEntries = Array();
+  $offset = 0;
+  while($offset < 4){
+    $orderedEntries[$offset] = array();
+    $aQuery = $offset;
+    while($aQuery < count($unOrderedEntries)){
+      
+      if(is_array($unOrderedEntries[$aQuery])){
+        $anEntry = 0;
+        while($anEntry < count($unOrderedEntries[$aQuery])){
+          $id = getIdFromEntry($unOrderedEntries[$aQuery][$anEntry]);
+          if( $index = getIndexOfIdOnEntriesArray( $id, $orderedEntries[$offset] ) ){
+            $orderedEntries[$offset][$index] = $unOrderedEntries[$aQuery][$anEntry];
+            $orderedEntries[$offset][$index][13] = $orderedEntries[$offset][$index][13] . '--' . $unOrderedEntries[$aQuery][$anEntry][13];
+            $orderedEntries[$offset][$index][14] = $orderedEntries[$offset][$index][14] + $unOrderedEntries[$aQuery][$anEntry][14];
+          }else{
+            $orderedEntries[$offset][ count($orderedEntries[$offset]) ] = $unOrderedEntries[$aQuery][$anEntry]; // esto es un push 
+          }
+          $anEntry++;
+        }
+      }
 
+      $aQuery += 4;    
+    }
+    if(count($orderedEntries[$offset]) == 0) $orderedEntries[$offset] = "no entries for this query. Query index:" . $offset;
+    $offset++;
+  }
+
+  return $orderedEntries;
+}
 ?>

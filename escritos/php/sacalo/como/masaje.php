@@ -87,6 +87,23 @@
     return substr($query, $index, 1); // assumes 1 digit area and 6 spaces after 'a'
   }
 
+  function getIdFromEntry($entry){
+    return $entry[0];
+  }
+
+  function getIndexOfIdOnEntriesArray( $id, $arrayOfEntries ){
+    $result = false;
+    $index = 0;   $notFound = true;
+    while(($index < count($arrayOfEntries)) && $notFound ){
+      if($id == getIdFromEntry($arrayOfEntries[$index])){
+        $notFound = false;   $result = $index;
+      }else{
+        $index++;
+      }
+    }
+    return $result;
+  } 
+
 $fotoTipo = array(
     1 => "gif",
     2 => "jpg",

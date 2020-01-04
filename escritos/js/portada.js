@@ -15,20 +15,20 @@ function cambia( isSmallScreen, isMediumScreen, isBigScreen ){
 function showArray(){
  if (showing == 1){
     var elHtml = [""];
-    putHtml(elHtml, entries);
+    putHtml(elHtml, orderedEntries);
     //putHtml(elHtml, extraEntries);
     document.getElementById("uno").innerHTML = elHtml[0];
   }
   if (showing == 2){
     var elHtml = ["", ""];
-    putHtml(elHtml, entries);
+    putHtml(elHtml, orderedEntries);
     //putHtml(elHtml, extraEntries);
     document.getElementById("uno").innerHTML = elHtml[0];
     document.getElementById("dos").innerHTML = elHtml[1];
   }
   if(showing == 3){
     var elHtml = ["", "", ""];
-    putHtml(elHtml, entries);
+    putHtml(elHtml, orderedEntries);
     //putHtml(elHtml, extraEntries);
     document.getElementById("uno").innerHTML = elHtml[0];
     document.getElementById("dos").innerHTML = elHtml[1];
