@@ -113,9 +113,12 @@ function orderEntries($unOrderedEntries){
         $anEntry = 0;
         while($anEntry < count($unOrderedEntries[$aQuery])){
           $id = getIdFromEntry($unOrderedEntries[$aQuery][$anEntry]);
-          if( $index = getIndexOfIdOnEntriesArray( $id, $orderedEntries[$offset] ) ){
-            $orderedEntries[$offset][$index] = $unOrderedEntries[$aQuery][$anEntry];
-            $orderedEntries[$offset][$index][13] = $orderedEntries[$offset][$index][13] . '--' . $unOrderedEntries[$aQuery][$anEntry][13];
+          $findAndIndex = getIndexOfIdOnEntriesArray( $id, $orderedEntries[$offset] );
+          $found = $findAndIndex[0];
+          $index = $findAndIndex[1]; 
+          if($found){
+            //$orderedEntries[$offset][$index] = $unOrderedEntries[$aQuery][$anEntry];
+            $orderedEntries[$offset][$index][13] = $orderedEntries[$offset][$index][13] . ' + ' . $unOrderedEntries[$aQuery][$anEntry][13];
             $orderedEntries[$offset][$index][14] = $orderedEntries[$offset][$index][14] + $unOrderedEntries[$aQuery][$anEntry][14];
           }else{
             $orderedEntries[$offset][ count($orderedEntries[$offset]) ] = $unOrderedEntries[$aQuery][$anEntry]; // esto es un push 

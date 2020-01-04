@@ -92,16 +92,15 @@
   }
 
   function getIndexOfIdOnEntriesArray( $id, $arrayOfEntries ){
-    $result = false;
-    $index = 0;   $notFound = true;
-    while(($index < count($arrayOfEntries)) && $notFound ){
+    $index = 0;     $found = false;
+    while(($index < count($arrayOfEntries)) && !$found ){ 
       if($id == getIdFromEntry($arrayOfEntries[$index])){
-        $notFound = false;   $result = $index;
+        $found = true;
       }else{
         $index++;
       }
     }
-    return $result;
+    return array($found, $index);
   } 
 
 $fotoTipo = array(
