@@ -1,3 +1,5 @@
+can now log by points
+
 con pelota - sur    http://localhost/4b/portada.php?q=21212   http://localhost/4b/portada.php?q=41414
 no se ve parejo 2x2
     el primer indice del segundo query vuelve al inicio en vez de seguir secuancial
@@ -14,28 +16,27 @@ cada query pa printear en JS debe traer tagWord y/o deporte, area pa saber q cla
 
 isla area icon -  get someone
 
+{divide y/o saca deporte y area de entrada y en vez de eso usa un relation entre entradas y foto
+
+en vez de area y deporte hazlo generico ... 1000 lugares con 1000 categorias}
+
+divide y/o saca tags de entrada y haz una relacion con table tags que contenga tag array
+    asi puedes tener 3, 5, 25 tags relational to an entrada
+
+in db id serial en ves de integer
 
 
 
 
 
-
-
-
-
-los tags de ponlo flotalos left, pon uno por cada dos de los labels deporte: 
-esos tags y los de deporte controlalos con class cols-4 o algo asi como en bootstrap
 
 
 Log as admin then ==> view as admin ver el entry en rojo 
 
 reduce images
 
-post from entries
+post from entries:share to FB?
 
-share to FB?
-
-DONE :: after upload redirect randomly to q=2x2x2 or 4x4x4
 
 si buscas por tag4 'torneo little lads', en un entry q sea de baloncesto, 
 lograr deducir q little lads aplica sobre 90% de
@@ -44,7 +45,6 @@ las veces a baloncesto y devolver resultados con any tag like '%little lads%'
 convierte el big while de sacalo en una funcion do pg query(), y asi poder crear do mysql query().
 el EXTRACT EPOCH en setDbQueries() de sacalo_masageout lleva otro formato para MySQL
 en escritos/php/ponlo/ponlo.php crear funcion analoga para mysql
-
 
 
 ===========================================================================================
