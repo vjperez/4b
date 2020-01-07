@@ -22,26 +22,23 @@ body{
   font-family:freemono,OliJo-Bold,bevan;
   text-align:center;
 }
+#mensaje{
+  border:2px solid #000000; /* #828592 o #e8e8e8 */
+  /* border-radius:5px; */
+  width:96%;
+  margin:0px auto 0px auto;
+}
 #despedida{
   border:1px solid #000000;/*#bfbfbf;   /*828592*/
   /* border-radius:5px; */
   font-size:0.625em;
   font-weight: bold;
-  color:#e9806e;
+  color:#c9604e;
   width:100%;
   margin:100px auto 10px auto;
   text-align:center;
 }
 
-
-#titulo i{
-  color: #92aa83;
-  font-size: 4em;
-  vertical-align:middle;
-}
-#titulo i:hover{
-  color:#829a73;
-}
 #titulo ul{
   margin:0px;
   padding:0px;
@@ -54,8 +51,8 @@ body{
   margin-top:0.0em;
   display:block;
   font-weight: bold;
-  font-size:0.625em;
-  color:#5d2e46;
+  font-size:0.750em;
+  color:#c9604e;
 }
 
 

@@ -1,5 +1,3 @@
-can now log by points
-
 con pelota - sur    http://localhost/4b/portada.php?q=21212   http://localhost/4b/portada.php?q=41414
 no se ve parejo 2x2
     el primer indice del segundo query vuelve al inicio en vez de seguir secuancial
@@ -16,12 +14,16 @@ cada query pa printear en JS debe traer tagWord y/o deporte, area pa saber q cla
 
 isla area icon -  get someone
 
-{divide y/o saca deporte y area de entrada y en vez de eso usa un relation entre entradas y foto
+{divide y/o saca deporte y area de entrada y en vez de eso usa un relation entre entradas y deportes
+    y entre entrada y fotos
 
 en vez de area y deporte hazlo generico ... 1000 lugares con 1000 categorias}
 
 divide y/o saca tags de entrada y haz una relacion con table tags que contenga tag array
     asi puedes tener 3, 5, 25 tags relational to an entrada
+
+si es una entrada- una foto esta bien como esta (fotos en total participacion, una foto por entrada). 
+Para muchas fotos por entradas habria q hacer relacion entre foto y entrada (o sacar el unique foreign constraint de foto)
 
 in db id serial en ves de integer
 

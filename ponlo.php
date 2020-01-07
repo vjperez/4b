@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" name="4 bolas" description="">
 <title>4 bolas Deporte Infantil Y Juvenil en Puerto Rico Baloncesto Beisbol Volibol Futbol Soccer</title>
+<link rel="icon"       type="image/png" href="icon/baloncesto.png">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
-<link rel="stylesheet" type="text/css" href="escritos/estilo/ponlo.css">
 
-<link rel="stylesheet" type="text/css" media='screen and (max-width: 500px)' href="escritos/estilo/ponloxSmall.css">
-<link rel='stylesheet' type="text/css" media='screen and (min-width: 501px) and (max-width: 700px)' href='escritos/estilo/ponloSmall.css'>
+<link rel="stylesheet" type="text/css" href="escritos/estilo/ponlo.css">
+<link rel='stylesheet' type="text/css" media='screen and (max-width: 700px)' href='escritos/estilo/ponloSmall.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/ponloMedium.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1201px)' href='escritos/estilo/ponloBig.css'>
 
@@ -20,12 +20,13 @@
 
 
 
+
 <!---------------------------------------------------------------------------------------------------->
 <div id="titulo">
 <ul>
-<li><a href='portada.php'><img src="icon/baloncesto.png" alt="puerto rico baloncesto infantil"></a></li>
 <li><a href='portada.php'><img src="icon/beisbol.png" alt="puerto rico beisbol infantil"></a></li>
 <li><a href='portada.php'><img src="icon/futbol-soccer.png" alt="puerto rico futbol soccer infantil"></a></li>
+<li><a href='portada.php'><img src="icon/baloncesto.png" alt="puerto rico baloncesto infantil"></a></li>
 <li><a href='portada.php'><img src="icon/volibol.png" alt="puerto rico volibol infantil"></a></li>
 <li id="titulo-text">Infantil y Juvenil</li>
 </ul>
@@ -34,11 +35,8 @@
 
 
 
-
-
-
-
-
+<!---------------------------------------------------------------------------------------------------->
+<div id="mensaje">
 <form action="escritos/php/ponlo/ponlo.php" method="POST" enctype="multipart/form-data">
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
@@ -174,12 +172,7 @@
 </div><!-- end of submit -->
 
 </form>
-
-
-
-
-
-
+</div><!-- end mensaje-->
 
 
 
@@ -190,7 +183,8 @@
 </div><!--end of despedida-->
 
 
-          
+
+
 </div><!-- end of papel-->
 </body>
 </html>
