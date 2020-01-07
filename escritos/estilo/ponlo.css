@@ -73,7 +73,7 @@ label.loadLabel input[type="file"] {
 
 #tag1-feedback-paragraph, #tag2-feedback-paragraph, #tag3-feedback-paragraph, #tag4-feedback-paragraph, #tag5-feedback-paragraph,
 #foto-feedback-paragraph, #deporte-feedback-paragraph, #submit-feedback-paragraph{
-  margin-top:20px;   
+  margin-top:15px;   
 }
 
 .sr-only {
