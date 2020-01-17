@@ -1,18 +1,22 @@
 <!doctype html>
 <html>
+
+
 <head>
 <meta charset="UTF-8" name="4 bolas" description="">
 <title>4 bolas Deporte Infantil Y Juvenil en Puerto Rico Baloncesto Beisbol Volibol Futbol Soccer</title>
 <link rel="icon"       type="image/png" href="icon/baloncesto.png">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
-
 <link rel="stylesheet" type="text/css" href="escritos/estilo/ponlo.css">
+
 <link rel='stylesheet' type="text/css" media='screen and (max-width: 700px)' href='escritos/estilo/ponloSmall.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/ponloMedium.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1201px)' href='escritos/estilo/ponloBig.css'>
 
 <script type="text/javascript" src="escritos/js/ponlo.js"></script>
 </head>
+
+
 
 
 <body>
@@ -187,4 +191,6 @@
 
 </div><!-- end of papel-->
 </body>
+
+
 </html>

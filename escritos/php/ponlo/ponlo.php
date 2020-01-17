@@ -64,7 +64,7 @@ if( ! empty($_FILES['laFoto']['name']) ){
   if($comentario == FALSE){ // con === me cubre solo el caso de unset en masajein; con == cubre unset en masajein y tambien set en masajein pero vacio
     $query = "INSERT INTO entrada (deporte,area,tag3,tag4,tag5) VALUES ($deporte, $area, '$tag3', '$tag4', '{$tag5}' );"; // comentario will be set to NULL since thats the default in postgre
   }else{
-	$query = "INSERT INTO entrada (deporte,area,tag3,tag4,tag5,comentario) VALUES ($deporte, $area, '$tag3', '$tag4', '{$tag5}', '{$comentario}' );";
+	  $query = "INSERT INTO entrada (deporte,area,tag3,tag4,tag5,comentario) VALUES ($deporte, $area, '$tag3', '$tag4', '{$tag5}', '{$comentario}' );";
   }	
   $insert_query1_result = pg_query($cxn, $query);
   if( ! $insert_query1_result ){

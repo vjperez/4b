@@ -1,11 +1,12 @@
+  //otro green #7ec97b
   //cambia color de divisiones
   function coloreaFile(){
     var limit = 150;
     var ladivision = document.getElementById('foto-select-div');
     
     if( escogioFoto() ){
-      ladivision.style.backgroundColor='#7ec97b'; 
-      ladivision.style.border="1px solid #8f8f8f";
+      ladivision.style.backgroundColor='#92aa83'; 
+      ladivision.style.border="1px solid #d5d5d5";
     }else{
       ladivision.style.backgroundColor='#f5f5f5';
       ladivision.style.border="0px solid #e5e5e5";
@@ -41,10 +42,10 @@
       ladivision.style.border="0px solid #e5e5e5";  //"1px solid #bfbfbf";
     }else if(faltan < 0){
       ladivision.style.backgroundColor='#ff0000';  
-      ladivision.style.border="1px solid #8f8f8f";         
+      ladivision.style.border="1px solid #d5d5d5";         
     }else{ // ha escrito algo y no se ha pasado
-      ladivision.style.backgroundColor='#7ec97b';
-      ladivision.style.border="1px solid #8f8f8f";
+      ladivision.style.backgroundColor='#92aa83';
+      ladivision.style.border="1px solid #d5d5d5";
     }
   }
   
@@ -100,8 +101,8 @@
       var ladivision = document.getElementById(divArr[index]);
       //var labels = ladivision.getElementsByTagName('label');
       if(boton.checked == true){
-        ladivision.style.backgroundColor='#7ec97b';
-        ladivision.style.border="1px solid #8f8f8f";
+        ladivision.style.backgroundColor='#92aa83';
+        ladivision.style.border="1px solid #d5d5d5";
         //labels[0].style.color='#ffffff';
         //labels[0].style.fontWeight='bold';
       }else{
@@ -141,8 +142,8 @@
       var ladivision = document.getElementById(divArr[index]);
       var labels = ladivision.getElementsByTagName('label'); /*  get the elements named 'label' from  "ladivision" NOT FROM document */
       if(boton.value != '' && boton.value.length <= limit){
-        ladivision.style.backgroundColor='#7ec97b';
-        ladivision.style.border="1px solid #8f8f8f";
+        ladivision.style.backgroundColor='#92aa83';
+        ladivision.style.border="1px solid #d5d5d5";
         labels[0].style.color='#ffffff';
         labels[0].style.fontWeight='bold';
       }else{

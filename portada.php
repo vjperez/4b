@@ -2,21 +2,27 @@
 require_once                'escritos/php/config/datosConfig.php';
 require_once HOST_FS_ROOT . 'escritos/php/sacalo/sacalo.php'; 
 ?>
+
+
 <!doctype html>
 <html>
+
+
 <head>
 <meta charset="utf-8" name="4 bolas" description="">
 <title>4 bolas | Deporte Infantil Y Juvenil en Puerto Rico | Baloncesto Beisbol Volibol Futbol Soccer</title>
 <link rel="icon"       type="image/png" href="icon/baloncesto.png">
-<link rel="stylesheet" type="text/css" href="escritos/estilo/comun.css">
-
+<link rel="stylesheet" type="text/css"  href="escritos/estilo/comun.css">
 <link rel="stylesheet" type="text/css" href="escritos/estilo/portada.css">
+
 <link rel="stylesheet" type="text/css" media='screen and (max-width: 700px)' href="escritos/estilo/portadaSmall.css">
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 701px) and (max-width: 1200px)' href='escritos/estilo/portadaMedium.css'>
 <link rel='stylesheet' type="text/css" media='screen and (min-width: 1201px)' href='escritos/estilo/portadaBig.css'>
 
 <script type="text/javascript" src="escritos/js/portada.js"></script>
 </head>
+
+
 
 
 <body>
@@ -94,4 +100,6 @@ var orderedEntries  = <?php echo json_encode($orderedEntries);  ?>;
 
 </div><!-- end of papel-->
 </body>
+
+
 </html>
